@@ -14,7 +14,7 @@ export const ProgramacaoCard = ({ avatar, end, name, start, title }: Props) => {
   return (
     <Flex className='w-full border-[1px] border-neutral-pure100'>
       <Flex className='p-2 border-r-[1px] border-r-neutral-pure100'>
-        <Flex className='relative'>
+        <Flex className='relative w-[160px]'>
           <Image
             src={avatar}
             alt={name}
