@@ -4,6 +4,7 @@ import { Flex } from "../components/Flex/Flex"
 import Image from "next/image";
 import Form from "../features/Form/Form";
 import { Dates } from "../features/Dates/Dates";
+import Link from "next/link";
 
 
 const Home: NextPage = () => {
@@ -19,14 +20,24 @@ const Home: NextPage = () => {
           quality={100}
           alt="Fundo"
         />
-        <Flex align="center" justify="end" className="lg:px-[5%] xl:px-0 bg-grey w-full min-[1921px]:max-w-[1700px] max-w-[1217px] z-[100]">
+
+        <Flex align="center" justify="end" className=" w-fit relative lg:px-[5%] xl:px-0 bg-grey w-full min-[1921px]:max-w-[1700px] max-w-[1217px] z-[100]">
+          <Link href="#programacao">
+            <Flex className="gap-2 cursor-pointer  absolute right-0 lg:top-5 lg:right-14 xl:right-0 xl:top-5 2xl:top-10" align="center">
+              <p className="text-white text-[14px] font-[500]">Ver programação</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 9 10" fill="none">
+                <path d="M0 5H8.5M8.5 5L4.5 1M8.5 5L4.5 9" stroke="white" stroke-linejoin="round" />
+              </svg>
+            </Flex>
+          </Link>
+
           <Flex direction="col" className="max-w-[412px] gap-8 rounded-sm bg-white p-6">
             <p className="text-[24px] font-[500] leading-[29px] text-neutral-pure900">Faça a sua inscrição!</p>
             <Form />
           </Flex>
         </Flex>
       </Flex>
-      <Flex justify="center" className="w-full py-[120px] ">
+      <Flex justify="center" className="w-full py-[120px] " id="programacao">
         <Flex direction='col' className="lg:px-[5%] xl:px-0 w-full min-[1921px]:max-w-[1700px] max-w-[1217px] gap-[64px]">
           <Flex justify="between" align="center">
             <Flex direction="col" className="gap-6">
