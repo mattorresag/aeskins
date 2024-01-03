@@ -124,7 +124,7 @@ const programacao = [
       name: 'Lídia Dantas',
       start: '11:00',
       end: '12:00',
-      title: 'Harmozinação Facial vs Naturalidade, individualizando o tratamento com Sofiderm.',
+      title: 'Harmonização Facial vs Naturalidade, individualizando o tratamento com Sofiderm.',
     },
     {
       avatar: '/assets/matheus.jpg',
@@ -168,7 +168,7 @@ const programacao = [
       name: 'Lídia Dantas',
       start: '11:00',
       end: '12:00',
-      title: 'Harmozinação Facial vs Naturalidade, individualizando o tratamento com Sofiderm.',
+      title: 'Harmonização Facial vs Naturalidade, individualizando o tratamento com Sofiderm.',
     },
     {
       avatar: '/assets/daniel.jpg',
