@@ -119,7 +119,7 @@ function Form() {
                 <option disabled selected>Selecione uma aula</option>
                 {programacao[selectedDate]?.map((date, index) => (
                   <option key={index} value={date.title}>
-                    {date.title}
+                    {date.start} às {date.end} - {date.title}
                   </option>
                 ))}
               </select>
