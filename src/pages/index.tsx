@@ -53,7 +53,6 @@ const Home: NextPage = () => {
                 <p className="text-secondary-pure font-[600]"> 24 a 27 de janeiro de 2024 -&gt;  19h</p>
               </Flex>
             </Flex>
-            <p className="max-w-[458px] text-neutral-pure500 font-[500] leading-[24px]">Lorem ipsum dolor sit amet consectetur. Enim vitae pulvinar sit ante vestibulum sed adipiscing. Dictumst dictum felis vitae sit ac. Vestibulum curabitur eget donec lorem ultrices.</p>
           </Flex>
           <Dates />
         </Flex>
