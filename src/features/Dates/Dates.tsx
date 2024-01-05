@@ -3,7 +3,7 @@ import { Flex } from '../../components/Flex/Flex'
 import { DateCard } from '../../components/DateCard/DateCard'
 import { ProgramacaoCard } from '../../components/ProgramacaoCard/ProgramacaoCard'
 
-const dates = [
+export const dates = [
   {
     date: '24 de jan, 2024',
     day: 'quarta-feira',
@@ -22,7 +22,7 @@ const dates = [
   },
 ]
 
-const programacao = [
+export const programacao = [
   [
     {
       avatar: '/assets/matheus.jpg',

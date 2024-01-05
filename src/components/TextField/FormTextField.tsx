@@ -42,7 +42,7 @@ const FormTextField = <T extends FieldValues>({
       {label && (
         <label
           htmlFor={name as string}
-          className="text-[14px] -mb-2 text-neutral-pure400 font-[500]"
+          className="2xl:text-[14px] text-[12px] -mb-2 text-neutral-pure400 font-[500]"
         >
           {label}
         </label>
@@ -63,7 +63,7 @@ const FormTextField = <T extends FieldValues>({
                 type={type}
                 placeholder={placeholder}
                 {...props}
-                className={`font-[500] bg-white outline-none py-2 border-b-[1px] ${errors[name] ? "border-b-red-500" : "border-b-grey-300"
+                className={`font-[500] bg-white outline-none 2xl:text-[16px] text-[14px] py-2 border-b-[1px] ${errors[name] ? "border-b-red-500" : "border-b-grey-300"
                   } ${className}`}
                 errors={errors}
               />
@@ -74,7 +74,7 @@ const FormTextField = <T extends FieldValues>({
               type={type}
               placeholder={placeholder}
               {...props}
-              className={`font-[500] bg-white outline-none py-2 border-b-[1px]  ${errors[name] ? "border-b-red-500" : "border-b-grey-300"
+              className={`font-[500] bg-white 2xl:text-[16px] text-[14px] outline-none py-2 border-b-[1px]  ${errors[name] ? "border-b-red-500" : "border-b-grey-300"
                 } ${className}`}
               errors={errors}
               field={field}
@@ -83,7 +83,7 @@ const FormTextField = <T extends FieldValues>({
         }
       />
       {errors[name] && (
-        <span className="mt-1 text-xs text-red-500">
+        <span className=" 2xl:mt-1 text-xs text-red-500">
           {String(errors[name]?.message)}
         </span>
       )}

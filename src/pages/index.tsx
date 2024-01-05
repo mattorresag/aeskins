@@ -10,7 +10,7 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Flex justify="center" className="w-full lg:w-[100vw] h-[232px] lg:h-[600px] 2xl:h-[739px] min-[1921px]:h-[980px] relative">
+      <Flex justify="center" className="w-full lg:w-[100vw] h-[232px] lg:h-[600px] xl:h-[640px] 2xl:h-[739px] min-[1921px]:h-[980px] relative">
         <Image
           src="/assets/bg.png"
           unoptimized
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 
         <Flex align="center" justify="end" className=" w-fit relative lg:px-[5%] xl:px-0 bg-grey w-full min-[1921px]:max-w-[1700px] max-w-[1217px] z-[100]">
           <Link href="#programacao">
-            <Flex className="gap-2 cursor-pointer  absolute right-0 lg:top-5 lg:right-14 xl:right-0 xl:top-5 2xl:top-10" align="center">
+            <Flex className="gap-2 cursor-pointer  absolute right-0 lg:top-5 lg:right-14 xl:right-0 xl:top-5 2xl:top-7 min-[1921px]:top-20" align="center">
               <p className="text-white text-[14px] font-[500]">Ver programação</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 9 10" fill="none">
                 <path d="M0 5H8.5M8.5 5L4.5 1M8.5 5L4.5 9" stroke="white" stroke-linejoin="round" />
@@ -31,8 +31,8 @@ const Home: NextPage = () => {
             </Flex>
           </Link>
 
-          <Flex direction="col" className="max-w-[412px] gap-8 rounded-sm bg-white p-6">
-            <p className="text-[24px] font-[500] leading-[29px] text-neutral-pure900">Faça a sua inscrição!</p>
+          <Flex direction="col" className="max-w-[412px] gap-5 2xl:gap-8 rounded-sm bg-white pb-6 pt-4 px-6 2xl:p-6">
+            <p className="text-[20px] 2xl:text-[24px] font-[500] leading-[29px] text-neutral-pure900">Faça a sua inscrição!</p>
             <Form />
           </Flex>
         </Flex>
