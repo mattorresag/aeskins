@@ -79,7 +79,7 @@ function Form() {
               <select
                 {...field}
                 defaultValue={dates[0].date}
-                className="w-[100%] 2xl:text-[16px] text-[14px] border-b-grey-300 border-b-[1px]"
+                className="w-[100%] 2xl:text-[16px] bg-white text-[14px] border-b-grey-300 border-b-[1px]"
                 onChange={(e) => {
                   setSelectedDate(dates.indexOf(dates[parseInt(e.target.value)]))
                   setSelectedClass(programacao[dates.indexOf(dates[parseInt(e.target.value)])][0].title || 'Rinomodelação com Sofiderm.');
@@ -99,7 +99,7 @@ function Form() {
         <Flex direction="col" className="gap-1 w-full">
           <label
             htmlFor="class"
-            className="2xl:text-[14px] text-[12px] text-neutral-pure400 font-[500]"
+            className="2xl:text-[14px] text-[12px] bg-white text-neutral-pure400 font-[500]"
           >
             Aula escolhida*
           </label>
