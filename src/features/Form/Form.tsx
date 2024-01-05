@@ -99,7 +99,7 @@ function Form() {
         <Flex direction="col" className="gap-1 w-full">
           <label
             htmlFor="class"
-            className="2xl:text-[14px] text-[12px] bg-white text-neutral-pure400 font-[500]"
+            className="2xl:text-[14px] text-[12px] text-neutral-pure400 font-[500]"
           >
             Aula escolhida*
           </label>
@@ -110,7 +110,7 @@ function Form() {
               <select
                 {...field}
                 value={selectedClass}
-                className="w-[100%] 2xl:text-[16px] text-[14px] border-b-grey-300 border-b-[1px]"
+                className="w-[100%] 2xl:text-[16px] bg-white text-[14px] border-b-grey-300 border-b-[1px]"
                 onChange={(e) => {
                   setSelectedClass(e.target.value);
                   field.onChange(e)
