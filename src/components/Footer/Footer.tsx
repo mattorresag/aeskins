@@ -51,9 +51,9 @@ export const Footer = (): JSX.Element => {
             justify="between"
             className="min-[1921px]:max-w-[1700px] max-w-[1216px]  px-[4%] lg:px-[5%] xl:px-0 w-full items-center"
           >
-            <Flex className="gap-1 flex-col lg:items-center lg:flex-row text-white text-[14px] font-[500] leading-[21px]">
+            <div className="gap-1 flex-col lg:items-center lg:flex-row text-white text-[14px] font-[500] leading-[21px]">
 
-            </Flex>
+            </div>
             <Flex
               className="gap-2 cursor-pointer"
               onClick={() => {
