@@ -20,6 +20,7 @@ const schema = object({
 type IFormValues = InferType<typeof schema>;
 
 function Form() {
+  const [disabled, setDisabled] = React.useState(false);
   const [hasSent, setHasSent] = React.useState(false);
   const [selectedDate, setSelectedDate] = React.useState(0);
   const [selectedClass, setSelectedClass] = React.useState(
@@ -43,6 +44,7 @@ function Form() {
 
   const onSubmit: SubmitHandler<IFormValues> = async (data) => {
     if (!data.telefone || !data.email || !data.name) return;
+    setDisabled(true);
     const finalData = {
       ...data,
       date: dates[selectedDate].date,
@@ -55,6 +57,7 @@ function Form() {
       )
       .then(() => {
         setHasSent(true);
+        setDisabled(false);
       });
   };
 
@@ -176,6 +179,7 @@ function Form() {
                 placeholder="(00) 00000-0000"
               />
               <button
+                disabled={disabled}
                 type="submit"
                 className="py-3 rounded-sm bg-[#07D767] hover:bg-[rgb(128,252,140,0.8)]"
               >
