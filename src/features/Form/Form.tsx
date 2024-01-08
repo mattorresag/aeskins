@@ -68,7 +68,9 @@ function Form() {
       {hasSent ? (
         <>
           <p className="text-center text-[20px] 2xl:text-[24px] font-[500] leading-[29px] text-neutral-pure900">
-            Obrigado pelo interesse! Entraremos em contato em breve.
+            Pronto! Seu cadastro foi realizado com sucesso. <br />
+            Chegue 10 minutos antes da sua palestra começar, caso contrário, sua
+            vaga será disponibilizada para outro participante.
           </p>
         </>
       ) : (
