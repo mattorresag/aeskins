@@ -159,8 +159,7 @@ const Home: NextPage = () => {
                   </svg>
                 </Flex>
                 <p className="text-secondary-pure font-[600]">
-                  {" "}
-                  24 a 27 de janeiro de 2024 -&gt; 19h
+                  24 a 27 de janeiro de 2024
                 </p>
               </Flex>
             </Flex>
