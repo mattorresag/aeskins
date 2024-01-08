@@ -63,8 +63,9 @@ const FormTextField = <T extends FieldValues>({
                 type={type}
                 placeholder={placeholder}
                 {...props}
-                className={`font-[500] bg-white outline-none 2xl:text-[16px] text-[14px] py-2 border-b-[1px] ${errors[name] ? "border-b-red-500" : "border-b-grey-300"
-                  } ${className}`}
+                className={`font-[500] bg-white outline-none 2xl:text-[16px] text-[14px] py-2 border-b-[1px] ${
+                  errors[name] ? "border-b-red-500" : "border-b-grey-300"
+                } ${className}`}
                 errors={errors}
               />
             </InputMask>
@@ -74,8 +75,9 @@ const FormTextField = <T extends FieldValues>({
               type={type}
               placeholder={placeholder}
               {...props}
-              className={`font-[500] bg-white 2xl:text-[16px] text-[14px] outline-none py-2 border-b-[1px]  ${errors[name] ? "border-b-red-500" : "border-b-grey-300"
-                } ${className}`}
+              className={`font-[500] bg-white 2xl:text-[16px] text-[14px] outline-none py-2 border-b-[1px]  ${
+                errors[name] ? "border-b-red-500" : "border-b-grey-300"
+              } ${className}`}
               errors={errors}
               field={field}
             />
