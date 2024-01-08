@@ -162,7 +162,6 @@ function Form() {
                 errors={errors}
                 className="w-[100%] border-b-black border-b-[2px]"
                 label="Telefone*"
-                mask="(99) 99999-9999"
               />
               <button
                 type="submit"
