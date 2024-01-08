@@ -42,7 +42,7 @@ function Form() {
   });
 
   const onSubmit: SubmitHandler<IFormValues> = async (data) => {
-    console.log(data);
+    if (!data.telefone || !data.email || !data.name) return;
     const finalData = {
       ...data,
       date: dates[selectedDate].date,
