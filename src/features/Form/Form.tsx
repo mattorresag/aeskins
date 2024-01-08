@@ -162,6 +162,7 @@ function Form() {
                 errors={errors}
                 className="w-[100%] border-b-black border-b-[2px]"
                 label="Telefone*"
+                placeholder="(00) 00000-0000"
               />
               <button
                 type="submit"
