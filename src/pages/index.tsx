@@ -95,7 +95,7 @@ const Home: NextPage = () => {
       >
         <Flex
           direction="col"
-          className="md:px-[5%] w-full min-[1921px]:max-w-[1700px] max-w-[1217px] gap-[64px]"
+          className="md:px-[5%] w-full min-[1921px]:max-w-[1700px] max-w-[1217px] gap-8 md:gap-[64px]"
         >
           <Flex justify="between" align="center">
             <Flex direction="col" className="gap-6">

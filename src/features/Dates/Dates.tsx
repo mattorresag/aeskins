@@ -214,21 +214,45 @@ export const programacao = [
 export const Dates = () => {
   const [selectedDate, setSelectedDate] = React.useState(0);
   return (
-    <Flex direction="col" className="gap-6  pl-6 lg:py-0 xl:pl-0">
-      <Flex className="bg-neutral-pure100 w-full lg:gap-8 overflow-x-auto overflow-y-hidden">
-        {dates.map((date, index) => (
-          <Flex
-            key={date.date}
-            className=" cursor-pointer"
-            onClick={() => setSelectedDate(index)}
+    <Flex direction="col" className="gap-6  pl-6 lg:py-0 xl:pl-0 ">
+      <Flex className="relative w-full" align="center">
+        <Flex
+          align="center"
+          className="bg-neutral-pure100 w-full lg:gap-8 overflow-x-auto overflow-y-hidden"
+        >
+          {dates.map((date, index) => (
+            <Flex
+              key={date.date}
+              className=" cursor-pointer"
+              onClick={() => setSelectedDate(index)}
+            >
+              <DateCard
+                date={date.date}
+                day={date.day}
+                selected={selectedDate === index}
+              />
+            </Flex>
+          ))}
+        </Flex>
+        <Flex className="absolute right-2 lg:hidden">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <DateCard
-              date={date.date}
-              day={date.day}
-              selected={selectedDate === index}
+            <rect
+              x="24"
+              width="24"
+              height="24"
+              rx="12"
+              transform="rotate(90 24 0)"
+              fill="white"
             />
-          </Flex>
-        ))}
+            <path d="M10 8L14 12L10 16" stroke="#7C7C83" stroke-width="1.5" />
+          </svg>
+        </Flex>
       </Flex>
       <Flex direction="col" className="gap-2 pr-6  md:pr-0">
         {programacao[selectedDate]?.map((programacao) => (
