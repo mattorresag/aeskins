@@ -9,7 +9,6 @@ import {
 
 import { TextField } from "../TextField";
 import { Flex } from "../Flex/Flex";
-import InputMask from "react-input-mask";
 
 interface FormTextFieldProps<T extends FieldValues> {
   control: Control<T>;
