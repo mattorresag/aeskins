@@ -16,6 +16,7 @@ const Home: NextPage = () => {
         <Flex className="hidden md:flex">
           <Image
             src="/assets/bg.png"
+            objectPosition="35% center"
             unoptimized
             objectFit="cover"
             priority
@@ -78,7 +79,7 @@ const Home: NextPage = () => {
 
           <Flex
             direction="col"
-            className="max-w-[412px] gap-5 2xl:gap-8 rounded-sm bg-white pb-6 pt-4 px-6 2xl:p-6"
+            className="max-w-[412px] md:max-w-[200px] xl:max-w-[412px] lg:max-w-[352px] gap-5 2xl:gap-8 rounded-sm bg-white pb-6 pt-4 px-6 2xl:p-6"
           >
             <p className="text-[20px] 2xl:text-[24px] font-[500] leading-[29px] text-neutral-pure900">
               Faça a sua inscrição!
