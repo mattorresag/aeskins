@@ -177,7 +177,7 @@ function Form() {
                 type="submit"
                 className="py-3 rounded-sm bg-[#07D767] hover:bg-[rgb(128,252,140,0.8)]"
               >
-                <p className="text-[rgb(0,0,0,0.87)">Enviar mensagem</p>
+                <p className="text-[rgb(0,0,0,0.87)">Confirmar Inscrição</p>
               </button>
             </Flex>
           </form>
