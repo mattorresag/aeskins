@@ -52,23 +52,16 @@ const FormTextField = <T extends FieldValues>({
         name={name}
         render={({ field }) =>
           mask ? (
-            <InputMask
-              mask={mask}
-              maskChar={maskChar}
-              alwaysShowMask={alwaysShowMask}
-              {...field}
-            >
-              <TextField
-                name={name}
-                type={type}
-                placeholder={placeholder}
-                {...props}
-                className={`font-[500] bg-white outline-none 2xl:text-[16px] text-[14px] py-2 border-b-[1px] ${
-                  errors[name] ? "border-b-red-500" : "border-b-grey-300"
-                } ${className}`}
-                errors={errors}
-              />
-            </InputMask>
+            <TextField
+              name={name}
+              type={type}
+              placeholder={placeholder}
+              {...props}
+              className={`font-[500] bg-white outline-none 2xl:text-[16px] text-[14px] py-2 border-b-[1px] ${
+                errors[name] ? "border-b-red-500" : "border-b-grey-300"
+              } ${className}`}
+              errors={errors}
+            />
           ) : (
             <TextField
               name={name}

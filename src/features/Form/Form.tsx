@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Flex } from "../../components/Flex/Flex";
 import FormTextField from "../../components/TextField/FormTextField";
 import { dates, programacao } from "../Dates/Dates";
+import axios from "axios";
 
 const schema = object({
   name: string().required("Insira seu nome."),
@@ -47,8 +48,14 @@ function Form() {
       date: dates[selectedDate].date,
       class: selectedClass,
     };
-    console.log(finalData);
-    setHasSent(true);
+    axios
+      .post(
+        "https://hook.us1.make.com/wfm0utskeaieaw6y67ey7czzhrj1l6ld",
+        finalData
+      )
+      .then(() => {
+        setHasSent(true);
+      });
   };
 
   return (
