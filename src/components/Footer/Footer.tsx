@@ -30,7 +30,7 @@ export const Footer = (): JSX.Element => {
               Acompanhe nas redes
             </p>
             <Flex className="gap-4">
-              <Link href="" passHref>
+              <Link href="https://www.instagram.com/aeskins.pharma" passHref>
                 <a
                   className="cursor-pointer"
                   target="_blank"
@@ -67,7 +67,7 @@ export const Footer = (): JSX.Element => {
                   </svg>
                 </a>
               </Link>
-              <Link href="" passHref>
+              <Link href="https://www.youtube.com/@aeskinspharma" passHref>
                 <a
                   className="cursor-pointer"
                   target="_blank"
