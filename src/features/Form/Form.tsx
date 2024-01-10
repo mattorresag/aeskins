@@ -4,7 +4,7 @@ import { InferType, object, string } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Flex } from "../../components/Flex/Flex";
 import FormTextField from "../../components/TextField/FormTextField";
-import { dates, programacao } from "../Dates/Dates";
+import { availableClasses, dates } from "../Dates/Dates";
 import axios from "axios";
 
 const schema = object({
@@ -24,7 +24,7 @@ function Form() {
   const [hasSent, setHasSent] = React.useState(false);
   const [selectedDate, setSelectedDate] = React.useState(0);
   const [selectedClass, setSelectedClass] = React.useState(
-    "Rinomodelação com Sofiderm."
+    availableClasses[0][0].title
   );
 
   const {
@@ -119,7 +119,7 @@ function Form() {
                           dates.indexOf(dates[parseInt(e.target.value)])
                         );
                         setSelectedClass(
-                          programacao[
+                          availableClasses[
                             dates.indexOf(dates[parseInt(e.target.value)])
                           ][0].title || "Rinomodelação com Sofiderm."
                         );
@@ -161,7 +161,7 @@ function Form() {
                       <option disabled selected>
                         Selecione uma aula
                       </option>
-                      {programacao[selectedDate]?.map((date, index) => (
+                      {availableClasses[selectedDate]?.map((date, index) => (
                         <option key={index} value={date.title}>
                           {date.start} às {date.end} - {date.title}
                         </option>
