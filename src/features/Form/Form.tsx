@@ -52,7 +52,7 @@ function Form() {
     };
     axios
       .post(
-        "https://hook.us1.make.com/t157c5vpq5kgkmh29svdlsn83u8kfhxv",
+        "https://hook.us1.make.com/u6xbs57tc3xv4ajnv80h701xbo8gvss4",
         finalData
       )
       .then(() => {
