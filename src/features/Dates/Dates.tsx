@@ -30,12 +30,14 @@ export const programacao = [
       start: "10:00",
       end: "11:00",
       title: "Rinomodelação com Sofiderm.",
+      esgotado: true,
     },
     {
       avatar: "/assets/lidia.jpg",
       name: "Lídia Dantas",
       start: "11:00",
       end: "12:00",
+      esgotado: true,
       title:
         "Harmonização Facial vs Naturalidade, individualizando o tratamento com Sofiderm.",
     },
@@ -44,6 +46,7 @@ export const programacao = [
       name: "Amanda Lopes",
       start: "14:00",
       end: "15:00",
+      esgotado: true,
       title: "Soluções de harmonização facial para o dia-a-dia clínico.",
     },
     {
@@ -51,6 +54,7 @@ export const programacao = [
       name: "Daniela Cardoso",
       start: "15:00",
       end: "16:00",
+      esgotado: true,
       title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
     },
     {
@@ -58,6 +62,7 @@ export const programacao = [
       name: "Marcela Espaladori",
       start: "16:00",
       end: "17:00",
+      esgotado: true,
       title:
         "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
     },
@@ -83,6 +88,7 @@ export const programacao = [
       name: "Fernanda Zanini",
       start: "11:00",
       end: "12:00",
+      esgotado: true,
       title: "Soluções de harmonização facial para o dia-a-dia clínico.",
     },
     {
@@ -90,6 +96,7 @@ export const programacao = [
       name: "Lídia Dantas",
       start: "14:00",
       end: "15:00",
+      esgotado: true,
       title:
         "Harmonização Facial vs Naturalidade, individualizando o tratamento com Sofiderm.",
     },
@@ -121,6 +128,7 @@ export const programacao = [
       name: "Amanda Lopes",
       start: "10:00",
       end: "11:00",
+      esgotado: true,
       title: "Soluções de harmonização facial para o dia-a-dia clínico.",
     },
     {
@@ -128,6 +136,7 @@ export const programacao = [
       name: "Lídia Dantas",
       start: "11:00",
       end: "12:00",
+      esgotado: true,
       title:
         "Harmonização Facial vs Naturalidade, individualizando o tratamento com Sofiderm.",
     },
@@ -136,6 +145,7 @@ export const programacao = [
       name: "Matheus Macedo",
       start: "14:00",
       end: "15:00",
+      esgotado: true,
       title: "Rinomodelação com Sofiderm.",
     },
     {
@@ -176,6 +186,7 @@ export const programacao = [
       name: "Lídia Dantas",
       start: "11:00",
       end: "12:00",
+      esgotado: true,
       title:
         "Harmonização Facial vs Naturalidade, individualizando o tratamento com Sofiderm.",
     },
