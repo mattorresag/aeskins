@@ -47,6 +47,21 @@ export const programacao = [
       title: "Soluções de harmonização facial para o dia-a-dia clínico.",
     },
     {
+      avatar: "/assets/daniela.jpg",
+      name: "Daniela Cardoso",
+      start: "15:00",
+      end: "16:00",
+      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
+    },
+    {
+      avatar: "/assets/marcela.jpg",
+      name: "Marcela Espaladori",
+      start: "16:00",
+      end: "17:00",
+      title:
+        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
+    },
+    {
       avatar: "/assets/matheus.jpg",
       name: "Matheus Macedo",
       start: "17:00",
@@ -62,6 +77,13 @@ export const programacao = [
       end: "11:00",
       title:
         "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
+    },
+    {
+      avatar: "/assets/fernanda.jpg",
+      name: "Fernanda Zanini",
+      start: "11:00",
+      end: "12:00",
+      title: "Soluções de harmonização facial para o dia-a-dia clínico.",
     },
     {
       avatar: "/assets/lidia.jpg",
@@ -110,135 +132,6 @@ export const programacao = [
         "Harmonização Facial vs Naturalidade, individualizando o tratamento com Sofiderm.",
     },
     {
-      avatar: "/assets/fernanda.jpg",
-      name: "Fernanda Zanini",
-      start: "15:00",
-      end: "16:00",
-      title:
-        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
-    },
-    {
-      avatar: "/assets/daniela.jpg",
-      name: "Daniela Cardoso",
-      start: "16:00",
-      end: "17:00",
-      title:
-        "10 seringas em 1, simplificando o tratamento full face com Sofiderm.",
-    },
-    {
-      avatar: "/assets/diogo.jpg",
-      name: "Diogo Lustosa",
-      start: "17:00",
-      end: "18:00",
-      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
-    },
-  ],
-  [
-    {
-      avatar: "/assets/marcela.jpg",
-      name: "Marcela Espaladori",
-      start: "10:00",
-      end: "11:00",
-      title:
-        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
-    },
-    {
-      avatar: "/assets/daniel.jpg",
-      name: "Daniel Machado",
-      start: "14:00",
-      end: "15:00",
-      title: "Rinomodelação com Sofiderm.",
-    },
-    {
-      avatar: "/assets/amanda.jpg",
-      name: "Amanda Lopes",
-      start: "15:00",
-      end: "16:00",
-      title: "Ultrasom da face usando os preenchedores Sofiderm.",
-    },
-    {
-      avatar: "/assets/fernanda.jpg",
-      name: "Fernanda Zanini",
-      start: "16:00",
-      end: "17:00",
-      title:
-        "Como a reologia do ácido hialurônico garante um melhor resultado.",
-    },
-    {
-      avatar: "/assets/matheus.jpg",
-      name: "Matheus Macedo",
-      start: "17:00",
-      end: "18:00",
-      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
-    },
-  ],
-];
-
-export const availableClasses = [
-  [
-    {
-      avatar: "/assets/daniela.jpg",
-      name: "Daniela Cardoso",
-      start: "15:00",
-      end: "16:00",
-      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
-    },
-    {
-      avatar: "/assets/marcela.jpg",
-      name: "Marcela Espaladori",
-      start: "16:00",
-      end: "17:00",
-      title:
-        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
-    },
-    {
-      avatar: "/assets/matheus.jpg",
-      name: "Matheus Macedo",
-      start: "17:00",
-      end: "18:00",
-      title: "Preenchimento de Têmporas com Sofiderm.",
-    },
-  ],
-  [
-    {
-      avatar: "/assets/marcela.jpg",
-      name: "Marcela Espaladori",
-      start: "10:00",
-      end: "11:00",
-      title:
-        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
-    },
-    {
-      avatar: "/assets/fernanda.jpg",
-      name: "Fernanda Zanini",
-      start: "11:00",
-      end: "12:00",
-      title: "Soluções de harmonização facial para o dia-a-dia clínico.",
-    },
-    {
-      avatar: "/assets/matheus.jpg",
-      name: "Matheus Macedo",
-      start: "15:00",
-      end: "16:00",
-      title: "Volumização e projeção de glúteo com Sofiderm Sub-skin.",
-    },
-    {
-      avatar: "/assets/amanda.jpg",
-      name: "Amanda Lopes",
-      start: "16:00",
-      end: "17:00",
-      title: "Ultrassom da face usando os preenchedores Sofiderm.",
-    },
-    {
-      avatar: "/assets/daniel.jpg",
-      name: "Daniel Machado",
-      start: "17:00",
-      end: "18:00",
-      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
-    },
-  ],
-  [
-    {
       avatar: "/assets/matheus.jpg",
       name: "Matheus Macedo",
       start: "14:00",
@@ -285,6 +178,113 @@ export const availableClasses = [
       end: "12:00",
       title:
         "Harmonização Facial vs Naturalidade, individualizando o tratamento com Sofiderm.",
+    },
+    {
+      avatar: "/assets/daniel.jpg",
+      name: "Daniel Machado",
+      start: "14:00",
+      end: "15:00",
+      title: "Rinomodelação com Sofiderm.",
+    },
+    {
+      avatar: "/assets/amanda.jpg",
+      name: "Amanda Lopes",
+      start: "15:00",
+      end: "16:00",
+      title: "Ultrasom da face usando os preenchedores Sofiderm.",
+    },
+    {
+      avatar: "/assets/fernanda.jpg",
+      name: "Fernanda Zanini",
+      start: "16:00",
+      end: "17:00",
+      title:
+        "Como a reologia do ácido hialurônico garante um melhor resultado.",
+    },
+    {
+      avatar: "/assets/matheus.jpg",
+      name: "Matheus Macedo",
+      start: "17:00",
+      end: "18:00",
+      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
+    },
+  ],
+];
+
+export const availableClasses = [
+  [
+    {
+      avatar: "/assets/matheus.jpg",
+      name: "Matheus Macedo",
+      start: "17:00",
+      end: "18:00",
+      title: "Preenchimento de Têmporas com Sofiderm.",
+    },
+  ],
+  [
+    {
+      avatar: "/assets/marcela.jpg",
+      name: "Marcela Espaladori",
+      start: "10:00",
+      end: "11:00",
+      title:
+        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
+    },
+    {
+      avatar: "/assets/matheus.jpg",
+      name: "Matheus Macedo",
+      start: "15:00",
+      end: "16:00",
+      title: "Volumização e projeção de glúteo com Sofiderm Sub-skin.",
+    },
+    {
+      avatar: "/assets/amanda.jpg",
+      name: "Amanda Lopes",
+      start: "16:00",
+      end: "17:00",
+      title: "Ultrassom da face usando os preenchedores Sofiderm.",
+    },
+    {
+      avatar: "/assets/daniel.jpg",
+      name: "Daniel Machado",
+      start: "17:00",
+      end: "18:00",
+      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
+    },
+  ],
+  [
+    {
+      avatar: "/assets/fernanda.jpg",
+      name: "Fernanda Zanini",
+      start: "15:00",
+      end: "16:00",
+      title:
+        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
+    },
+    {
+      avatar: "/assets/daniela.jpg",
+      name: "Daniela Cardoso",
+      start: "16:00",
+      end: "17:00",
+      title:
+        "10 seringas em 1, simplificando o tratamento full face com Sofiderm.",
+    },
+    {
+      avatar: "/assets/diogo.jpg",
+      name: "Diogo Lustosa",
+      start: "17:00",
+      end: "18:00",
+      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
+    },
+  ],
+  [
+    {
+      avatar: "/assets/marcela.jpg",
+      name: "Marcela Espaladori",
+      start: "10:00",
+      end: "11:00",
+      title:
+        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
     },
     {
       avatar: "/assets/daniel.jpg",
