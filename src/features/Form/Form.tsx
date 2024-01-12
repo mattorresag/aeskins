@@ -50,16 +50,15 @@ function Form() {
       date: availableDates[selectedDate].date,
       class: selectedClass,
     };
-    // axios
-    //   .post(
-    //     "https://hook.us1.make.com/u6xbs57tc3xv4ajnv80h701xbo8gvss4",
-    //     finalData
-    //   )
-    //   .then(() => {
-    //     setHasSent(true);
-    //     setDisabled(false);
-    //   });
-    console.log(finalData)
+    axios
+      .post(
+        "https://hook.us1.make.com/u6xbs57tc3xv4ajnv80h701xbo8gvss4",
+        finalData
+      )
+      .then(() => {
+        setHasSent(true);
+        setDisabled(false);
+      });
   };
 
   return (
