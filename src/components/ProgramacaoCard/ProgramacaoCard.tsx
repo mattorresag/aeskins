@@ -84,13 +84,11 @@ export const ProgramacaoCard = ({
               {start} às {end}
             </p>
           </Flex>
-          {esgotado && (
-            <Flex className="w-full justify-center md:w-fit rounded-3xl pr-3 pl-3 py-1 border-[1px] border-[#F44747]">
-              <p className="text-[#F44747] font-[500] text-[14px] lg:text-[18px] leading-[27px]">
-                Vagas esgotadas
-              </p>
-            </Flex>
-          )}
+          <Flex className="w-full justify-center md:w-fit rounded-3xl pr-3 pl-3 py-1 border-[1px] border-[#F44747]">
+            <p className="text-[#F44747] font-[500] text-[14px] lg:text-[18px] leading-[27px]">
+              Vagas esgotadas
+            </p>
+          </Flex>
         </Flex>
         <p className="text-[20px] lg:text-[24px] text-secondary-pure font-[400]">
           {title}
