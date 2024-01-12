@@ -24,7 +24,7 @@ function Form() {
   const [hasSent, setHasSent] = React.useState(false);
   const [selectedDate, setSelectedDate] = React.useState(0);
   const [selectedClass, setSelectedClass] = React.useState(
-    availableClasses[0][0].title
+    availableClasses[1][0].title
   );
 
   const {
@@ -112,7 +112,7 @@ function Form() {
                   render={({ field }) => (
                     <select
                       {...field}
-                      defaultValue={dates[0].date}
+                      defaultValue={dates[1].date}
                       className="w-[100%] 2xl:text-[16px] bg-white text-[14px] border-b-grey-300 border-b-[1px]"
                       onChange={(e) => {
                         setSelectedDate(

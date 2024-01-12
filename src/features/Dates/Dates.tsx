@@ -329,7 +329,7 @@ export const Dates = () => {
         </Flex>
       </Flex>
       <Flex direction="col" className="gap-2 pr-6  md:pr-0">
-        {programacao[selectedDate]?.map((programacao) => (
+        {programacao?.[selectedDate]?.map((programacao) => (
           <Flex
             key={`${programacao.name} - ${programacao.title} - ${selectedDate} `}
           >
