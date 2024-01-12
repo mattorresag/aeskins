@@ -72,6 +72,7 @@ export const programacao = [
       start: "17:00",
       end: "18:00",
       title: "Preenchimento de Têmporas com Sofiderm.",
+      esgotado: true,
     },
   ],
   [
@@ -80,6 +81,7 @@ export const programacao = [
       name: "Marcela Espaladori",
       start: "10:00",
       end: "11:00",
+      esgotado: true,
       title:
         "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
     },
@@ -119,6 +121,7 @@ export const programacao = [
       name: "Daniel Machado",
       start: "17:00",
       end: "18:00",
+      esgotado: true,
       title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
     },
   ],
@@ -153,6 +156,7 @@ export const programacao = [
       name: "Fernanda Zanini",
       start: "15:00",
       end: "16:00",
+      esgotado: true,
       title:
         "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
     },
@@ -169,6 +173,7 @@ export const programacao = [
       name: "Diogo Lustosa",
       start: "17:00",
       end: "18:00",
+      esgotado: true,
       title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
     },
   ],
@@ -178,6 +183,7 @@ export const programacao = [
       name: "Marcela Espaladori",
       start: "10:00",
       end: "11:00",
+      esgotado: true,
       title:
         "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
     },
@@ -195,6 +201,7 @@ export const programacao = [
       name: "Daniel Machado",
       start: "14:00",
       end: "15:00",
+      esgotado: true,
       title: "Rinomodelação com Sofiderm.",
     },
     {
@@ -224,23 +231,8 @@ export const programacao = [
 
 export const availableClasses = [
   [
-    {
-      avatar: "/assets/matheus.jpg",
-      name: "Matheus Macedo",
-      start: "17:00",
-      end: "18:00",
-      title: "Preenchimento de Têmporas com Sofiderm.",
-    },
   ],
   [
-    {
-      avatar: "/assets/marcela.jpg",
-      name: "Marcela Espaladori",
-      start: "10:00",
-      end: "11:00",
-      title:
-        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
-    },
     {
       avatar: "/assets/matheus.jpg",
       name: "Matheus Macedo",
@@ -255,23 +247,8 @@ export const availableClasses = [
       end: "17:00",
       title: "Ultrassom da face usando os preenchedores Sofiderm.",
     },
-    {
-      avatar: "/assets/daniel.jpg",
-      name: "Daniel Machado",
-      start: "17:00",
-      end: "18:00",
-      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
-    },
   ],
   [
-    {
-      avatar: "/assets/fernanda.jpg",
-      name: "Fernanda Zanini",
-      start: "15:00",
-      end: "16:00",
-      title:
-        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
-    },
     {
       avatar: "/assets/daniela.jpg",
       name: "Daniela Cardoso",
@@ -280,30 +257,9 @@ export const availableClasses = [
       title:
         "10 seringas em 1, simplificando o tratamento full face com Sofiderm.",
     },
-    {
-      avatar: "/assets/diogo.jpg",
-      name: "Diogo Lustosa",
-      start: "17:00",
-      end: "18:00",
-      title: "Tratamento do terço inferior e linha mandibular com Sofiderm.",
-    },
+
   ],
   [
-    {
-      avatar: "/assets/marcela.jpg",
-      name: "Marcela Espaladori",
-      start: "10:00",
-      end: "11:00",
-      title:
-        "Tratamento da região perioral e lábios associando técnicas de preenchimento com Sofiderm.",
-    },
-    {
-      avatar: "/assets/daniel.jpg",
-      name: "Daniel Machado",
-      start: "14:00",
-      end: "15:00",
-      title: "Rinomodelação com Sofiderm.",
-    },
     {
       avatar: "/assets/amanda.jpg",
       name: "Amanda Lopes",
