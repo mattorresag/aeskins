@@ -123,6 +123,7 @@ export const programacao = [
       start: "15:00",
       end: "16:00",
       title: "Volumização e projeção de glúteo com Sofiderm Sub-skin.",
+      esgotado: true,
     },
     {
       avatar: "/assets/amanda.jpg",
@@ -130,6 +131,7 @@ export const programacao = [
       start: "16:00",
       end: "17:00",
       title: "Ultrassom da face usando os preenchedores Sofiderm.",
+      esgotado: true,
     },
     {
       avatar: "/assets/daniel.jpg",
