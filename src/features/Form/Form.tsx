@@ -4,7 +4,7 @@ import { InferType, object, string } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Flex } from "../../components/Flex/Flex";
 import FormTextField from "../../components/TextField/FormTextField";
-import { availableClasses, dates } from "../Dates/Dates";
+import { availableClasses, availableDates } from "../Dates/Dates";
 import axios from "axios";
 
 const schema = object({
@@ -24,7 +24,7 @@ function Form() {
   const [hasSent, setHasSent] = React.useState(false);
   const [selectedDate, setSelectedDate] = React.useState(0);
   const [selectedClass, setSelectedClass] = React.useState(
-    availableClasses[1][0].title
+    availableClasses[0][0].title
   );
 
   const {
@@ -37,7 +37,7 @@ function Form() {
       email: "",
       name: "",
       telefone: "",
-      date: "24 de jan, 2024",
+      date: "25 de jan, 2024",
       class: "Rinomodelação com Sofiderm.",
     },
   });
@@ -47,18 +47,19 @@ function Form() {
     setDisabled(true);
     const finalData = {
       ...data,
-      date: dates[selectedDate].date,
+      date: availableDates[selectedDate].date,
       class: selectedClass,
     };
-    axios
-      .post(
-        "https://hook.us1.make.com/u6xbs57tc3xv4ajnv80h701xbo8gvss4",
-        finalData
-      )
-      .then(() => {
-        setHasSent(true);
-        setDisabled(false);
-      });
+    // axios
+    //   .post(
+    //     "https://hook.us1.make.com/u6xbs57tc3xv4ajnv80h701xbo8gvss4",
+    //     finalData
+    //   )
+    //   .then(() => {
+    //     setHasSent(true);
+    //     setDisabled(false);
+    //   });
+    console.log(finalData)
   };
 
   return (
@@ -112,15 +113,15 @@ function Form() {
                   render={({ field }) => (
                     <select
                       {...field}
-                      defaultValue={dates[1].date}
+                      defaultValue={availableDates[1].date}
                       className="w-[100%] 2xl:text-[16px] bg-white text-[14px] border-b-grey-300 border-b-[1px]"
                       onChange={(e) => {
                         setSelectedDate(
-                          dates.indexOf(dates[parseInt(e.target.value)])
+                          availableDates.indexOf(availableDates[parseInt(e.target.value)])
                         );
                         setSelectedClass(
                           availableClasses[
-                            dates.indexOf(dates[parseInt(e.target.value)])
+                            availableDates.indexOf(availableDates[parseInt(e.target.value)])
                           ][0].title || "Rinomodelação com Sofiderm."
                         );
                         field.onChange(e);
@@ -129,7 +130,7 @@ function Form() {
                       <option disabled selected>
                         Selecione uma data
                       </option>
-                      {dates.map((date, index) => (
+                      {availableDates.map((date, index) => (
                         <option key={index} value={index}>
                           {date.date}
                         </option>

@@ -22,6 +22,21 @@ export const dates = [
   },
 ];
 
+export const availableDates = [
+  {
+    date: "25 de jan, 2024",
+    day: "quinta-feira",
+  },
+  {
+    date: "26 de jan, 2024",
+    day: "sexta-feira",
+  },
+  {
+    date: "27 de jan, 2024",
+    day: "sábado",
+  },
+]
+
 export const programacao = [
   [
     {
@@ -230,8 +245,6 @@ export const programacao = [
 ];
 
 export const availableClasses = [
-  [
-  ],
   [
     {
       avatar: "/assets/matheus.jpg",
