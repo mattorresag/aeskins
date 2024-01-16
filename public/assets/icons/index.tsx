@@ -9,9 +9,14 @@ import MobileInstagram from './mobileInstagram.svg?svgr';
 import MobileLinkedin from './mobileLinkedin.svg?svgr';
 import EmailButton from './emailButton.svg?svgr';
 import PaymentMethods from './paymentMethods.svg?svgr';
-
+import LogoBlack from './logoBlack.svg?svgr';
+import Burger from './burger.svg?svgr';
+import LetterBlack from './letterBlack.svg?svgr';
 
 const rawIcons = {
+  LetterBlack,
+  Burger,
+  LogoBlack,
   PaymentMethods,
   EmailButton,
   MobileFacebook,

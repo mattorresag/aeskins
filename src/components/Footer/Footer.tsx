@@ -171,7 +171,7 @@ export const Footer = (): JSX.Element => {
           </Flex>
         </Flex>
         <Flex
-          className=" lg:mt-12 justify-center lg:justify-between text-center lg:text-start text-[16px] text-white/70 w-full gap-4 px-[5%] min-[1800px]:px-16 min-[1921px]:px-0 items-center flex-col lg:flex-row lg:py-6 py-8"
+          className=" lg:mt-12 justify-center lg:justify-between text-center lg:text-start text-[16px] lg:text-[14px] xl:text-[16px] text-white/70 w-full gap-4 px-[5%] min-[1800px]:px-16 min-[1921px]:px-0 items-center flex-col lg:flex-row lg:py-6 py-8"
         >
           <Flex className="gap-4 flex-col lg:flex-row" align="center">
             <p> R. Nome da rua, Nº - Cidade/UF - CEP 00000-000</p>

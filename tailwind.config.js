@@ -9,6 +9,9 @@ module.exports = {
           pure: "#29223E",
           pure10: "#EAE9EC",
           pureOp10: "rgba(41, 34, 62, 0.1)",
+          pureHony: "#EBFFF6",
+          pureHony10: "#FDFFFF",
+          pureHonyOp10: "rgba(235, 255, 246, 0.10)",
         },
         primary: {
           pure: "#07D767",
@@ -29,8 +32,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Open Sans", "ui-sans-serif", "system-ui"],
-        nunito: ["Nunito Sans", "ui-sans-serif", "system-ui"],
-        source: ["Source Sans 3", "ui-sans-serif", "system-ui"],
         fontWeight: {
           normal: "400",
         },
