@@ -2,114 +2,33 @@ import React from "react";
 import { Flex } from "../Flex/Flex";
 import Link from "next/link";
 import Image from "next/image";
+import Icons from "../../../public/assets/icons";
 export const Footer = (): JSX.Element => {
   return (
     <footer className="static bottom-0 z-50 w-full overflow-hidden">
       <Flex
         direction="col"
-        align="center"
-        justify="center"
-        className=" bg-black dark: bg-black w-full "
+        className="lg:items-center lg:justify-center bg-black dark:bg-black w-full "
       >
         <Flex
-          className="w-full gap-8 lg:gap-14 justify-center  lg:justify-between lg:px-[5%] xl:px-0 items-center flex-col lg:flex-row py-[80px] min-[1921px]:max-w-[1700px] max-w-[1216px]"
-          justify="between"
+          className="relative w-full gap-12 lg:gap-14 justify-center  lg:justify-between px-[5%] min-[1800px]:px-16 min-[1921px]:px-0 items-center flex-col lg:flex-row py-10 lg:py-8"
         >
-          <p className="text-white font-[500] leading-[19px]">©AESKINS2024</p>
-          <Flex className="lg:-mr-[145px]">
-            <Image
-              src="/assets/logogrande.png"
-              width={195}
-              height={120}
-              alt="logo"
-              objectFit="cover"
-            />
+          <Flex
+            className="gap-2 lg:hidden absolute top-1 right-1 cursor-pointer "
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
+            align="center"
+          >
+            <Icons.WhiteChevronUp className='w-[28px] h-[28px]' />
           </Flex>
-          <Flex className="gap-4 flex-col lg:flex-row" align="center">
-            <p className="text-[14px] font-[500] text-white">
-              Acompanhe nas redes
-            </p>
-            <Flex className="gap-4">
-              <Link href="https://www.instagram.com/aeskins.pharma" passHref>
-                <a
-                  className="cursor-pointer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="0.5"
-                      y="0.5"
-                      width="47"
-                      height="47"
-                      rx="23.5"
-                      stroke="white"
-                      stroke-opacity="0.2"
-                    />
-                    <path
-                      d="M24.0047 17.4409C26.1427 17.4409 26.3958 17.4503 27.2366 17.4878C28.018 17.5222 28.44 17.6534 28.7213 17.7628C29.0932 17.9066 29.362 18.0817 29.6402 18.3598C29.9215 18.6411 30.0934 18.9068 30.2372 19.2788C30.3466 19.5601 30.4779 19.9852 30.5123 20.7634C30.5498 21.6073 30.5591 21.8605 30.5591 23.9953C30.5591 26.1332 30.5498 26.3864 30.5123 27.2272C30.4779 28.0086 30.3466 28.4306 30.2372 28.7119C30.0934 29.0838 29.9184 29.3526 29.6402 29.6308C29.3589 29.9121 29.0932 30.084 28.7213 30.2278C28.44 30.3372 28.0149 30.4685 27.2366 30.5028C26.3927 30.5403 26.1395 30.5497 24.0047 30.5497C21.8668 30.5497 21.6136 30.5403 20.7729 30.5028C19.9915 30.4685 19.5695 30.3372 19.2882 30.2278C18.9162 30.084 18.6474 29.909 18.3693 29.6308C18.088 29.3495 17.916 29.0838 17.7723 28.7119C17.6629 28.4306 17.5316 28.0055 17.4972 27.2272C17.4597 26.3833 17.4503 26.1301 17.4503 23.9953C17.4503 21.8574 17.4597 21.6042 17.4972 20.7634C17.5316 19.982 17.6629 19.5601 17.7723 19.2788C17.916 18.9068 18.0911 18.638 18.3693 18.3598C18.6506 18.0785 18.9162 17.9066 19.2882 17.7628C19.5695 17.6534 19.9946 17.5222 20.7729 17.4878C21.6136 17.4503 21.8668 17.4409 24.0047 17.4409ZM24.0047 16C21.8324 16 21.5605 16.0094 20.7072 16.0469C19.8571 16.0844 19.2726 16.2219 18.7662 16.4188C18.238 16.6251 17.791 16.8971 17.3472 17.344C16.9002 17.7878 16.6283 18.2348 16.422 18.7599C16.2251 19.2694 16.0876 19.8508 16.0501 20.7009C16.0126 21.5573 16.0032 21.8293 16.0032 24.0016C16.0032 26.1739 16.0126 26.4458 16.0501 27.2991C16.0876 28.1492 16.2251 28.7337 16.422 29.2401C16.6283 29.7683 16.9002 30.2153 17.3472 30.6591C17.791 31.103 18.238 31.378 18.7631 31.5812C19.2726 31.7781 19.8539 31.9156 20.7041 31.9531C21.5574 31.9906 21.8293 32 24.0016 32C26.1739 32 26.4458 31.9906 27.2991 31.9531C28.1493 31.9156 28.7338 31.7781 29.2401 31.5812C29.7652 31.378 30.2122 31.103 30.656 30.6591C31.0999 30.2153 31.3749 29.7683 31.5781 29.2432C31.775 28.7337 31.9125 28.1524 31.95 27.3022C31.9875 26.4489 31.9969 26.177 31.9969 24.0047C31.9969 21.8324 31.9875 21.5605 31.95 20.7072C31.9125 19.857 31.775 19.2725 31.5781 18.7662C31.3812 18.2348 31.1093 17.7878 30.6623 17.344C30.2185 16.9002 29.7715 16.6251 29.2464 16.422C28.7369 16.225 28.1555 16.0875 27.3054 16.05C26.449 16.0094 26.177 16 24.0047 16Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M24.0047 19.8914C21.7355 19.8914 19.8946 21.7324 19.8946 24.0016C19.8946 26.2708 21.7355 28.1117 24.0047 28.1117C26.2739 28.1117 28.1149 26.2708 28.1149 24.0016C28.1149 21.7324 26.2739 19.8914 24.0047 19.8914ZM24.0047 26.6677C22.5326 26.6677 21.3386 25.4737 21.3386 24.0016C21.3386 22.5294 22.5326 21.3354 24.0047 21.3354C25.4769 21.3354 26.6709 22.5294 26.6709 24.0016C26.6709 25.4737 25.4769 26.6677 24.0047 26.6677Z"
-                      fill="white"
-                    />
-                    <path
-                      d="M29.237 19.7293C29.237 20.2607 28.8056 20.6889 28.2774 20.6889C27.7461 20.6889 27.3178 20.2575 27.3178 19.7293C27.3178 19.198 27.7492 18.7698 28.2774 18.7698C28.8056 18.7698 29.237 19.2011 29.237 19.7293Z"
-                      fill="white"
-                    />
-                  </svg>
-                </a>
-              </Link>
-              <Link href="https://www.youtube.com/@aeskinspharma" passHref>
-                <a
-                  className="cursor-pointer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="0.5"
-                      y="0.5"
-                      width="47"
-                      height="47"
-                      rx="23.5"
-                      stroke="white"
-                      stroke-opacity="0.2"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M32.2438 18.4907C32.5301 18.7789 32.7357 19.1371 32.84 19.5297C33.2258 20.9785 33.2258 24 33.2258 24C33.2258 24 33.2258 27.0215 32.84 28.4703C32.7357 28.8629 32.5301 29.2211 32.2438 29.5093C31.9575 29.7974 31.6006 30.0053 31.2087 30.1121C29.7661 30.5 24 30.5 24 30.5C24 30.5 18.2338 30.5 16.7913 30.1121C16.3994 30.0053 16.0425 29.7974 15.7562 29.5093C15.4699 29.2211 15.2643 28.8629 15.16 28.4703C14.7742 27.0215 14.7742 24 14.7742 24C14.7742 24 14.7742 20.9785 15.16 19.5297C15.2643 19.1371 15.4699 18.7789 15.7562 18.4907C16.0425 18.2026 16.3994 17.9947 16.7913 17.8879C18.2338 17.5 24 17.5 24 17.5C24 17.5 29.7661 17.5 31.2087 17.8879C31.6006 17.9947 31.9575 18.2026 32.2438 18.4907ZM26.9354 24.0006L22.1128 21.257V26.7443L26.9354 24.0006Z"
-                      fill="white"
-                    />
-                  </svg>
-                </a>
-              </Link>
-            </Flex>
-          </Flex>
-        </Flex>
-        <Flex
-          className="gap-4 h-[124px] w-full  z-[2] bg-black dark:bg-black py-1 text-neutral-white font-[500] text-[14px]"
-          align="center"
-          justify="center"
-        >
-          <Flex className="justify-center lg:justify-between min-[1921px]:max-w-[1700px] max-w-[1216px]  px-[4%] lg:px-[5%] xl:px-0 w-full items-center">
-            <div className="hidden lg:flex gap-1 flex-col lg:items-center lg:flex-row text-white text-[14px] font-[500] leading-[21px]"></div>
+          <Icons.LogoGrande className=' h-[120px] w-[178px]' />
+          <Flex direction="col" className="items-end lg:h-[120px]" justify="between">
             <Flex
-              className="gap-2 cursor-pointer"
+              className="gap-2 cursor-pointer hidden lg:flex"
               onClick={() => {
                 window.scrollTo({
                   top: 0,
@@ -121,21 +40,150 @@ export const Footer = (): JSX.Element => {
               <p className="text-white text-[14px] font-[400] leading-[21px]">
                 Voltar ao topo
               </p>
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 28 28"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="28" height="28" rx="14" fill="white" />
-                <path
-                  d="M9 16.5L14 11.5L19 16.5"
-                  stroke="#29223E"
-                  stroke-width="1.5"
-                />
-              </svg>
+              <Icons.WhiteChevronUp className='w-[28px] h-[28px]' />
             </Flex>
+            <Flex className="gap-4  flex-col lg:flex-row" align="center">
+              <Flex className="gap-4">
+                <Link href="https://www.instagram.com/aeskins.pharma" passHref>
+                  <a
+                    className="cursor-pointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Flex className="gap-[6px]" align="center">
+                      <Icons.Instagram className='w-[49px] h-12 hidden lg:block' />
+                      <Icons.MobileInstagram className='w-[49px] h-12 lg:hidden' />
+                      <p className="text-[14px] text-white/70 hidden lg:block">Instagram</p>
+                    </Flex>
+                  </a>
+                </Link>
+                <Link href="https://www.youtube.com/@aeskinspharma" passHref>
+                  <a
+                    className="cursor-pointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Flex className="gap-[6px]" align="center">
+                      <Icons.Facebook className='w-[49px] h-12 hidden lg:block' />
+                      <Icons.MobileFacebook className='w-[49px] h-12 lg:hidden' />
+                      <p className="text-[14px] text-white/70 hidden lg:block">Facebook</p>
+                    </Flex>
+                  </a>
+                </Link>
+                <Link href="https://www.youtube.com/@aeskinspharma" passHref>
+                  <a
+                    className="cursor-pointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Flex className="gap-[6px]" align="center">
+                      <Icons.Linkedin className='w-[49px] h-12 hidden lg:block' />
+                      <Icons.MobileLinkedin className='w-[49px] h-12 lg:hidden' />
+                      <p className="text-[14px] text-white/70 hidden lg:block">LinkedIn</p>
+                    </Flex>
+                  </a>
+                </Link>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Flex>
+        <Flex className="w-full border-y-[1px] border-white/10">
+          <Flex
+            className="flex-col lg:flex-row max-w-[1792px] relative w-full  lg:gap-14 justify-start  lg:justify-between  min-[1800px]:px-0 min-[1921px]:px-0"
+          >
+            <Flex direction="col" className="lg:border-r-[1px] border-b-[1px] border-white/10 gap-8 py-6 lg:py-16 lg:px-20 w-full lg:w-[50%]  justify-start lg:justify-center">
+              <Flex direction="col" className="px-[5%] lg:px-0">
+                <p className="text-[32px] text-white leading-[48px]">FIQUE POR DENTRO DAS NOVIDADES!</p>
+                <p className="text-[16px] text-white/70 leading-[24px]">Cadastre seu e-mail e fique sabendo primeiro de todas as nossas promoções e lançamentos.</p>
+              </Flex>
+              <Flex className="items-center w-full gap-2 px-[5%] lg:px-0">
+                <p className="w-full h-14 px-[14px] py-3 border-b-[1px] border-white/10 text-white/70 text-[16px]">Endereço de e-mail</p>
+                <button >
+                  <Icons.EmailButton className='h-14 w-14' />
+                </button>
+              </Flex>
+            </Flex>
+            <Flex className="flex-col py-8 px-[5%] gap-8 lg:gap-10 lg:flex-row w-full lg:w-[50%] lg:px-20 lg:py-16">
+              <Flex className=" w-full gap-4" direction="col">
+                <Link href="/sobre" passHref>
+                  <a>
+                    <p className="text-[20px] text-white leading-[30px] cursor-pointer">Quem somos</p>
+                  </a>
+                </Link>
+                <Link href="/sobre" passHref>
+                  <a>
+                    <p className="text-[20px] text-white leading-[30px] cursor-pointer">Blogs e Artigos</p>
+                  </a>
+                </Link>
+                <Link href="/sobre" passHref>
+                  <a>
+                    <p className="text-[20px] text-white leading-[30px] cursor-pointer">Depoimentos</p>
+                  </a>
+                </Link>
+                <Link href="/sobre" passHref>
+                  <a>
+                    <p className="text-[20px] text-white leading-[30px] cursor-pointer">Encontre uma clínica</p>
+                  </a>
+                </Link>
+                <Link href="/sobre" passHref>
+                  <a>
+                    <p className="text-[20px] text-white leading-[30px] cursor-pointer">Para profissionais</p>
+                  </a>
+                </Link>
+                <Link href="/sobre" passHref>
+                  <a>
+                    <p className="text-[20px] text-white leading-[30px] cursor-pointer">Community</p>
+                  </a>
+                </Link>
+              </Flex>
+              <Flex className=" w-full gap-6" direction="col">
+
+                <p className="text-[20px] text-white leading-[30px] cursor-pointer">Produtos</p>
+                <Flex direction="col" className="gap-2">
+                  <Link href="/sobre" passHref>
+                    <a>
+                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">Linha x</p>
+                    </a>
+                  </Link>
+                  <Link href="/sobre" passHref>
+                    <a>
+                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">Linha x</p>
+                    </a>
+                  </Link>
+                  <Link href="/sobre" passHref>
+                    <a>
+                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">Linha x</p>
+                    </a>
+                  </Link>
+                  <Link href="/sobre" passHref>
+                    <a>
+                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">Linha x</p>
+                    </a>
+                  </Link>
+                  <Link href="/sobre" passHref>
+                    <a>
+                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">Linha x</p>
+                    </a>
+                  </Link>
+                </Flex>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Flex>
+        <Flex
+          className=" lg:mt-12 justify-center lg:justify-between text-center lg:text-start text-[16px] text-white/70 w-full gap-4 px-[5%] min-[1800px]:px-16 min-[1921px]:px-0 items-center flex-col lg:flex-row lg:py-6 py-8"
+        >
+          <Flex className="gap-4 flex-col lg:flex-row" align="center">
+            <p> R. Nome da rua, Nº - Cidade/UF - CEP 00000-000</p>
+            <p className="lg:hidden">--</p>
+            <p className="hidden lg:block text-white/40">|</p>
+            <p>Termos de Uso</p>
+            <p>•</p>
+            <p>Política de Privacidade</p>
+          </Flex>
+          <Flex className="lg:mt-0 gap-6 mt-14 flex-col lg:flex-row" align="center">
+            <p> Nós aceitamos:</p>
+            <Icons.PaymentMethods className='h-8 w-[166px]' />
           </Flex>
         </Flex>
       </Flex>
