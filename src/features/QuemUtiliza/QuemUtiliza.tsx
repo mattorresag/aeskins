@@ -40,7 +40,7 @@ export const QuemUtiliza = () => {
               <Flex
                 key={index}
                 align='center'
-                className='gap-8'
+                className='gap-8 w-fit'
               >
                 {words}
                 <Flex>
