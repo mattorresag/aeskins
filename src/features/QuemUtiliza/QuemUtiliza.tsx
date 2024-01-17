@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Flex } from '../../components/Flex/Flex'
 import { Carousel } from '../../components/Carousel/Carousel'
 import Icons from '../../../public/assets/icons'
 import { DepoimentosCard } from '../../components/Cards/DepoimentosCard'
-import VideoDialog from '../../components/VideoDialog/VideoDialog'
 
-const words = <p className='text-[64px] font-[300] leading-[83px] lg:text-[80px] leading-[104px]'>Conheça quem utiliza <span className='text-secondary-pure font-[700]'>Aeskins® </span></p>
+const words = <p className='text-[64px] font-[300] leading-[83px] lg:text-[80px] leading-[104px] text-nowrap'>Conheça quem utiliza <span className='text-secondary-pure font-[700]'>Aeskins® </span></p>
 
 const depoimentos = [
   {
