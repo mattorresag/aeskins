@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Header = (): JSX.Element => {
   return (
-    <Flex justify="center" className="w-[100vw] border-b-[1px] border-neutral-pure200">
+    <Flex justify="center" className="w-full border-b-[1px] border-neutral-pure200">
       <Flex
         justify="between"
         align="center"

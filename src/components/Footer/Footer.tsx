@@ -89,7 +89,7 @@ export const Footer = (): JSX.Element => {
         </Flex>
         <Flex className="w-full border-y-[1px] border-white/10">
           <Flex
-            className="flex-col lg:flex-row max-w-[1792px] relative w-full  lg:gap-14 justify-start  lg:justify-between  min-[1800px]:px-0 min-[1921px]:px-0"
+            className="flex-col lg:flex-row max-w-[1792px] relative w-full  lg:gap-0 justify-start  lg:justify-between  min-[1800px]:px-0 min-[1921px]:px-0"
           >
             <Flex direction="col" className="lg:border-r-[1px] border-b-[1px] border-white/10 gap-8 py-6 lg:py-16 lg:px-20 w-full lg:w-[50%]  justify-start lg:justify-center">
               <Flex direction="col" className="px-[5%] lg:px-0">

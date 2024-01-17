@@ -19,29 +19,34 @@ module.exports = {
           pureOp10: "rgba(0, 255, 117, 0.1)",
         },
         neutral: {
-          pure100: "#EFEFF0",
+          pure100: "#F0F0F0",
           pure200: "#DFDFE0",
-          pure300: "#7C7C83",
-          pure400: "#68686E",
+          pure300: "#BABABC",
+          pure400: "#85858C",
           pure500: "#4B4B53",
           pure600: "#313135",
-          pure700: "#19191C",
+          pure700: "#1D1D20",
           pure800: "#0D0D0E",
           pure900: "#040404",
         },
       },
       fontFamily: {
         sans: ["Open Sans", "ui-sans-serif", "system-ui"],
+        metropolis: ["Metropolis", "ui-sans-serif", "system-ui"],
         fontWeight: {
           normal: "400",
         },
       },
+
       backgroundImage: {
         "background-home": "url('/assets/banner.png')",
         "background-homeMobile": "url('/assets/bannerMobile.png')",
+        "background-preenchedores": "url('/assets/preenchedores.png')",
+        "background-preenchedoresMobile":
+          "radial-gradient(602.15% 130.28% at 2.73% 13.33%, rgba(6, 247, 132, 0.10) 0%, rgba(255, 255, 255, 0.00) 47.93%, rgba(6, 247, 132, 0.10) 100%)",
       },
       boxShadow: {
-        form: "0px 4px 24px 0px rgba(207, 214, 219, 0.08)",
+        preenchedores: "0px 16px 32px 0px rgba(0, 0, 0, 0.04)",
       },
     },
   },

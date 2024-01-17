@@ -17,9 +17,9 @@ export const Layout = ({
     <>
       <PageMeta subtitle={subtitle} />
       <Header />
-      <div className="w-full min-h-full overflow-x-hidden overflow-y-auto">
+      <div className="w-full min-h-full relative overflow-x-hidden overflow-y-auto">
         <Flex className="w-full" justify="center" align={align}>
-          <Flex className={"h-full w-full"} direction="col">{children}</Flex>
+          <Flex className={"h-full w-full "} direction="col">{children}</Flex>
         </Flex>
         <Footer />
       </div>
