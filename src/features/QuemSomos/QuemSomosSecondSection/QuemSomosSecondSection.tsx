@@ -4,7 +4,11 @@ import Image from "next/image";
 
 export const QuemSomosSecondSection = () => {
   return (
-    <Flex direction="col" className="lg:py-[120px]  py-8 gap-16" align="center">
+    <Flex
+      direction="col"
+      className="lg:py-[120px]  pb-[137px] pt-8 gap-16"
+      align="center"
+    >
       <Flex className="px-[5%] min-[1440px]:max-w-[1000px] max-w-[800px] w-full gap-8">
         <p className="text-center text-[18px] 2xl:text-[20px] text-secondary-pure font-[300] leading-[27px] 2xl:leading-[30px]">
           A Aeskins Pharmaceutical tem a missão de democratizar a beleza,

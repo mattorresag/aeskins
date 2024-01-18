@@ -36,8 +36,20 @@ import House from "./house.svg?svgr";
 import Email from "./email.svg?svgr";
 import Whatsapp from "./whatsapp.svg?svgr";
 import WhiteArrowRight from "./whiteArrowRight.svg?svgr";
+import Comprometimento from "./comprometimento.svg?svgr";
+import Inovacao from "./inovacao.svg?svgr";
+import Bemestar from "./bemestar.svg?svgr";
+import ComprometimentoMobile from "./comprometimentoMobile.svg?svgr";
+import InovacaoMobile from "./inovacaoMobile.svg?svgr";
+import BemestarMobile from "./bemestarMobile.svg?svgr";
 
 const rawIcons = {
+  BemestarMobile,
+  InovacaoMobile,
+  ComprometimentoMobile,
+  Bemestar,
+  Inovacao,
+  Comprometimento,
   WhiteArrowRight,
   Whatsapp,
   Email,
