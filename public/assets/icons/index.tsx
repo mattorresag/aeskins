@@ -1,39 +1,47 @@
 import withIconStyles from "./wrapper";
-import Facebook from './facebook.svg?svgr';
-import Instagram from './instagram.svg?svgr';
-import Linkedin from './linkedin.svg?svgr';
-import LogoGrande from './logoGrande.svg?svgr';
-import WhiteChevronUp from './whiteChevronUp.svg?svgr';
-import MobileFacebook from './mobileFacebook.svg?svgr';
-import MobileInstagram from './mobileInstagram.svg?svgr';
-import MobileLinkedin from './mobileLinkedin.svg?svgr';
-import EmailButton from './emailButton.svg?svgr';
-import PaymentMethods from './paymentMethods.svg?svgr';
-import LogoBlack from './logoBlack.svg?svgr';
-import Burger from './burger.svg?svgr';
-import LetterBlack from './letterBlack.svg?svgr';
-import CarouselIcon from './carouselIcon.svg?svgr';
-import LetterLine from './letterLine.svg?svgr';
-import Sofiderm from './sofiderm.svg?svgr';
-import SofidermMobile from './sofidermMobile.svg?svgr';
-import ArrowRight from './arrowRight.svg?svgr';
-import Acido from './acido.svg?svgr';
-import Biocompativel from './biocompativel.svg?svgr';
-import Duracao from './duracao.svg?svgr';
-import Particulas from './particulas.svg?svgr';
-import Seguranca from './seguranca.svg?svgr';
-import Volume from './volume.svg?svgr';
-import AcidoMobile from './acido.svg?svgr';
-import BiocompativelMobile from './biocompativelMobile.svg?svgr';
-import DuracaoMobile from './duracaoMobile.svg?svgr';
-import ParticulasMobile from './particulasMobile.svg?svgr';
-import SegurancaMobile from './segurancaMobile.svg?svgr';
-import VolumeMobile from './volumeMobile.svg?svgr';
-import Line from './line.svg?svgr';
-import ChevronLeft from './chevronLeft.svg?svgr';
-import ChevronRight from './chevronRight.svg?svgr';
+import Facebook from "./facebook.svg?svgr";
+import Instagram from "./instagram.svg?svgr";
+import Linkedin from "./linkedin.svg?svgr";
+import LogoGrande from "./logoGrande.svg?svgr";
+import WhiteChevronUp from "./whiteChevronUp.svg?svgr";
+import MobileFacebook from "./mobileFacebook.svg?svgr";
+import MobileInstagram from "./mobileInstagram.svg?svgr";
+import MobileLinkedin from "./mobileLinkedin.svg?svgr";
+import EmailButton from "./emailButton.svg?svgr";
+import PaymentMethods from "./paymentMethods.svg?svgr";
+import LogoBlack from "./logoBlack.svg?svgr";
+import Burger from "./burger.svg?svgr";
+import LetterBlack from "./letterBlack.svg?svgr";
+import CarouselIcon from "./carouselIcon.svg?svgr";
+import LetterLine from "./letterLine.svg?svgr";
+import Sofiderm from "./sofiderm.svg?svgr";
+import SofidermMobile from "./sofidermMobile.svg?svgr";
+import ArrowRight from "./arrowRight.svg?svgr";
+import Acido from "./acido.svg?svgr";
+import Biocompativel from "./biocompativel.svg?svgr";
+import Duracao from "./duracao.svg?svgr";
+import Particulas from "./particulas.svg?svgr";
+import Seguranca from "./seguranca.svg?svgr";
+import Volume from "./volume.svg?svgr";
+import AcidoMobile from "./acido.svg?svgr";
+import BiocompativelMobile from "./biocompativelMobile.svg?svgr";
+import DuracaoMobile from "./duracaoMobile.svg?svgr";
+import ParticulasMobile from "./particulasMobile.svg?svgr";
+import SegurancaMobile from "./segurancaMobile.svg?svgr";
+import VolumeMobile from "./volumeMobile.svg?svgr";
+import Line from "./line.svg?svgr";
+import ChevronLeft from "./chevronLeft.svg?svgr";
+import ChevronRight from "./chevronRight.svg?svgr";
+import House from "./house.svg?svgr";
+import Email from "./email.svg?svgr";
+import Whatsapp from "./whatsapp.svg?svgr";
+import WhiteArrowRight from "./whiteArrowRight.svg?svgr";
 
 const rawIcons = {
+  WhiteArrowRight,
+  Whatsapp,
+  Email,
+  House,
   ChevronRight,
   ChevronLeft,
   Line,

@@ -8,6 +8,7 @@ import { HomeSecondSection } from "../features/Home/HomeSecondSection/HomeSecond
 import { HomeThirdSection } from "../features/Home/HomeThirdSection/HomeThirdSection";
 import { QuemUtiliza } from "../features/QuemUtiliza/QuemUtiliza";
 import { FacaParte } from "../features/Home/FacaParte/FacaParte";
+import { FaleConosco } from "../features/Home/FaleConosco/FaleConosco";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
         <HomeThirdSection />
         <QuemUtiliza />
         <FacaParte />
+        <FaleConosco />
       </Flex>
     </Layout>
   );
