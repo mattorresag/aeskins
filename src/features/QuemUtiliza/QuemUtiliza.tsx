@@ -19,7 +19,7 @@ const depoimentos = [
   },
   {
     src: "/assets/depoimento.png",
-    url: "https://www.youtube.com/watch?v=DXKojYz25Gw",
+    url: "https://www.youtube.com/embed/MOPKWUVKU28?si=CsQKYlXESEcpJJoT",
   },
   {
     src: "/assets/depoimento.png",

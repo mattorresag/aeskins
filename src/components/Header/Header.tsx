@@ -25,23 +25,13 @@ export const Header = (): JSX.Element => {
             className=" gap-12 hidden lg:flex text-[14px] text-secondary-pure"
             align="center"
           >
-            <Flex className="gap-2" align="center">
-              <p>PRODUTOS</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="8"
-                height="4"
-                viewBox="0 0 8 4"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M0 0L4 4L8 0"
-                  fill="#29223E"
-                />
-              </svg>
-            </Flex>
+            <Link passHref href="/produtos">
+              <a>
+                <Flex className="gap-2" align="center">
+                  <p>PRODUTOS</p>
+                </Flex>
+              </a>
+            </Link>
             <Link passHref href="/sobre">
               <a>
                 <p>BLOGS E ARTIGOS</p>
@@ -52,7 +42,7 @@ export const Header = (): JSX.Element => {
                 <p>ENCONTRE UMA CLÍNICA</p>
               </a>
             </Link>
-            <Link passHref href="/sobre">
+            <Link passHref href="/profissionais">
               <a>
                 <p>PARA PROFISSIONAIS</p>
               </a>

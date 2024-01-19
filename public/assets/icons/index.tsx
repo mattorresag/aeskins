@@ -42,8 +42,12 @@ import Bemestar from "./bemestar.svg?svgr";
 import ComprometimentoMobile from "./comprometimentoMobile.svg?svgr";
 import InovacaoMobile from "./inovacaoMobile.svg?svgr";
 import BemestarMobile from "./bemestarMobile.svg?svgr";
+import Wave from "./wave.svg?svgr";
+import Download from "./download.svg?svgr";
 
 const rawIcons = {
+  Download,
+  Wave,
   BemestarMobile,
   InovacaoMobile,
   ComprometimentoMobile,

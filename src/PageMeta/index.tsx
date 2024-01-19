@@ -10,7 +10,7 @@ const PageMeta = ({ subtitle = "Aeskins" }: Props) => {
   const [title, setTitle] = useState<string>("Aeskins");
 
   useEffect(() => {
-    setTitle(subtitle);
+    setTitle(`Aeskins | ${subtitle}`);
   }, [subtitle]);
 
   return (
