@@ -29,6 +29,10 @@ module.exports = {
           pure800: "#0D0D0E",
           pure900: "#040404",
         },
+        status: {
+          open: "rgba(12, 195, 96, 0.1)",
+          closed: "rgba(195, 12, 12, 0.1)",
+        },
       },
       fontFamily: {
         sans: ["Open Sans", "ui-sans-serif", "system-ui"],

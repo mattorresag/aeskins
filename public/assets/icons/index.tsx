@@ -44,8 +44,16 @@ import InovacaoMobile from "./inovacaoMobile.svg?svgr";
 import BemestarMobile from "./bemestarMobile.svg?svgr";
 import Wave from "./wave.svg?svgr";
 import Download from "./download.svg?svgr";
+import BlackSearch from "./blackSearch.svg?svgr";
+import TransparentSearch from "./transparentSearch.svg?svgr";
+import Map from "./map.svg?svgr";
+import MapPin from "./mapPin.svg?svgr";
 
 const rawIcons = {
+  MapPin,
+  Map,
+  TransparentSearch,
+  BlackSearch,
   Download,
   Wave,
   BemestarMobile,
