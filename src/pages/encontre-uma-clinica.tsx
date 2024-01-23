@@ -7,34 +7,35 @@ import { BuscaVazia } from "../features/Clinicas/BuscaVazia";
 import { ClinicaCard } from "../components/Cards/ClinicaCard";
 import { Map } from "../components/GoogleMap/GoogleMap";
 import { Location } from "../utils/types";
+import { useRouter } from "next/router";
 
 const clinicasMap = [
   {
     nome: "Clinica A",
     endereco: "123 Main St, City A",
     lat: "40.7128",
-    long: "-74.0060",
+    lng: "-74.0060",
     status: "aberto",
   },
   {
     nome: "Clinica B",
     endereco: "456 Elm St, City B",
     lat: "34.0522",
-    long: "-118.2437",
+    lng: "-118.2437",
     status: "fechado",
   },
   {
     nome: "Clinica C",
     endereco: "789 Oak St, City C",
     lat: "41.8781",
-    long: "-87.6298",
+    lng: "-87.6298",
     status: "aberto",
   },
   {
     nome: "Clinica D",
     endereco: "101 Pine St, City D",
     lat: "37.7749",
-    long: "-122.4194",
+    lng: "-122.4194",
     status: "fechado",
   },
 ] as const;
@@ -44,7 +45,7 @@ const Clinicas: NextPage = (): JSX.Element => {
 
   const locations = clinicasMap.map((clinica) => ({
     lat: parseFloat(clinica.lat),
-    lng: parseFloat(clinica.long),
+    lng: parseFloat(clinica.lng),
     id: clinica.nome,
   }));
 
@@ -52,8 +53,11 @@ const Clinicas: NextPage = (): JSX.Element => {
     null
   );
 
+  const router = useRouter();
+
   const handleSelectedLocation = (location: Location | null) => {
     setSelectedLocation(location);
+    router.push("#mapa");
   };
 
   return (
@@ -104,16 +108,17 @@ const Clinicas: NextPage = (): JSX.Element => {
                     key={clinica.nome}
                     endereco={clinica.endereco}
                     lat={clinica.lat}
-                    long={clinica.long}
+                    lng={clinica.lng}
                     nome={clinica.nome}
                     status={clinica.status}
+                    handleSelectedLocation={handleSelectedLocation}
                   />
                 ))
               )}
             </Flex>
           </Flex>
         </Flex>
-        <Flex className="lg:w-[50%] w-full lg:h-[975px] h-[446px]">
+        <Flex className="lg:w-[50%] w-full lg:h-[975px] h-[446px]" id="mapa">
           <Map
             style={{
               width: "100%",

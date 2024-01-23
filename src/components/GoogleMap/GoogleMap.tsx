@@ -185,8 +185,8 @@ export const Map = ({
   handleSelectedLocation,
 }: Props) => {
   const [mapCenter, setMapCenter] = useState({
-    lat: -22.903684616088867,
-    lng: -43.181480407714844,
+    lat: 40.7128,
+    lng: -74.006,
   });
 
   const handleMarkerClick = (location: Location) => {

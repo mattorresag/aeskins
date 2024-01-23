@@ -2,21 +2,24 @@ import React from "react";
 import { Flex } from "../Flex/Flex";
 import Image from "next/image";
 import Icons from "../../../public/assets/icons";
+import { Location } from "../../utils/types";
 interface Props {
   nome: string;
   endereco: string;
   lat: string;
-  long: string;
+  lng: string;
   status: "aberto" | "fechado";
   imagem?: string;
+  handleSelectedLocation: (location: Location | null) => void;
 }
 export const ClinicaCard = ({
   endereco,
   imagem,
   lat,
-  long,
+  lng,
   nome,
   status,
+  handleSelectedLocation,
 }: Props): JSX.Element => {
   const statusStyle = `${
     status === "aberto" ? "bg-status-open" : "bg-status-closed"
@@ -54,7 +57,18 @@ export const ClinicaCard = ({
         </Flex>
       </Flex>
       <div className="divider h-0 m-0" />
-      <Flex className="p-4 cursor-pointer" justify="between" align="center">
+      <Flex
+        className="p-4 cursor-pointer"
+        justify="between"
+        onClick={() =>
+          handleSelectedLocation({
+            lat: parseFloat(lat),
+            lng: parseFloat(lng),
+            id: nome,
+          })
+        }
+        align="center"
+      >
         <Flex className="gap-2" align="center">
           <Icons.Map className="w-6 h-6" />
           <p className="text-[12px] font-[600] text-secondary-pure uppercase">
