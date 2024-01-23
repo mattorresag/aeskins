@@ -37,7 +37,7 @@ export const Header = (): JSX.Element => {
                 <p>BLOGS E ARTIGOS</p>
               </a>
             </Link>
-            <Link passHref href="/sobre">
+            <Link passHref href="/encontre-uma-clinica">
               <a>
                 <p>ENCONTRE UMA CLÍNICA</p>
               </a>

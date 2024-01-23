@@ -12,6 +12,7 @@
     "@fontsource/metropolis": "^5.0.7",
     "@fontsource/open-sans": "^5.0.20",
     "@hookform/resolvers": "^3.3.2",
+    "@react-google-maps/api": "^2.19.2",
     "@svgr/webpack": "^8.1.0",
     "axios": "^1.6.5",
     "embla-carousel-react": "^8.0.0-rc19",

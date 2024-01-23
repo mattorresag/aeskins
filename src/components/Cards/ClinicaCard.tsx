@@ -54,7 +54,7 @@ export const ClinicaCard = ({
         </Flex>
       </Flex>
       <div className="divider h-0 m-0" />
-      <Flex className="p-4" justify="between" align="center">
+      <Flex className="p-4 cursor-pointer" justify="between" align="center">
         <Flex className="gap-2" align="center">
           <Icons.Map className="w-6 h-6" />
           <p className="text-[12px] font-[600] text-secondary-pure uppercase">

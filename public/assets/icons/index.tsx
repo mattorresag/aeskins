@@ -48,8 +48,14 @@ import BlackSearch from "./blackSearch.svg?svgr";
 import TransparentSearch from "./transparentSearch.svg?svgr";
 import Map from "./map.svg?svgr";
 import MapPin from "./mapPin.svg?svgr";
+import WhitePhone from "./whitePhone.svg?svgr";
+import WhiteWhatsapp from "./whiteWhatsapp.svg?svgr";
+import WhiteMail from "./whiteMail.svg?svgr";
 
 const rawIcons = {
+  WhiteMail,
+  WhiteWhatsapp,
+  WhitePhone,
   MapPin,
   Map,
   TransparentSearch,

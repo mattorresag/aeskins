@@ -1,10 +1,12 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useState } from "react";
 import { Layout } from "../Layout/Layout";
 import { Flex } from "../components/Flex/Flex";
 import Icons from "../../public/assets/icons";
 import { BuscaVazia } from "../features/Clinicas/BuscaVazia";
 import { ClinicaCard } from "../components/Cards/ClinicaCard";
+import { Map } from "../components/GoogleMap/GoogleMap";
+import { Location } from "../utils/types";
 
 const clinicasMap = [
   {
@@ -39,9 +41,24 @@ const clinicasMap = [
 
 const Clinicas: NextPage = (): JSX.Element => {
   const isEmpty = false;
+
+  const locations = clinicasMap.map((clinica) => ({
+    lat: parseFloat(clinica.lat),
+    lng: parseFloat(clinica.long),
+    id: clinica.nome,
+  }));
+
+  const [selectedLocation, setSelectedLocation] = useState<Location | null>(
+    null
+  );
+
+  const handleSelectedLocation = (location: Location | null) => {
+    setSelectedLocation(location);
+  };
+
   return (
     <Layout subtitle="Encontre uma clínica">
-      <Flex className="w-full">
+      <Flex className="w-full flex-col lg:flex-row gap-8 lg:pb-[100px]">
         <Flex className="justify-center lg:justify-start   w-full lg:w-[50%] py-10 min-[1440px]:pl-[160px] px-[5%] lg:pr-0">
           <Flex
             direction="col"
@@ -75,21 +92,37 @@ const Clinicas: NextPage = (): JSX.Element => {
               </Flex>
             </Flex>
             <div className="divider h-0 m-0" />
-            {isEmpty ? (
-              <BuscaVazia />
-            ) : (
-              clinicasMap.map((clinica) => (
-                <ClinicaCard
-                  key={clinica.nome}
-                  endereco={clinica.endereco}
-                  lat={clinica.lat}
-                  long={clinica.long}
-                  nome={clinica.nome}
-                  status={clinica.status}
-                />
-              ))
-            )}
+            <Flex
+              className="max-h-[732px] overflow-y-auto overflow-x-hidden gap-6"
+              direction="col"
+            >
+              {isEmpty ? (
+                <BuscaVazia />
+              ) : (
+                clinicasMap.map((clinica) => (
+                  <ClinicaCard
+                    key={clinica.nome}
+                    endereco={clinica.endereco}
+                    lat={clinica.lat}
+                    long={clinica.long}
+                    nome={clinica.nome}
+                    status={clinica.status}
+                  />
+                ))
+              )}
+            </Flex>
           </Flex>
+        </Flex>
+        <Flex className="lg:w-[50%] w-full lg:h-[975px] h-[446px]">
+          <Map
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+            selectedLocation={selectedLocation}
+            handleSelectedLocation={handleSelectedLocation}
+            locations={locations}
+          />
         </Flex>
       </Flex>
     </Layout>
