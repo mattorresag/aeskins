@@ -227,16 +227,16 @@ export const Map = ({
             className="bg-white rounded-sm p-6 gap-4 w-[306px]"
           >
             <p className="text-[20px] font-sans font-secondary-pure font-[500] leading-[30px]">
-              Nome da clínica
+              {selectedLocation.nome}
             </p>
             <div className="divider h-0 m-0" />
             <Flex direction="col" className="gap-3">
               <Flex direction="col" className="gap-1">
                 <p className="text-[14px] text-neutral-pure400 font-[500] leading-[17px]">
-                  Segunda à Domingo
+                  {selectedLocation.dias}
                 </p>
                 <p className="text-secondary-pure leading-[24px]">
-                  12:00 - 22:00
+                  {selectedLocation.horaInicio} - {selectedLocation.horaFim}
                 </p>
               </Flex>
               <Flex direction="col" className="gap-1">
@@ -244,7 +244,7 @@ export const Map = ({
                   Especialização
                 </p>
                 <p className="text-secondary-pure leading-[24px]">
-                  Especialização da clínica
+                  {selectedLocation.especializacao}
                 </p>
               </Flex>
               <Flex direction="col" className="gap-1">
@@ -252,7 +252,7 @@ export const Map = ({
                   Endereço
                 </p>
                 <p className="text-secondary-pure leading-[24px]">
-                  Endereço completo
+                  {selectedLocation.endereco}
                 </p>
               </Flex>
             </Flex>

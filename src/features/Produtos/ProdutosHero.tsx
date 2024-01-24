@@ -11,7 +11,7 @@ export const ProdutosHero = (): JSX.Element => {
         background:
           "linear-gradient(179deg, #A8ACB0 1.01%, #A8ACB0 23.09%, #AAAEB3 42.85%, #A6AAAE 57.6%, #A5A8AC 69.14%, #A1A5A8 81.17%, #9FA2A5 85.07%, #9C9EA1 90.04%, #9A9C9E 94.15%, #9A9C9E 99.21%)",
       }}
-      className="  w-full relative pt-10 gap-8 md:gap-20 md:pt-20 lg:py-[140px] min-[1920px]:pl-[295px] lg:px-[5%] min-[1440px]:px-20 justify-center lg:justify-start flex-col lg:flex-row"
+      className="  w-full relative pt-10 gap-8 md:gap-20 md:pt-20 lg:py-[140px] 2xl:pl-[295px] lg:px-[5%] min-[1440px]:px-20 justify-center lg:justify-start flex-col lg:flex-row"
     >
       <Flex className="hidden lg:flex absolute h-full right-0 top-0">
         <Image

@@ -43,10 +43,16 @@ const clinicasMap = [
 const Clinicas: NextPage = (): JSX.Element => {
   const isEmpty = false;
 
-  const locations = clinicasMap.map((clinica) => ({
+  const locations: Location[] = clinicasMap.map((clinica) => ({
     lat: parseFloat(clinica.lat),
     lng: parseFloat(clinica.lng),
     id: clinica.nome,
+    nome: clinica.nome,
+    endereco: clinica.endereco,
+    horaInicio: "08:00",
+    horaFim: "18:00",
+    dias: "Segunda a Sexta",
+    especializacao: "Clínica Geral",
   }));
 
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(

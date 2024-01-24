@@ -110,13 +110,11 @@ export const Footer = (): JSX.Element => {
                   nossas promoções e lançamentos.
                 </p>
               </Flex>
-              <Flex className="items-center w-full gap-2 px-[5%] lg:px-0">
+              <Flex className="cursor-pointer items-center w-full gap-2 px-[5%] lg:px-0">
                 <p className="w-full h-14 px-[14px] py-3 border-b-[1px] border-white/10 text-white/70 text-[16px]">
                   Endereço de e-mail
                 </p>
-                <button>
-                  <Icons.EmailButton className="h-14 w-14" />
-                </button>
+                <Icons.EmailButton className="h-14 w-14" />
               </Flex>
             </Flex>
             <Flex className="flex-col py-8 px-[5%] gap-8 lg:gap-10 lg:flex-row w-full lg:w-[50%] lg:px-20 lg:py-16">
@@ -128,7 +126,7 @@ export const Footer = (): JSX.Element => {
                     </p>
                   </a>
                 </Link>
-                <Link href="/sobre" passHref>
+                <Link href="/blog" passHref>
                   <a>
                     <p className="text-[20px] text-white leading-[30px] cursor-pointer">
                       Blogs e Artigos

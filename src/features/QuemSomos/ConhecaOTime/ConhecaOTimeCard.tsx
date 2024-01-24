@@ -28,7 +28,7 @@ export const ConhecaOTimeCard = ({
       </Flex>
       <Flex
         direction="col"
-        className="w-full min-[1440px]:w-[50%] min-[1440px]:justify-center min-[1440px]:items-center bg-secondary-pure pt-6 pb-20 min-[1440px]:py-[3%] min-[1440px]:px-[3%] min-[1920px]:pt-[120px] min-[1920px]:px-[160px]  px-[5%]"
+        className="w-full min-[1440px]:w-[50%] min-[1440px]:justify-center min-[1440px]:items-center bg-secondary-pure pt-6 pb-20 min-[1440px]:py-[3%] min-[1440px]:px-[3%] 2xl:pt-[120px] 2xl:px-[160px]  px-[5%]"
       >
         <Flex direction="col" className="min-[1440px]:gap-16 gap-8 ">
           <Flex direction="col" className="gap-2">

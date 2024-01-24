@@ -46,6 +46,7 @@ import Wave from "./wave.svg?svgr";
 import Download from "./download.svg?svgr";
 import BlackSearch from "./blackSearch.svg?svgr";
 import TransparentSearch from "./transparentSearch.svg?svgr";
+import TransparentSearchSmall from "./transparentSearchSmall.svg?svgr";
 import Map from "./map.svg?svgr";
 import MapPin from "./mapPin.svg?svgr";
 import WhitePhone from "./whitePhone.svg?svgr";
@@ -53,6 +54,7 @@ import WhiteWhatsapp from "./whiteWhatsapp.svg?svgr";
 import WhiteMail from "./whiteMail.svg?svgr";
 
 const rawIcons = {
+  TransparentSearchSmall,
   WhiteMail,
   WhiteWhatsapp,
   WhitePhone,

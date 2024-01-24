@@ -36,22 +36,19 @@ export const HomeThirdSection = () => {
               </p>
               <Flex
                 align="center"
-                className="hidden min-[1440px]:flex w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
+                className="cursor-pointer hidden min-[1440px]:flex w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
               >
                 <p className="font-[600]">COMPRAR AGORA</p>
-                <button>
-                  <Icons.ArrowRight className="h-6 w-6" />
-                </button>
+                <Icons.ArrowRight className="h-6 w-6" />
               </Flex>
             </Flex>
             <Flex
               align="center"
-              className=" hidden lg:flex min-[1440px]:hidden w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
+              className="cursor-pointer  hidden lg:flex min-[1440px]:hidden w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
             >
               <p className="font-[600]">COMPRAR AGORA</p>
-              <button>
-                <Icons.ArrowRight className="h-6 w-6" />
-              </button>
+
+              <Icons.ArrowRight className="h-6 w-6" />
             </Flex>
             <Preenchedores />
             <Flex
@@ -60,12 +57,11 @@ export const HomeThirdSection = () => {
             >
               <Flex
                 align="center"
-                className="hidden mb-16 max-[1023px]:flex w-full py-2 gap-4 border-b-[1px] border-secondary-pure"
+                className="cursor-pointer hidden mb-16 max-[1023px]:flex w-full py-2 gap-4 border-b-[1px] border-secondary-pure"
               >
                 <p className="font-[600]">COMPRAR AGORA</p>
-                <button>
-                  <Icons.ArrowRight className="h-6 w-6" />
-                </button>
+
+                <Icons.ArrowRight className="h-6 w-6" />
               </Flex>
             </Flex>
             <Flex className="lg:hidden h-[203px] min-[410px]:h-[230px] md:h-[420px]  ">

@@ -32,7 +32,7 @@ export const Header = (): JSX.Element => {
                 </Flex>
               </a>
             </Link>
-            <Link passHref href="/sobre">
+            <Link passHref href="/blog">
               <a>
                 <p>BLOGS E ARTIGOS</p>
               </a>
