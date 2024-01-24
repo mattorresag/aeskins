@@ -1,4 +1,5 @@
 export interface Location {
+  imagem?: string;
   id: string;
   lat: number;
   lng: number;
@@ -8,4 +9,5 @@ export interface Location {
   horaFim: string;
   endereco: string;
   dias: string;
+  status: "aberto" | "fechado";
 }

@@ -4,25 +4,15 @@ import Image from "next/image";
 import Icons from "../../../public/assets/icons";
 import { Location } from "../../utils/types";
 interface Props {
-  nome: string;
-  endereco: string;
-  lat: string;
-  lng: string;
-  status: "aberto" | "fechado";
-  imagem?: string;
+  location: Location;
   handleSelectedLocation: (location: Location | null) => void;
 }
 export const ClinicaCard = ({
-  endereco,
-  imagem,
-  lat,
-  lng,
-  nome,
-  status,
+  location,
   handleSelectedLocation,
 }: Props): JSX.Element => {
   const statusStyle = `${
-    status === "aberto" ? "bg-status-open" : "bg-status-closed"
+    location.status === "aberto" ? "bg-status-open" : "bg-status-closed"
   } py-2 px-3 text-[12px] font-[600] uppercase rounded-3xl h-6 items-center justify-center`;
   return (
     <Flex
@@ -33,8 +23,8 @@ export const ClinicaCard = ({
         <Flex className="flex-col lg:flex-row gap-4 lg:items-center w-full">
           <Flex className="w-20 h-20">
             <Image
-              alt={`${nome} logo`}
-              src={imagem || "/assets/produtoPlaceholder.png"}
+              alt={`${location.nome} logo`}
+              src={location.imagem || "/assets/produtoPlaceholder.png"}
               width={80}
               height={80}
               objectFit="cover"
@@ -42,31 +32,25 @@ export const ClinicaCard = ({
           </Flex>
           <Flex direction="col" className="gap-1">
             <p className="text-[20px] font-[400] leading-[30px] text-secondary-pure">
-              {nome}
+              {location.nome}
             </p>
             <Flex className="gap-1" align="center">
               <Icons.MapPin className="w-[18px] h-[18px]" />
               <p className="text-[14px] font-[400] leading-[21px] text-neutral-pure400">
-                {endereco}
+                {location.endereco}
               </p>
             </Flex>
           </Flex>
         </Flex>
         <Flex className={statusStyle}>
-          <p>{status}</p>
+          <p>{location.status}</p>
         </Flex>
       </Flex>
       <div className="divider h-0 m-0" />
       <Flex
         className="p-4 cursor-pointer"
         justify="between"
-        onClick={() =>
-          handleSelectedLocation({
-            lat: parseFloat(lat),
-            lng: parseFloat(lng),
-            id: nome,
-          })
-        }
+        onClick={() => handleSelectedLocation(location)}
         align="center"
       >
         <Flex className="gap-2" align="center">

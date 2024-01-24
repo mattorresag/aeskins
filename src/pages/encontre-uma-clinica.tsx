@@ -9,43 +9,75 @@ import { Map } from "../components/GoogleMap/GoogleMap";
 import { Location } from "../utils/types";
 import { useRouter } from "next/router";
 
-const clinicasMap = [
+const clinicasMap: Location[] = [
   {
-    nome: "Clinica A",
-    endereco: "123 Main St, City A",
-    lat: "40.7128",
-    lng: "-74.0060",
+    id: "loc1",
+    lat: 40.7128,
+    lng: -74.006,
+    nome: "Central Park Clinic",
+    especializacao: "General Medicine",
+    horaInicio: "08:00",
+    horaFim: "17:00",
+    endereco: "59th to 110th Street, Manhattan, New York, NY 10022",
+    dias: "Monday-Friday",
     status: "aberto",
   },
   {
-    nome: "Clinica B",
-    endereco: "456 Elm St, City B",
-    lat: "34.0522",
-    lng: "-118.2437",
-    status: "fechado",
-  },
-  {
-    nome: "Clinica C",
-    endereco: "789 Oak St, City C",
-    lat: "41.8781",
-    lng: "-87.6298",
+    id: "loc2",
+    lat: 51.5074,
+    lng: -0.1278,
+    nome: "London Health Center",
+    especializacao: "Pediatrics",
+    horaInicio: "09:00",
+    horaFim: "18:00",
+    endereco: "Westminster, London SW1A 0AA, UK",
+    dias: "Monday-Friday",
     status: "aberto",
   },
   {
-    nome: "Clinica D",
-    endereco: "101 Pine St, City D",
-    lat: "37.7749",
-    lng: "-122.4194",
-    status: "fechado",
+    id: "loc3",
+    lat: 48.8566,
+    lng: 2.3522,
+    nome: "Paris Community Hospital",
+    especializacao: "Cardiology",
+    horaInicio: "07:30",
+    horaFim: "16:30",
+    endereco: "3 Rue de la Santé, 75013 Paris, France",
+    dias: "Monday-Friday",
+    status: "aberto",
   },
-] as const;
+  {
+    id: "loc4",
+    lat: 35.6895,
+    lng: 139.6917,
+    nome: "Tokyo Medical Center",
+    especializacao: "Neurology",
+    horaInicio: "08:00",
+    horaFim: "20:00",
+    endereco: "2-5-1 Nishi-Shinjuku, Shinjuku City, Tokyo 160-0023, Japan",
+    dias: "Every day",
+    status: "aberto",
+  },
+  {
+    id: "loc5",
+    lat: -33.8688,
+    lng: 151.2093,
+    nome: "Sydney Health Clinic",
+    especializacao: "Orthopedics",
+    horaInicio: "10:00",
+    horaFim: "19:00",
+    endereco: "1 Macquarie Street, Sydney NSW 2000, Australia",
+    dias: "Monday-Saturday",
+    status: "aberto",
+  },
+];
 
 const Clinicas: NextPage = (): JSX.Element => {
   const isEmpty = false;
 
   const locations: Location[] = clinicasMap.map((clinica) => ({
-    lat: parseFloat(clinica.lat),
-    lng: parseFloat(clinica.lng),
+    lat: clinica.lat,
+    lng: clinica.lng,
     id: clinica.nome,
     nome: clinica.nome,
     endereco: clinica.endereco,
@@ -53,6 +85,7 @@ const Clinicas: NextPage = (): JSX.Element => {
     horaFim: "18:00",
     dias: "Segunda a Sexta",
     especializacao: "Clínica Geral",
+    status: "aberto",
   }));
 
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(
@@ -111,12 +144,8 @@ const Clinicas: NextPage = (): JSX.Element => {
               ) : (
                 clinicasMap.map((clinica) => (
                   <ClinicaCard
+                    location={clinica}
                     key={clinica.nome}
-                    endereco={clinica.endereco}
-                    lat={clinica.lat}
-                    lng={clinica.lng}
-                    nome={clinica.nome}
-                    status={clinica.status}
                     handleSelectedLocation={handleSelectedLocation}
                   />
                 ))
