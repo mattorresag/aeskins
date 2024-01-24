@@ -52,8 +52,10 @@ import MapPin from "./mapPin.svg?svgr";
 import WhitePhone from "./whitePhone.svg?svgr";
 import WhiteWhatsapp from "./whiteWhatsapp.svg?svgr";
 import WhiteMail from "./whiteMail.svg?svgr";
+import LevandoABelezaWave from "./levandoABelezaWave.svg?svgr";
 
 const rawIcons = {
+  LevandoABelezaWave,
   TransparentSearchSmall,
   WhiteMail,
   WhiteWhatsapp,

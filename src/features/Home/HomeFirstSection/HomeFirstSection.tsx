@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
 import useWindowWidth from "../../../hooks/useWindowWidth";
@@ -9,6 +9,11 @@ export const HomeFirstSection = () => {
 
   const windowWidth = useWindowWidth();
 
+  const marginBottom = useMemo(() => {
+    if (windowWidth > 1023) return 0;
+    return windowWidth > 767 ? margin + 50 : margin + 100;
+  }, [windowWidth, margin]);
+
   useEffect(() => {
     if (ref.current) {
       setMargin(ref.current.clientHeight);
@@ -18,7 +23,7 @@ export const HomeFirstSection = () => {
     <Flex
       direction="col"
       style={{
-        marginBottom: windowWidth > 1023 ? 0 : margin - 30,
+        marginBottom,
       }}
       className="lg:mb-0 w-full py-20 lg:px-[5%]  lg:pt-[120px] lg:pb-[240px] xl:px-16 gap-8 lg:gap-14"
       align="center"
@@ -40,11 +45,13 @@ export const HomeFirstSection = () => {
         </Flex>
         <Icons.LetterLine className="w-[281px] h-5" />
       </Flex>
-      <Flex className=" relative max-h-[320px] lg:max-h-full lg:h-[600px] xl:h-[724px] bg-neutral-pure100 w-full max-w-[1792px]">
-        <div className="-bottom-10 -left-[6%] hidden xl:flex absolute bg-[#07D767] h-[184px]  xl:w-[400px] 2xl:w-[693px] mix-blend-multiply" />
+      <Flex className=" relative h-[320px] lg:max-h-full lg:h-[512px]  bg-secondary-pure w-full max-w-[1792px]">
+        <Flex className="absolute top-0 w-full h-full overflow-hidden">
+          <Icons.LevandoABelezaWave className="w-full h-full " />
+        </Flex>
         <Flex
           ref={ref}
-          className="ml-[5%] lg:ml-0 gap-8 w-full lg:max-w-[750px] xl:max-w-[886px] py-6 lg:py-12 px-[5%] h-full lg:h-fit my-[200px] lg:px-12 bg-white lg:my-0 lg:absolute lg:right-20  lg:-bottom-[300px] xl:-bottom-[120px]"
+          className="ml-[5%] z-[10] lg:ml-0 gap-8 w-full lg:max-w-[750px] xl:max-w-[886px] py-6 lg:py-12 px-[5%] h-full lg:h-fit my-[200px] lg:px-12 bg-white lg:my-0 lg:absolute lg:right-20  lg:-bottom-[120px]"
           direction="col"
         >
           <p className="text-[16px] lg:text-[20px] text-secondary-pure lg:font-[300] leading-[24px] lg:leading-[30px]">

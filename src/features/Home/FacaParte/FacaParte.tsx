@@ -78,8 +78,8 @@ export const FacaParte = () => {
           direction="col"
           className="w-full gap-6 lg:w-[calc(50%-16px)] px-[5%] h-[160px] lg:h-[266px] bg-black items-center justify-center"
         >
-          <p className="text-[16px] lg:text-[20px]  text-center text-white leading-[24px] lg:leading-[30px]">
-            Venha fazer parte da comunidade você também!
+          <p className="text-[24px] lg:text-[32px]  text-center text-white leading-[40px] lg:leading-[48px]">
+            PARA PROFISSIONAIS
           </p>
           <button className="bg-white text-black/87 py-2 h-12 px-4">
             <Flex className="justify-between items-center gap-4">
