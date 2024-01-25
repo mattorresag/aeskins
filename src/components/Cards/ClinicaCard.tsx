@@ -34,8 +34,10 @@ export const ClinicaCard = ({
             <p className="text-[20px] font-[400] leading-[30px] text-secondary-pure">
               {location.nome}
             </p>
-            <Flex className="gap-1" align="center">
-              <Icons.MapPin className="w-[18px] h-[18px]" />
+            <Flex className="gap-2" align="center">
+              <Flex className="w-fit">
+                <Icons.MapPin className="w-[18px] h-[18px]" />
+              </Flex>
               <p className="text-[14px] font-[400] leading-[21px] text-neutral-pure400">
                 {location.endereco}
               </p>
