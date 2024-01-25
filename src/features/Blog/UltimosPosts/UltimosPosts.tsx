@@ -63,14 +63,14 @@ export const UltimosPosts = (): JSX.Element => {
         className="gap-2 pb-4 lg:pb-8 border-b-[1px] border-secondary-pure"
         direction="col"
       >
-        <p className="text-[12px] text-neutral-pure400 font-[600] leading-[14px] uppercase 2xl:pl-[160px] px-[5%] min-[1440px]:px-20">
+        <p className="text-[12px] text-neutral-pure400 font-[600] leading-[14px] uppercase 2xl:pl-[160px] px-[5%] xl:px-20">
           BLOGS E ARTIGOS
         </p>
         <Flex
           justify="between"
-          className="w-full gap-2 flex-col lg:flex-row lg:items-center 2xl:px-[160px] px-[5%] min-[1440px]:px-20"
+          className="w-full gap-2 flex-col lg:flex-row lg:items-center 2xl:px-[160px] px-[5%] xl:px-20"
         >
-          <p className="text-[32px] lg:text-[40px] lg:tracking-[2px] text-secondary-pure leading-[48px] lg:leading-[52px] uppercase font-[300]">
+          <p className="text-[32px]  lg:text-[40px] lg:tracking-[2px] text-secondary-pure leading-[48px] lg:leading-[52px] uppercase font-[300]">
             últimas postagens
           </p>
           <Flex
@@ -109,7 +109,7 @@ export const UltimosPosts = (): JSX.Element => {
       `,
         }}
         justify="center"
-        className="grid gap-8  bg-white 2xl:px-[160px] px-[5%] min-[1440px]:px-20"
+        className="grid gap-8  bg-white 2xl:px-[160px] px-[5%] xl:px-20"
       >
         {mockedPosts.map((post, index) => {
           return (

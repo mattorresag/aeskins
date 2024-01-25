@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
 import useWindowWidth from "../../../hooks/useWindowWidth";
+import Link from "next/link";
 
 export const HomeFirstSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -72,14 +73,18 @@ export const HomeFirstSection = () => {
             resultados e maior satisfação do tratamento.
             <br />
           </p>
-          <Flex
-            align="center"
-            justify="between"
-            className="cursor-pointer lg:max-w-[277px] w-full border-b-[1px] border-secondary-pure"
-          >
-            <p className="font-[600]">SOBRE A AESKINS</p>
-            <Icons.EmailButton className="h-14 w-14" />
-          </Flex>
+          <Link href="/quem-somos" passHref>
+            <a>
+              <Flex
+                align="center"
+                justify="between"
+                className="cursor-pointer lg:max-w-[277px] w-full border-b-[1px] border-secondary-pure"
+              >
+                <p className="font-[600]">SOBRE A AESKINS</p>
+                <Icons.EmailButton className="h-14 w-14" />
+              </Flex>
+            </a>
+          </Link>
         </Flex>
       </Flex>
     </Flex>

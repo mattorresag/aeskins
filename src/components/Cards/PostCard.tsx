@@ -22,17 +22,19 @@ export const PostCard = ({
   return (
     <Flex className="w-full lg:w-[calc(50%-32px)] gap-4" direction="col">
       <Flex className="gap-6" direction="col">
-        <Flex className="lg:h-[428px] h-[264px]">
-          <Image
-            src={image || "/assets/produtoPlaceholder.png"}
-            objectFit="cover"
-            width={1000}
-            height={1000}
-            alt="title"
-            quality={100}
-            priority
-          />
+        <Flex direction="col" className="w-full ">
+          <div className="relative w-full h-full  pt-[54.5%] ">
+            <Image
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src={image || "/assets/produtoPlaceholder.png"}
+              alt={title}
+              layout="fill"
+              quality={100}
+              priority
+            />
+          </div>
         </Flex>
+
         <p className="text-[24px] text-secondary-pure leading-[29px]">
           {title}
         </p>

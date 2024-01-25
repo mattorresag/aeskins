@@ -28,12 +28,12 @@ export const BlogPostCard = ({
           priority
         />
       </Flex>
-      <Flex direction="col" className="gap-4">
+      <Flex direction="col" className="gap-4" style={{ height: "150px" }}>
         <Flex direction="col" className="gap-2">
           <p className="text-[12px] text-neutral-pure400 font-[600] leading-[14px] uppercase">
             {date}
           </p>
-          <p className="text-[20px] text-secondary-pure  leading-[30px]">
+          <p className="line-clamp-1 text-[20px] text-secondary-pure  leading-[30px]">
             {title}
           </p>
         </Flex>

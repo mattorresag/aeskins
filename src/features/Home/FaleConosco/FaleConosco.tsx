@@ -32,7 +32,7 @@ export const FaleConosco = () => {
         >
           <Flex
             justify="between"
-            className="w-full gap-8 flex-col h-full min-[1440px]:flex-row "
+            className="w-full gap-8 flex-col h-full xl:flex-row "
           >
             <Flex direction="col" className="gap-1 max-w-[477px]">
               <Flex direction="col" className="gap-2">
@@ -41,7 +41,7 @@ export const FaleConosco = () => {
                   VISITE-NOS
                 </p>
               </Flex>
-              <p className="min-[1440px]:text-[14px] 2xl:text-[16px] text-[16px] text-neutral-pure500 leading-[24px]">
+              <p className="xl:text-[14px] 2xl:text-[16px] text-[16px] text-neutral-pure500 leading-[24px]">
                 PARANA, NUMERO: 107, SALA 30 ANDAR 2, CHACARA DO SOLAR I
                 (FAZENDINHA) - SANTANA DE PARNAÍBA, SP 06530-025
               </p>
@@ -53,7 +53,7 @@ export const FaleConosco = () => {
                   CONTATO
                 </p>
               </Flex>
-              <p className="min-[1440px]:text-[14px] 2xl:text-[16px] text-[16px] text-neutral-pure500 leading-[24px]">
+              <p className="xl:text-[14px] 2xl:text-[16px] text-[16px] text-neutral-pure500 leading-[24px]">
                 0800 883 6193
               </p>
             </Flex>
@@ -64,11 +64,11 @@ export const FaleConosco = () => {
                   E-MAIL
                 </p>
               </Flex>
-              <p className="min-[1440px]:text-[14px] 2xl:text-[16px] text-[16px] text-neutral-pure500 leading-[24px]">
+              <p className="xl:text-[14px] 2xl:text-[16px] text-[16px] text-neutral-pure500 leading-[24px]">
                 Aeskins@example.com
               </p>
             </Flex>
-            <button className="min-[1440px]:w-fit w-full py-2 px-6 h-14 min-[1440px]:h-[101px] rounded-none bg-secondary-pure text-white text-[16px] font-[600]">
+            <button className="xl:w-fit w-full py-2 px-6 h-14 xl:h-[101px] rounded-none bg-secondary-pure text-white text-[16px] font-[600]">
               <Flex className="gap-2 items-center justify-between">
                 <p>ENTRAR EM CONTATO</p>{" "}
                 <Icons.WhiteArrowRight className="w-6 h-6" />

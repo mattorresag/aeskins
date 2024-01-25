@@ -15,7 +15,7 @@ export const HomeThirdSection = () => {
     bg-no-repeat
     w-full
     lg:h-[770px]
-    min-[1440px]:h-[630px]
+    xl:h-[630px]
     min-[1921px]:justify-center
     bg-center  lg:px-[160px] pt-16 lg:pt-[88px]  lg:pb-[174px]"
       >
@@ -36,7 +36,7 @@ export const HomeThirdSection = () => {
               </p>
               <Flex
                 align="center"
-                className="cursor-pointer hidden min-[1440px]:flex w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
+                className="cursor-pointer hidden xl:flex w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
               >
                 <p className="font-[600]">COMPRAR AGORA</p>
                 <Icons.ArrowRight className="h-6 w-6" />
@@ -44,7 +44,7 @@ export const HomeThirdSection = () => {
             </Flex>
             <Flex
               align="center"
-              className="cursor-pointer  hidden lg:flex min-[1440px]:hidden w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
+              className="cursor-pointer  hidden lg:flex xl:hidden w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
             >
               <p className="font-[600]">COMPRAR AGORA</p>
 

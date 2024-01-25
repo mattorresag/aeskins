@@ -1,9 +1,9 @@
 import React from "react";
 import { Flex } from "../../components/Flex/Flex";
 import { Carousel } from "../../components/Carousel/Carousel";
-import Icons from "../../../public/assets/icons";
 import { DepoimentosCard } from "../../components/Cards/DepoimentosCard";
 import { WordsCarousel } from "../../components/Carousel/WordsCarousel/WordsCarousel";
+import VideoDialog from "../../components/VideoDialog/VideoDialog";
 
 const words = (
   <p className="text-[64px] font-[300] leading-[83px] lg:text-[80px] lg:leading-[104px] text-nowrap">
@@ -36,6 +36,9 @@ const depoimentos = [
 ];
 
 export const QuemUtiliza = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [videoUrl, setVideoUrl] = React.useState("");
+
   return (
     <>
       <Flex
@@ -57,7 +60,14 @@ export const QuemUtiliza = () => {
           >
             <Flex className=" w-full pl-[5%] lg:pl-[160px] [&>*:last-child]:mr-8 gap-2 lg:gap-6 ">
               {depoimentos.map((depoimento, index) => (
-                <Flex className="w-full" key={index}>
+                <Flex
+                  className="w-full"
+                  key={index}
+                  onClick={() => {
+                    setVideoUrl(depoimento.url);
+                    setIsModalOpen((oldState) => !oldState);
+                  }}
+                >
                   <DepoimentosCard src={depoimento.src} url={depoimento.url} />
                 </Flex>
               ))}
@@ -65,6 +75,13 @@ export const QuemUtiliza = () => {
           </Carousel>
         </Flex>
       </Flex>
+      {videoUrl && (
+        <VideoDialog
+          url={videoUrl}
+          isModalOpen={isModalOpen}
+          handleClose={() => setIsModalOpen((oldState) => !oldState)}
+        />
+      )}
     </>
   );
 };

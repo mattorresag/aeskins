@@ -89,7 +89,7 @@ export const BlogHero = (): JSX.Element => {
           />
         ))}
       </Flex>
-      <Flex className="w-full gap-2 absolute bottom-4 lg:bottom-6 2xl:pl-[160px] px-[5%] min-[1440px]:px-20">
+      <Flex className="w-full gap-2 absolute bottom-4 lg:bottom-6 2xl:pl-[160px] px-[5%] xl:px-20">
         {Array.from({ length: mockedCards.length }, (_, index) => (
           <div
             key={index}

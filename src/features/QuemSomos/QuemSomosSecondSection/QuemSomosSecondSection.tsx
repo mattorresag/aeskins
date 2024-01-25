@@ -9,8 +9,8 @@ export const QuemSomosSecondSection = () => {
       className="lg:py-[120px]  pb-[137px] pt-8 gap-16"
       align="center"
     >
-      <Flex className="px-[5%] min-[1440px]:max-w-[1000px] max-w-[800px] w-full gap-8">
-        <p className="text-center text-[18px] 2xl:text-[20px] text-secondary-pure font-[300] leading-[27px] 2xl:leading-[30px]">
+      <Flex className="px-[5%] lg:px-0 xl:max-w-[1000px] max-w-[800px] w-full gap-8">
+        <p className="text-center  text-[18px] 2xl:text-[20px] text-secondary-pure font-[300] leading-[27px] 2xl:leading-[30px]">
           A Aeskins Pharmaceutical tem a missão de democratizar a beleza,
           colocando nossos clientes em primeiro lugar.
           <br />
@@ -33,38 +33,41 @@ export const QuemSomosSecondSection = () => {
       <Flex
         direction="col"
         align="center"
-        className="lg:px-[5%] gap-8 lg:gap-16"
+        className="lg:px-[5%] 2xl:px-[2%] gap-8 lg:gap-16 w-full"
       >
-        <Flex className="lg:gap-8 gap-[6px] h-[200px] lg:h-[600px] min-[1440px]:h-[884px] w-full">
-          <Image
-            className="object-cover"
-            src="/assets/quemsomos1.png"
-            width={884}
-            height={884}
-            alt="Quem somos 1"
-            quality={100}
-            priority
-          />
-          <Image
-            className="object-cover"
-            src="/assets/quemsomos2.png"
-            width={884}
-            height={884}
-            alt="Quem somos 2"
-            quality={100}
-            priority
-          />
-          <Image
-            className="object-cover"
-            src="/assets/quemsomos3.png"
-            width={884}
-            height={884}
-            alt="Quem somos 3"
-            quality={100}
-            priority
-          />
+        <Flex className="lg:gap-8 gap-[6px] w-full">
+          <div className="relative w-full h-full  pt-[46.5%] ">
+            <Image
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src={"/assets/quemsomos1.png"}
+              alt={"Quem somos 1"}
+              layout="fill"
+              quality={100}
+              priority
+            />
+          </div>
+          <div className="relative w-full h-full  pt-[46.5%] ">
+            <Image
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src={"/assets/quemsomos2.png"}
+              alt={"Quem somos 2"}
+              layout="fill"
+              quality={100}
+              priority
+            />
+          </div>
+          <div className="relative w-full h-full  pt-[46.5%] ">
+            <Image
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src={"/assets/quemsomos3.png"}
+              alt={"Quem somos 3"}
+              layout="fill"
+              quality={100}
+              priority
+            />
+          </div>
         </Flex>
-        <Flex className="px-[5%] min-[1440px]:max-w-[696px] max-w-[500px] w-full gap-8">
+        <Flex className="px-[5%] lg:px-0 xl:max-w-[696px] max-w-[500px] w-full gap-8">
           <p className="text-center text-[18px] 2xl:text-[20px] text-secondary-pure font-[300] leading-[27px] 2xl:leading-[30px]">
             Acreditamos que a beleza vai além da estética superficial. Nossa
             missão é promover não apenas uma transformação visual, mas também

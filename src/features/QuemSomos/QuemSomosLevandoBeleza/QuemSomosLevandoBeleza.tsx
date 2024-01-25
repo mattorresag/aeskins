@@ -7,7 +7,7 @@ export const QuemSomosLevandoBeleza = () => {
   return (
     <Flex direction="col">
       <Flex className="flex-col lg:flex-row w-full ">
-        <Flex className="w-full lg:w-[50%] h-[160px]  lg:h-[436px]">
+        <Flex className="hidden lg:flex w-full lg:w-[50%] h-[160px]  lg:h-[436px]">
           <Image
             className="object-cover"
             src="/assets/levandoBeleza.png"
@@ -18,23 +18,37 @@ export const QuemSomosLevandoBeleza = () => {
             priority
           />
         </Flex>
+        <Flex className="lg:hidden w-full h-full">
+          <div className="relative w-full h-full  pt-[44.5%] ">
+            <Image
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src={"/assets/levandoBeleza.png"}
+              alt={"Quem somos 3"}
+              layout="fill"
+              quality={100}
+              priority
+            />
+          </div>
+        </Flex>
         <Flex
-          className="bg-secondary-pure py-8 w-full lg:w-[50%] px-[5%] min-[1921px]:justify-start lg:justify-center"
+          className="bg-secondary-pure py-8 w-full lg:w-[50%] px-[5%] min-[1921px]:justify-start "
           align="center"
         >
-          <Flex direction="col" className="gap-3">
-            <p className="text-[12px] lg:text-[14px] lg:leading-[17px] leading-[14px] font-[600] text-white/90">
-              NOSSA CULTURA
-            </p>
-            <p className="uppercase text-[32px] lg:text-[56px] leading-[48px] lg:tracking-[2px] lg:leading-[73px] font-[300] text-white">
-              levando a beleza
-              <br className="lg:hidden min-[1921px]:block" /> ainda mais longe
-            </p>
+          <Flex direction="col">
+            <Flex direction="col" className="gap-3 w-full">
+              <p className="text-[12px] lg:text-[14px] lg:leading-[17px] leading-[14px] font-[600] text-white/90">
+                NOSSA CULTURA
+              </p>
+              <p className="uppercase text-[32px] lg:text-[56px] leading-[48px] lg:tracking-[2px] lg:leading-[73px] font-[300] text-white">
+                levando a beleza
+                <br className="hidden xl:block" /> ainda mais longe
+              </p>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
       <Flex
-        className="flex-col min-[1440px]:px-16 lg:py-16 py-12 2xl:px-[160px] px-[5%]"
+        className="flex-col xl:px-16 lg:py-16 py-12 2xl:px-[160px] px-[5%]"
         style={{
           background:
             "radial-gradient(602.15% 130.28% at 2.73% 13.33%, rgba(6, 247, 132, 0.10) 0%, rgba(255, 255, 255, 0.00) 47.93%, rgba(6, 247, 132, 0.10) 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%), #F0F0F0",
@@ -42,7 +56,7 @@ export const QuemSomosLevandoBeleza = () => {
       >
         <Flex className="pb-8 lg:py-8 border-b-[1px] border-black/10 lg:items-center  gap-6 flex-col lg:flex-row justify-start lg:justify-between w-full">
           <Icons.InovacaoMobile className="w-10 h-10 lg:hidden" />
-          <p className="lg:basis-1/3 text-[32px] lg:text-[28px] min-[1440px]:text-[40px] min-[1440px]:leading-[52px] lg:tracking-[2px] leading-[48px] uppercase text-secondary-pure">
+          <p className="lg:basis-1/3 text-[32px] lg:text-[28px] xl:text-[40px] xl:leading-[52px] lg:tracking-[2px] leading-[48px] uppercase text-secondary-pure">
             Inovação
           </p>
           <Icons.Inovacao className="w-fit hidden lg:block w-20 h-20" />
@@ -55,7 +69,7 @@ export const QuemSomosLevandoBeleza = () => {
         </Flex>
         <Flex className="py-8 border-b-[1px] border-black/10 lg:items-center  gap-6 flex-col lg:flex-row justify-start lg:justify-between w-full">
           <Icons.ComprometimentoMobile className="w-10 h-10 lg:hidden" />
-          <p className="lg:basis-1/3 text-[32px] lg:text-[28px] min-[1440px]:text-[40px] min-[1440px]:leading-[52px] lg:tracking-[2px] leading-[48px] uppercase text-secondary-pure">
+          <p className="lg:basis-1/3 text-[32px] lg:text-[28px] xl:text-[40px] xl:leading-[52px] lg:tracking-[2px] leading-[48px] uppercase text-secondary-pure">
             COMPROMETIMENTO
           </p>
           <Icons.Comprometimento className="w-fit hidden lg:block w-20 h-20" />
@@ -69,7 +83,7 @@ export const QuemSomosLevandoBeleza = () => {
         </Flex>
         <Flex className="py-8  lg:items-center  gap-6 flex-col lg:flex-row justify-start lg:justify-between w-full">
           <Icons.BemestarMobile className="w-10 h-10 lg:hidden" />
-          <p className="lg:basis-1/3 text-[32px] lg:text-[28px] min-[1440px]:text-[40px] min-[1440px]:leading-[52px] lg:tracking-[2px] leading-[48px] uppercase text-secondary-pure">
+          <p className="lg:basis-1/3 text-[32px] lg:text-[28px] xl:text-[40px] xl:leading-[52px] lg:tracking-[2px] leading-[48px] uppercase text-secondary-pure">
             Bem-Estar
           </p>
           <Icons.Bemestar className="w-fit hidden lg:block w-20 h-20" />

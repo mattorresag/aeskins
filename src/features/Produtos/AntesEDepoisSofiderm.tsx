@@ -65,15 +65,18 @@ export const AntesEDepoisSofiderm = (): JSX.Element => {
           >
             <Flex className=" w-full pl-[5%] lg:pl-[160px] [&>*:last-child]:mr-8 gap-4 lg:gap-8 ">
               {images.map((image, index) => (
-                <Flex className="w-full" key={index}>
-                  <Flex className="lg:w-[644px] lg:h-[484px] w-[304px] h-[248px]">
-                    <Image
-                      src={image.src}
-                      height={484}
-                      width={684}
-                      objectFit="cover"
-                      alt="Quem utiliza"
-                    />
+                <Flex className="w-full h-full" key={index}>
+                  <Flex className="w-[304px] lg:w-[644px] h-full ">
+                    <div className="relative w-full h-full pt-[75%] ">
+                      <Image
+                        className="absolute top-0 left-0 w-full h-full object-cover"
+                        src={image.src}
+                        alt={`Antes e depois ${index}`}
+                        layout="fill"
+                        quality={100}
+                        priority
+                      />
+                    </div>
                   </Flex>
                 </Flex>
               ))}

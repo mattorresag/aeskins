@@ -1,31 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
+import { Modal } from "../Modal/SideModal";
 
 interface Props {
-  id: string
-  url: string
+  url: string;
+  isModalOpen: boolean;
+  handleClose: () => void;
 }
 
-export default function VideoDialog({ id, url }: Props) {
-
+export default function VideoDialog({ handleClose, url, isModalOpen }: Props) {
   return (
-    <dialog id={id} className="modal modal-middle">
-      <div className="modal-box overflow-hidden  max-w-none lg:w-[70vw] w-[90vw] h-[50vh] lg:h-[70vh] rounded-md  ">
-
-        <div className="mt-2 w-full h-full">
-          <iframe
-            className="w-full h-full"
-            src={url}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          >
-
-          </iframe>
-        </div>
-      </div>
-      <form method="dialog" className="modal-backdrop">
-        <button>close</button>
-      </form>
-
-    </dialog>
+    <Modal isOpen={isModalOpen} handleClose={handleClose}>
+      <iframe
+        className="w-full h-full"
+        src={url}
+        title="YouTube video player"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      ></iframe>
+    </Modal>
   );
 }

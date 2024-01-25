@@ -102,7 +102,7 @@ const Clinicas: NextPage = (): JSX.Element => {
   return (
     <Layout subtitle="Encontre uma clínica" url="encontre-uma-clinica">
       <Flex className="w-full flex-col lg:flex-row gap-8 lg:pb-[100px]">
-        <Flex className="justify-center lg:justify-start   w-full lg:w-[50%] py-10 min-[1440px]:pl-[160px] px-[5%] lg:pr-0">
+        <Flex className="justify-center lg:justify-start   w-full lg:w-[50%] py-10 xl:pl-[160px] px-[5%] lg:pr-0">
           <Flex
             direction="col"
             style={{

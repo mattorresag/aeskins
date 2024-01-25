@@ -119,7 +119,7 @@ export const Footer = (): JSX.Element => {
             </Flex>
             <Flex className="flex-col py-8 px-[5%] gap-8 lg:gap-10 lg:flex-row w-full lg:w-[50%] lg:px-20 lg:py-16">
               <Flex className=" w-full gap-4" direction="col">
-                <Link href="/sobre" passHref>
+                <Link href="/quem-somos" passHref>
                   <a>
                     <p className="text-[20px] text-white leading-[30px] cursor-pointer">
                       Quem somos
@@ -133,7 +133,7 @@ export const Footer = (): JSX.Element => {
                     </p>
                   </a>
                 </Link>
-                <Link href="/sobre" passHref>
+                <Link href="/quem-somos" passHref>
                   <a>
                     <p className="text-[20px] text-white leading-[30px] cursor-pointer">
                       Depoimentos
@@ -167,35 +167,35 @@ export const Footer = (): JSX.Element => {
                   Produtos
                 </p>
                 <Flex direction="col" className="gap-2">
-                  <Link href="/sobre" passHref>
+                  <Link href="/quem-somos" passHref>
                     <a>
                       <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
                         Linha x
                       </p>
                     </a>
                   </Link>
-                  <Link href="/sobre" passHref>
+                  <Link href="/quem-somos" passHref>
                     <a>
                       <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
                         Linha x
                       </p>
                     </a>
                   </Link>
-                  <Link href="/sobre" passHref>
+                  <Link href="/quem-somos" passHref>
                     <a>
                       <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
                         Linha x
                       </p>
                     </a>
                   </Link>
-                  <Link href="/sobre" passHref>
+                  <Link href="/quem-somos" passHref>
                     <a>
                       <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
                         Linha x
                       </p>
                     </a>
                   </Link>
-                  <Link href="/sobre" passHref>
+                  <Link href="/quem-somos" passHref>
                     <a>
                       <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
                         Linha x

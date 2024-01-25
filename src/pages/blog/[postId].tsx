@@ -9,17 +9,17 @@ interface Props {
 const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
   return (
     <Layout subtitle={`Blog Post ${postId}`} url={`blog/${postId}`}>
-      <Flex className="lg:py-[62px] gap-[5%] pb-20 ">
+      <Flex className="lg:py-[62px] pb-20 gap-20">
         <Flex
           direction="col"
-          className="2xl:pl-[160px] pl-[5%] min-[1440pl]:pl-20 hidden lg:flex py-6 gap-6"
+          className="2xl:pl-[160px] pl-[5%] xl:pl-20 hidden lg:flex py-6 gap-6 w-[327px] 2xl:w-[407px]"
         >
           <Flex direction="col" className="gap-2">
             <p className="text-[14px] font-[600] text-secondary-pure leading-[17px]">
               Publicado em
             </p>
-            <p className="text-[18px] font-[300] text-secondary-pure leading-[27px]">
-              TROCAR POR DATA
+            <p className="text-[18px] font-[400] text-secondary-pure leading-[27px]">
+              7 de Janeiro, 2024
             </p>
           </Flex>
           <div className="divider h-0 m-0 bg-black/10" />
@@ -37,8 +37,8 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
                   src="/assets/blogPlaceholder.png"
                 />
               </Flex>
-              <p className="text-[18px] font-[300] text-secondary-pure leading-[27px]">
-                TROCAR POR NOME
+              <p className="text-[18px] font-[400] text-secondary-pure leading-[27px]">
+                Mariana Barbosa
               </p>
             </Flex>
           </Flex>
@@ -46,7 +46,7 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
         <Flex direction="col" className=" w-full gap-8 lg:gap-14 items-center">
           <Flex
             direction="col"
-            className="w-full 2xl:pr-[160px] lg:pr-[5%] min-[1440px]:pr-20"
+            className="w-full 2xl:pr-[160px] lg:pr-[5%] xl:pr-20"
           >
             <div className="relative w-full  lg:pt-[43.89%] pt-[73%]">
               <Image

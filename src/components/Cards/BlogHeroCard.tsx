@@ -1,7 +1,6 @@
 import React from "react";
 import { Flex } from "../Flex/Flex";
 import Image from "next/image";
-import useWindowWidth from "../../hooks/useWindowWidth";
 
 import { useRouter } from "next/router";
 interface Props {
@@ -19,10 +18,10 @@ export const BlogHeroCard = ({
   const router = useRouter();
 
   return (
-    <Flex className="bg-neutral-pure100 lg:bg-secondary-pure w-full min-w-[100vw]  relative pt-8 pb-16 gap-8 md:gap-20 md:pt-20 lg:py-[140px] 2xl:pl-[160px] px-[5%] min-[1440px]:px-20 justify-center lg:justify-start flex-col lg:flex-row">
+    <Flex className="bg-neutral-pure100 lg:bg-secondary-pure w-full min-w-[100vw]  relative pt-8 pb-16 gap-8 md:gap-20 md:pt-20 lg:py-0 lg:gap-0 justify-center lg:justify-start flex-col lg:flex-row">
       <Flex
         direction="col"
-        className="gap-8 max-w-[468px]"
+        className="gap-8  w-full lg:w-[50%] px-[5%] 2xl:pl-[160px] lg:pl-[5%] xl:pl-20 lg:justify-center"
         onClick={() => {
           router.push(link);
         }}
@@ -31,7 +30,7 @@ export const BlogHeroCard = ({
           <p className="text-neutral-pure400 text-[12px] lg:text-[14px] font-[600] leading-[14px] uppercase lg:leading-[17px]">
             {date}
           </p>
-          <p className="lg:text-[40px] lg:leading-[52px] lg:text-white text-[32px] leading-[42px] font-[300] text-secondary-pure overflow-hidden line-clamp-2">
+          <p className="lg:text-[40px] lg:leading-[52px] lg:text-white text-[32px] leading-[42px] font-[300] text-secondary-pure overflow-hidden line-clamp-2 lg:line-clamp-1 xl:line-clamp-2 xl:max-w-[438px]">
             {title}
           </p>
         </Flex>
@@ -62,17 +61,17 @@ export const BlogHeroCard = ({
           </svg>
         </Flex>
       </Flex>
-      <Flex className="lg:absolute min-h-[40vh] lg:min-h-fit h-full w-full lg:w-[50%] lg:right-0 lg:top-0">
-        <Image
-          src={image}
-          objectFit="cover"
-          width={2000}
-          objectPosition={"center"}
-          height={800}
-          alt="Banner"
-          quality={100}
-          priority
-        />
+      <Flex direction="col" className="w-full lg:w-[50%] ">
+        <div className="relative w-full h-full  lg:pt-[50.9%] pt-[60%]">
+          <Image
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            src="/assets/teste.png"
+            alt="Levando Beleza"
+            layout="fill"
+            quality={100}
+            priority
+          />
+        </div>
       </Flex>
     </Flex>
   );
