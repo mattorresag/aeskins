@@ -46,7 +46,7 @@ export const QuemUtiliza = () => {
         className="h-full gap-8 lg:gap-10 py-10 lg:py-0 pb-20 lg:pb-[120px] w-full border-none"
       >
         <WordsCarousel words={words} />
-        <p className="text-center lg:hidden text-[40px] font-[300] leading-[53px]">
+        <p className="px-[5%] text-center lg:hidden text-[40px] font-[300] leading-[53px]">
           Conheça quem utiliza{" "}
           <span className="text-secondary-pure font-[700]">Aeskins® </span>
         </p>

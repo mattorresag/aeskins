@@ -44,7 +44,11 @@ export const AntesEDepoisSofiderm = (): JSX.Element => {
         align="center"
       >
         <Flex direction="col" className="gap-6">
-          <Flex direction="col" className="gap-2 max-w-[985px]" align="center">
+          <Flex
+            direction="col"
+            className="gap-2 max-w-[985px] px-[5%] lg:px-0"
+            align="center"
+          >
             <p className="text-[12px] text-neutral-pure400 font-[600] uppercase leading-[14px]">
               AESKINS®
             </p>

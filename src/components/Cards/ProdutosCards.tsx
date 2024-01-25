@@ -19,7 +19,7 @@ export const ProdutosCards = ({ title, image }: Props): JSX.Element => {
           priority
         />
       </Flex>
-      <p className="text-[20px] text-secondary-pure font-[300] leading-[30px]">
+      <p className="text-center lg:text-start text-[20px] text-secondary-pure font-[300] leading-[30px]">
         {title}
       </p>
     </Flex>
