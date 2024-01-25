@@ -6,7 +6,7 @@ import { ParaProfissionaisPosts } from "../features/ParaProfissionais/ParaProfis
 
 export const Profissionais: NextPage = (): JSX.Element => {
   return (
-    <Layout subtitle="Para profissionais">
+    <Layout subtitle="Para profissionais" url="profissionais">
       <ParaProfissionaisHero />
       <ParaProfissionaisPosts />
     </Layout>

@@ -8,7 +8,7 @@ interface Props {
 }
 const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
   return (
-    <Layout subtitle={`Blog Post ${postId}`}>
+    <Layout subtitle={`Blog Post ${postId}`} url={`blog/${postId}`}>
       <Flex className="lg:py-[62px] gap-[5%] pb-20 ">
         <Flex
           direction="col"

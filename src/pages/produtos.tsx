@@ -8,7 +8,7 @@ import { QuemUtiliza } from "../features/QuemUtiliza/QuemUtiliza";
 
 const Sofiderm: NextPage = (): JSX.Element => {
   return (
-    <Layout subtitle="Produtos">
+    <Layout subtitle="Produtos" url="produtos">
       <ProdutosHero />
       <Produtos />
       <AntesEDepoisSofiderm />

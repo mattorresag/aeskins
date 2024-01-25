@@ -11,13 +11,13 @@ export const ParaProfissionaisPosts = (): JSX.Element => {
         <PostCard
           title="Conheça nossa comunidade"
           linkName="COMMUNITY"
-          link="/community"
+          link="https://community.aeskins.com/"
           image="/assets/community.png"
         />
         <PostCard
           title="Como a Aeskins Eleva a Autoestima dos Nossos Clientes"
           linkName="BAIXAR MATERIAL"
-          link="/community"
+          link="https://community.aeskins.com/"
           icon={<Icons.Download className="h-6 w-6" />}
         />
       </Flex>

@@ -47,7 +47,7 @@ export const Header = (): JSX.Element => {
                 <p>PARA PROFISSIONAIS</p>
               </a>
             </Link>
-            <Link passHref href="/sobre">
+            <Link passHref href="https://community.aeskins.com/">
               <a>
                 <p>COMMUNITY</p>
               </a>

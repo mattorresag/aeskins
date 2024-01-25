@@ -8,7 +8,7 @@ import { ConhecaOTime } from "../features/QuemSomos/ConhecaOTime/ConhecaOTime";
 
 const QuemSomos: NextPage = (): JSX.Element => {
   return (
-    <Layout subtitle="Quem Somos">
+    <Layout subtitle="Quem Somos" url="sobre">
       <QuemSomosHero />
       <QuemSomosSecondSection />
       <QuemSomosLevandoBeleza />

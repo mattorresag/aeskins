@@ -154,7 +154,7 @@ export const Footer = (): JSX.Element => {
                     </p>
                   </a>
                 </Link>
-                <Link href="/sobre" passHref>
+                <Link href="https://community.aeskins.com/" passHref>
                   <a>
                     <p className="text-[20px] text-white leading-[30px] cursor-pointer">
                       Community
@@ -209,7 +209,11 @@ export const Footer = (): JSX.Element => {
         </Flex>
         <Flex className=" lg:mt-12 justify-center lg:justify-between text-center lg:text-start text-[16px] lg:text-[14px] xl:text-[16px] text-white/70 w-full gap-4 px-[5%] min-[1800px]:px-16 min-[1921px]:px-[5%] items-center flex-col lg:flex-row lg:py-6 py-8">
           <Flex className="gap-4 flex-col lg:flex-row" align="center">
-            <p> R. Nome da rua, Nº - Cidade/UF - CEP 00000-000</p>
+            <p>
+              {" "}
+              R. Paraná, Nº 107 - Sala 30, 2º Andar - Santana de Parnaíba/SP -
+              CEP 06530-025
+            </p>
             <p className="lg:hidden">--</p>
             <p className="hidden lg:block text-white/40">|</p>
             <p>Termos de Uso</p>
