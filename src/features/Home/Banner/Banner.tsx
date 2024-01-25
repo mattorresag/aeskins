@@ -22,8 +22,8 @@ w-full bg-primary-pure relative    flex-col md:flex-row"
         <div className="relative w-full md:hidden pt-[180%]">
           <Image
             className="absolute top-0 left-0 w-full h-full object-cover"
-            src="/assets/bannermobile.png"
-            alt="Banner home"
+            src="/assets/bannerMobile.png"
+            alt="Banner home mobile"
             layout="fill"
             quality={100}
             priority
