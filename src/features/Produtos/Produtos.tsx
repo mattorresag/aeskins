@@ -48,7 +48,7 @@ export const Produtos = (): JSX.Element => {
       `,
       }}
       justify="center"
-      className="grid -pb-30 gap-8 px-[5%] 2xl:px-[160px] pt-20 bg-white lg:pb-30"
+      className="grid  gap-8 px-[5%] 2xl:px-[160px] pt-20 lg:pb-[120px] bg-white"
     >
       {produtos.map((produto, index) => {
         if (width < 1024 && index > 2) return <></>;
