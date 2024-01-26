@@ -36,21 +36,22 @@ export const Header = (): JSX.Element => {
                   <p>PRODUTOS</p>
                   <Icons.ChevronDown className="w-2 h-1" />
                 </Flex>
-                <ul
+                <Flex
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                  direction="col"
+                  className="dropdown-content z-[1] menu p-2 gap-2 shadow bg-base-100 rounded-box w-52"
                 >
-                  <li>
+                  <li className="p-2">
                     <Link passHref href="/produtos/linha-facial">
                       <a>Linha Facial</a>
                     </Link>
                   </li>
-                  <li>
+                  <li className="p-2">
                     <Link passHref href="/produtos/linha-corporal">
                       <a>Linha Corporal</a>
                     </Link>
                   </li>
-                </ul>
+                </Flex>
               </div>
               <Link passHref href="/quem-somos">
                 <a>
