@@ -1,6 +1,9 @@
 import React from "react";
 import { Flex } from "../../../components/Flex/Flex";
 import Image from "next/image";
+import QuemSomos1 from "../../../../public/assets/quemsomos1.png";
+import QuemSomos2 from "../../../../public/assets/quemsomos2.png";
+import QuemSomos3 from "../../../../public/assets/quemsomos3.png";
 
 export const QuemSomosSecondSection = () => {
   return (
@@ -39,7 +42,7 @@ export const QuemSomosSecondSection = () => {
           <div className="relative w-full h-full  pt-[46.5%] ">
             <Image
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={"/assets/quemsomos1.png"}
+              src={QuemSomos1.src}
               alt={"Quem somos 1"}
               layout="fill"
               quality={100}
@@ -49,7 +52,7 @@ export const QuemSomosSecondSection = () => {
           <div className="relative w-full h-full  pt-[46.5%] ">
             <Image
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={"/assets/quemsomos2.png"}
+              src={QuemSomos2.src}
               alt={"Quem somos 2"}
               layout="fill"
               quality={100}
@@ -59,7 +62,7 @@ export const QuemSomosSecondSection = () => {
           <div className="relative w-full h-full  pt-[46.5%] ">
             <Image
               className="absolute top-0 left-0 w-full h-full object-cover"
-              src={"/assets/quemsomos3.png"}
+              src={QuemSomos3.src}
               alt={"Quem somos 3"}
               layout="fill"
               quality={100}
