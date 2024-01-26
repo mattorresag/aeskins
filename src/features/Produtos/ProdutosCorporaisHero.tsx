@@ -13,19 +13,19 @@ export const ProdutosCorporaisHero = (): JSX.Element => {
     >
       <Flex
         direction="col"
-        className=" px-[5%]  items-center justify-center gap-10 z-10  lg:w-[50%] xl:w-[60%]"
+        className=" px-[5%] 2xl:pl-[160px]  items-center justify-center gap-10 z-10  lg:w-[50%] xl:w-[60%]"
       >
-        <Flex direction="col" className="max-w-[742px] ">
-          <p className="font-[300] tracking-[2px] uppercase text-[54px] xl:text-[80px] xl:leading-[104px] leading-[70px] text-neutral-pure900">
-            linha corporal <span className="font-[600]"> sofiderm</span>
+        <Flex direction="col" className="max-w-[572px] ">
+          <p className="font-[300] tracking-[2px] uppercase text-[54px] xl:text-[80px] xl:leading-[104px] leading-[70px] text-secondary-pure">
+            linha <span className="font-[600]"> corporal</span>
           </p>
         </Flex>
       </Flex>
-      <Flex className=" h-full lg:w-[50%] xl:w-[40%] ">
-        <div className="relative w-full h-full pt-[62%] ">
+      <Flex className=" h-full w-[89%] ">
+        <div className="relative w-full h-full pt-[45%] ">
           <Image
             className="absolute top-0 left-0 w-full h-full object-cover"
-            src="/assets/produtosHero.png"
+            src="/assets/corporalHero.png"
             alt="produtos hero"
             layout="fill"
             quality={100}

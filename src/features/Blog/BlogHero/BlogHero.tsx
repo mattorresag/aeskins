@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Flex } from "../../../components/Flex/Flex";
 import { BlogHeroCard } from "../../../components/Cards/BlogHeroCard";
 import useEmblaCarousel from "embla-carousel-react";
+import { useCarousel } from "../../../hooks/useCarousel";
 
 const mockedCards = [
   {
@@ -31,47 +32,7 @@ const mockedCards = [
 ];
 
 export const BlogHero = (): JSX.Element => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [emblaRef, emblaApi] = useEmblaCarousel();
-
-  const updateCurrentSlide = useCallback(() => {
-    if (emblaApi) {
-      const index = emblaApi.selectedScrollSnap();
-      setCurrentSlide(index);
-    }
-  }, [emblaApi]);
-
-  const scrollToSlide = useCallback(
-    (index: number) => {
-      if (emblaApi) {
-        emblaApi.scrollTo(index);
-      }
-    },
-    [emblaApi]
-  );
-
-  const onScroll = useCallback(() => {
-    if (emblaApi) {
-      updateCurrentSlide();
-    }
-  }, [emblaApi, updateCurrentSlide]);
-
-  useEffect(() => {
-    if (emblaApi) {
-      onScroll();
-      emblaApi.on("reInit", onScroll);
-      emblaApi.on("scroll", onScroll);
-      emblaApi.on("select", updateCurrentSlide);
-    }
-  }, [emblaApi, onScroll, updateCurrentSlide]);
-
-  const calcStyle = (index: number) => {
-    return `h-[2px] ${
-      currentSlide === index
-        ? `w-[calc(300%/6)] lg:w-[154px] bg-black lg:bg-white`
-        : `w-[calc(100%/6)] lg:w-[50px] bg-black/30 lg:bg-white/40`
-    } mx-1`;
-  };
+  const { calcStyle, emblaRef, scrollToSlide } = useCarousel({});
 
   return (
     <div

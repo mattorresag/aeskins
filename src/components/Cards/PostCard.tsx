@@ -3,6 +3,7 @@ import { Flex } from "../Flex/Flex";
 import Icons from "../../../public/assets/icons";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Link from "next/link";
 interface Props {}
 interface Props {
   link: string;
@@ -18,7 +19,6 @@ export const PostCard = ({
   image,
   icon = <Icons.ArrowRight className="h-6 w-6" />,
 }: Props): JSX.Element => {
-  const router = useRouter();
   return (
     <Flex className="w-full lg:w-[calc(50%-32px)] gap-4" direction="col">
       <Flex className="gap-6" direction="col">
@@ -39,17 +39,16 @@ export const PostCard = ({
           {title}
         </p>
       </Flex>
-      <button
-        onClick={() => {
-          router.push(link);
-        }}
-        className=" w-fit py-2 gap-4 border-b-[1px] border-secondary-pure"
-      >
-        <Flex className="gap-4" align="center">
-          <p className="font-[600]">{linkName}</p>
-          {icon}
-        </Flex>
-      </button>
+      <Link href={link} passHref className="w-fit">
+        <a className="w-fit">
+          <button className=" w-fit py-2 gap-4 border-b-[1px] border-secondary-pure">
+            <Flex className="gap-4" align="center">
+              <p className="font-[600]">{linkName}</p>
+              {icon}
+            </Flex>
+          </button>
+        </a>
+      </Link>
     </Flex>
   );
 };
