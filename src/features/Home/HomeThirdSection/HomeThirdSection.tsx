@@ -13,12 +13,11 @@ export const HomeThirdSection = () => {
     xl:bg-background-preenchedores
     max-[1023px]:bg-background-preenchedoresMobile
     bg-no-repeat
-    bg-right
+    bg-[bottom_right]
     w-full
-    xl:h-[770px]
     xl:h-[630px]
     min-[1921px]:justify-center
-    bg-center xl:px-20  2xl:px-[160px] pt-16 xl:pt-[88px]  xl:pb-[174px]"
+    bg-center xl:px-20  2xl:px-[160px] pt-16 xl:pt-[88px]  xl:pb-[0px]"
       >
         <Flex
           direction="col"
