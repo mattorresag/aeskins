@@ -1,9 +1,10 @@
 import React from "react";
 import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
-import { PreenchedoresCard } from "../../../components/Cards/PreenchedoresCard";
 import { Preenchedores } from "./Preenchedores";
 import Image from "next/image";
+import PreenchedoresImage from "../../../../public/assets/preenchedores.png";
+import PreenchedoresMobileImage from "../../../../public/assets/mobilePreenchedores.png";
 
 export const HomeThirdSection = () => {
   return (
@@ -41,7 +42,7 @@ export const HomeThirdSection = () => {
               <div className="hidden md:block xl:hidden relative w-full pt-[60%]">
                 <Image
                   className="absolute left-0 w-full object-cover object-top"
-                  src={"/assets/preenchedores.png"}
+                  src={PreenchedoresImage.src}
                   alt="Preenchedores Mobile"
                   unoptimized
                   layout="fill"
@@ -52,7 +53,7 @@ export const HomeThirdSection = () => {
               <div className="md:hidden relative w-full pt-[60%]">
                 <Image
                   className="absolute left-0 w-full object-cover object-top"
-                  src={"/assets/mobilePreenchedores.png"}
+                  src={PreenchedoresMobileImage.src}
                   alt="Preenchedores Mobile"
                   unoptimized
                   layout="fill"
@@ -63,19 +64,6 @@ export const HomeThirdSection = () => {
             </Flex>
           </Flex>
         </Flex>
-        {/* <Flex className="w-full">
-          <div className="relative w-full   pt-[70%]">
-            <Image
-              className="absolute left-0 w-full object-cover"
-              src="/assets/preenchedores.png"
-              alt="Preenchedores Mobile"
-              unoptimized
-              layout="fill"
-              quality={100}
-              priority
-            />
-          </div>
-        </Flex> */}
       </Flex>
     </Flex>
   );
