@@ -3,6 +3,7 @@ import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
 import Image from "next/image";
 import Link from "next/link";
+import FacialImage from "../../../../public/assets/facial.png";
 
 export const FacialSection = () => {
   return (
@@ -34,7 +35,7 @@ export const FacialSection = () => {
       </Flex>
       <Flex className="w-full lg:w-[50%] max-[600px]:h-[264px] max-[1023px]:h-[364px] ">
         <Image
-          src="/assets/facial.png"
+          src={FacialImage.src}
           width={2000}
           height={468}
           alt="Facial"

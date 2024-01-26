@@ -3,13 +3,14 @@ import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
 import Image from "next/image";
 import Link from "next/link";
+import CorporalImage from "../../../../public/assets/corporal.png";
 
 export const CorporalSection = () => {
   return (
     <Flex className="w-full flex-col lg:flex-row border-b-[1px] border-neutral-pure200 ">
       <Flex className="w-full lg:w-[50%] max-[600px]:h-[264px] max-[1023px]:h-[364px] ">
         <Image
-          src="/assets/corporal.png"
+          src={CorporalImage.src}
           width={2000}
           height={468}
           alt="Corporal"
