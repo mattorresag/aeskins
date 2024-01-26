@@ -162,55 +162,12 @@ export const Footer = (): JSX.Element => {
                   </a>
                 </Link>
               </Flex>
-              <Flex className=" w-full gap-6" direction="col">
-                <p className="text-[20px] text-white leading-[30px] cursor-pointer">
-                  Produtos
-                </p>
-                <Flex direction="col" className="gap-2">
-                  <Link href="/quem-somos" passHref>
-                    <a>
-                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
-                        Linha x
-                      </p>
-                    </a>
-                  </Link>
-                  <Link href="/quem-somos" passHref>
-                    <a>
-                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
-                        Linha x
-                      </p>
-                    </a>
-                  </Link>
-                  <Link href="/quem-somos" passHref>
-                    <a>
-                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
-                        Linha x
-                      </p>
-                    </a>
-                  </Link>
-                  <Link href="/quem-somos" passHref>
-                    <a>
-                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
-                        Linha x
-                      </p>
-                    </a>
-                  </Link>
-                  <Link href="/quem-somos" passHref>
-                    <a>
-                      <p className="text-[16px] text-white/70 leading-[30px] cursor-pointer">
-                        Linha x
-                      </p>
-                    </a>
-                  </Link>
-                </Flex>
-              </Flex>
             </Flex>
           </Flex>
         </Flex>
         <Flex className=" lg:mt-12 justify-center lg:justify-between text-center lg:text-start text-[16px] lg:text-[14px] xl:text-[16px] text-white/70 w-full gap-4 px-[5%] min-[1800px]:px-16 min-[1921px]:px-[5%] items-center flex-col lg:flex-row lg:py-6 py-8">
           <Flex className="gap-4 flex-col lg:flex-row" align="center">
             <p>
-              {" "}
               R. Paraná, Nº 107 - Sala 30, 2º Andar - Santana de Parnaíba/SP -
               CEP 06530-025
             </p>
