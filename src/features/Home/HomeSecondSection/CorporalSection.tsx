@@ -2,6 +2,7 @@ import React from "react";
 import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
 import Image from "next/image";
+import Link from "next/link";
 
 export const CorporalSection = () => {
   return (
@@ -29,13 +30,17 @@ export const CorporalSection = () => {
             CORPORAL
           </p>
         </Flex>
-        <Flex
-          align="center"
-          className="cursor-pointer w-fit gap-4 border-b-[1px] border-secondary-pure"
-        >
-          <p className="font-[600]">CONHECER LINHA</p>
-          <Icons.EmailButton className="h-14 w-14" />
-        </Flex>
+        <Link href="/produtos/linha-corporal">
+          <a>
+            <Flex
+              align="center"
+              className="cursor-pointer w-fit gap-4 border-b-[1px] border-secondary-pure"
+            >
+              <p className="font-[600]">CONHECER LINHA</p>
+              <Icons.EmailButton className="h-14 w-14" />
+            </Flex>
+          </a>
+        </Link>
       </Flex>
     </Flex>
   );

@@ -53,8 +53,10 @@ import WhitePhone from "./whitePhone.svg?svgr";
 import WhiteWhatsapp from "./whiteWhatsapp.svg?svgr";
 import WhiteMail from "./whiteMail.svg?svgr";
 import LevandoABelezaWave from "./levandoABelezaWave.svg?svgr";
+import ChevronDown from "./chevronDown.svg?svgr";
 
 const rawIcons = {
+  ChevronDown,
   LevandoABelezaWave,
   TransparentSearchSmall,
   WhiteMail,

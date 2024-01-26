@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Flex } from "../../components/Flex/Flex";
 
-export const ProdutosHero = (): JSX.Element => {
+export const ProdutosFaciaisHero = (): JSX.Element => {
   return (
     <Flex
       style={{

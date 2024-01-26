@@ -23,17 +23,18 @@ export const HomeThirdSection = () => {
           direction="col"
           className="    min-[1921px]:max-w-[1800px] gap-2 xl:gap-6  xl:max-w-[50vw] w-full"
         >
-          <Icons.SofidermMobile className="w-[180px] h-12 pl-[5%] xl:hidden" />
           <Flex direction="col" className="gap-6 xl:gap-14 w-full ">
-            <Icons.Sofiderm className="w-[155px] h-[56px] hidden xl:block" />
-            <Flex
-              className="w-full xl:px-0 px-[5%] justify-between min-[1921px]:justify-start min-[1921px]:gap-14"
-              align="end"
-            >
-              <p className="xl:text-[48px] xl:tracking-[2px] xl:leading-[63px] text-[32px] font-[300] leading-[48px] text-secondary-pure">
-                PREENCHEDORES DE <br />
-                <span className="font-[400]">ALTA TECNOLOGIA</span>
-              </p>
+            <Flex direction="col" className="lg:gap-4">
+              <Icons.Sofiderm className="w-[200px] lg:w-[161px] h-[60px] pl-[5%] lg:pl-0" />
+              <Flex
+                className="w-full xl:px-0 px-[5%] justify-between min-[1921px]:justify-start min-[1921px]:gap-14"
+                align="end"
+              >
+                <p className="xl:text-[48px] xl:tracking-[2px] xl:leading-[63px] text-[32px] font-[300] leading-[48px] text-secondary-pure">
+                  PREENCHEDORES DE <br />
+                  <span className="font-[400]">ALTA TECNOLOGIA</span>
+                </p>
+              </Flex>
             </Flex>
             <Preenchedores />
             <Flex>

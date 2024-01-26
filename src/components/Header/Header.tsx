@@ -23,13 +23,39 @@ export const Header = (): JSX.Element => {
               </a>
             </Link>
             <Flex
-              className=" gap-12 hidden lg:flex text-[14px] text-secondary-pure"
+              className=" gap-8 xl:gap-12 hidden lg:flex text-[14px] text-secondary-pure"
               align="center"
             >
-              <Link passHref href="/produtos">
+              <div className="dropdown">
+                <Flex
+                  tabIndex={0}
+                  role="button"
+                  className="gap-2"
+                  align="center"
+                >
+                  <p>PRODUTOS</p>
+                  <Icons.ChevronDown className="w-2 h-1" />
+                </Flex>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <Link passHref href="/produtos/linha-facial">
+                      <a>Linha Facial</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link passHref href="/produtos/linha-corporal">
+                      <a>Linha Corporal</a>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <Link passHref href="/quem-somos">
                 <a>
                   <Flex className="gap-2" align="center">
-                    <p>PRODUTOS</p>
+                    <p>QUEM SOMOS</p>
                   </Flex>
                 </a>
               </Link>
@@ -76,7 +102,7 @@ export const Header = (): JSX.Element => {
           className=" w-[100vw] h-[100dvh] fixed lg:hidden top-0 dark:bg-white bg-white z-[1000000]"
         >
           <Flex
-            className="h-16 px-4 border-b-[1px] lg:hidden  w-full"
+            className="h-16 px-4 py-3 border-b-[1px] lg:hidden  w-full"
             align="center"
             justify="between"
           >
@@ -113,11 +139,25 @@ export const Header = (): JSX.Element => {
               </svg>
             </Flex>
           </Flex>
-          <Flex className="px-6  gap-6 mt-16 mb-20" direction="col">
+          <Flex className="px-6  gap-4 mt-4 mb-20" direction="col">
             <Flex onClick={() => setShowSidebar((prevState) => !prevState)}>
-              <Link href="/produtos">
+              <Link href="/">
                 <p className="pb-6 text-[20px] w-full text-neutral-pure1000 font-[400] leading-[32px] border-b-[1px] ">
-                  Produtos
+                  Página Inicial
+                </p>
+              </Link>
+            </Flex>
+            <Flex onClick={() => setShowSidebar((prevState) => !prevState)}>
+              <Link href="/produtos/linha-facial">
+                <p className="pb-6 text-[20px] w-full text-neutral-pure1000 font-[400] leading-[32px] border-b-[1px] ">
+                  Linha Facial
+                </p>
+              </Link>
+            </Flex>
+            <Flex onClick={() => setShowSidebar((prevState) => !prevState)}>
+              <Link href="/produtos/linha-corporal">
+                <p className="pb-6 text-[20px] w-full text-neutral-pure1000 font-[400] leading-[32px] border-b-[1px] ">
+                  Linha Corporal
                 </p>
               </Link>
             </Flex>

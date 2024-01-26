@@ -40,7 +40,7 @@ export const ConhecaOTimeCard = ({
       </Flex>
       <Flex
         direction="col"
-        className="w-full xl:w-[50%] xl:justify-center xl:items-center bg-secondary-pure pt-6 pb-20 xl:py-[3%] xl:px-[3%] 2xl:pt-[120px] 2xl:px-[160px]  px-[5%]"
+        className="w-full xl:w-[50%] xl:justify-center xl:items-center bg-secondary-pure pt-6 pb-20 xl:py-[3%] xl:px-[3%] 2xl:py-[7%] 2xl:px-[7%]  px-[5%]"
       >
         <Flex direction="col" className="xl:gap-16 gap-8 ">
           <Flex direction="col" className="gap-2">

@@ -2,6 +2,7 @@ import React from "react";
 import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
 import Image from "next/image";
+import Link from "next/link";
 
 export const FacialSection = () => {
   return (
@@ -18,13 +19,18 @@ export const FacialSection = () => {
             FACIAL
           </p>
         </Flex>
-        <Flex
-          align="center"
-          className="cursor-pointer w-fit gap-4 border-b-[1px] border-secondary-pure"
-        >
-          <p className="font-[600]">CONHECER LINHA</p>
-          <Icons.EmailButton className="h-14 w-14" />
-        </Flex>
+
+        <Link href="/produtos/linha-facial">
+          <a>
+            <Flex
+              align="center"
+              className="cursor-pointer w-fit gap-4 border-b-[1px] border-secondary-pure"
+            >
+              <p className="font-[600]">CONHECER LINHA</p>
+              <Icons.EmailButton className="h-14 w-14" />
+            </Flex>
+          </a>
+        </Link>
       </Flex>
       <Flex className="w-full lg:w-[50%] max-[600px]:h-[264px] max-[1023px]:h-[364px] ">
         <Image
@@ -49,13 +55,17 @@ export const FacialSection = () => {
             FACIAL
           </p>
         </Flex>
-        <Flex
-          align="center"
-          className="cursor-pointer w-fit gap-4 border-b-[1px] border-secondary-pure"
-        >
-          <p className="font-[600]">CONHECER LINHA</p>
-          <Icons.EmailButton className="h-14 w-14" />
-        </Flex>
+        <Link href="/produtos/linha-facial">
+          <a>
+            <Flex
+              align="center"
+              className="cursor-pointer w-fit gap-4 border-b-[1px] border-secondary-pure"
+            >
+              <p className="font-[600]">CONHECER LINHA</p>
+              <Icons.EmailButton className="h-14 w-14" />
+            </Flex>
+          </a>
+        </Link>
       </Flex>
     </Flex>
   );
