@@ -13,7 +13,7 @@ export const HomeThirdSection = () => {
     xl:bg-background-preenchedores
     max-[1023px]:bg-background-preenchedoresMobile
     bg-no-repeat
-    bg-[bottom_right]
+    bg-right-bottom
     w-full
     xl:h-[630px]
     min-[1921px]:justify-center
