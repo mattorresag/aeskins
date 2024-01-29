@@ -39,7 +39,7 @@ export const Header = (): JSX.Element => {
                 <Flex
                   tabIndex={0}
                   direction="col"
-                  className="dropdown-content z-[1] menu p-2 gap-2 shadow bg-base-100 rounded-box w-52"
+                  className="dropdown-content z-[1] menu p-2 gap-2 shadow dark:bg-base-100 bg-base-100 rounded-box w-52"
                 >
                   <li className="p-2">
                     <Link passHref href="/produtos/linha-facial">
