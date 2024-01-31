@@ -88,7 +88,12 @@ export const Header = (): JSX.Element => {
           align="center"
           justify="between"
         >
-          <Icons.LetterBlack className="w-[52px] h-10" />
+          <Link href="/">
+            <a>
+              <Icons.LetterBlack className="w-[52px] h-10" />
+            </a>
+
+          </Link>
           <Flex
             onClick={() => setShowSidebar((prevState) => !prevState)}
             className="cursor-pointer"
