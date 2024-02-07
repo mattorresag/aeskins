@@ -1,7 +1,6 @@
 import React from "react";
 import { Flex } from "../Flex/Flex";
 import Link from "next/link";
-import Image from "next/image";
 import Icons from "../../../public/assets/icons";
 export const Footer = (): JSX.Element => {
   return (
@@ -176,13 +175,6 @@ export const Footer = (): JSX.Element => {
             <p>Termos de Uso</p>
             <p>•</p>
             <p>Política de Privacidade</p>
-          </Flex>
-          <Flex
-            className="lg:mt-0 gap-6 mt-14 flex-col lg:flex-row"
-            align="center"
-          >
-            <p> Nós aceitamos:</p>
-            <Icons.PaymentMethods className="h-8 w-[166px]" />
           </Flex>
         </Flex>
       </Flex>
