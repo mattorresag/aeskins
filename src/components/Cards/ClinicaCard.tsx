@@ -23,8 +23,8 @@ export const ClinicaCard = ({
         <Flex className="flex-col lg:flex-row gap-4 lg:items-center w-full">
           <Flex className="w-20 h-20">
             <Image
-              alt={`${location.nome} logo`}
-              src={location.imagem || "/assets/produtoPlaceholder.png"}
+              alt={`${location.name} logo`}
+              src={location.image || "/assets/produtoPlaceholder.png"}
               width={80}
               height={80}
               objectFit="cover"
@@ -32,14 +32,14 @@ export const ClinicaCard = ({
           </Flex>
           <Flex direction="col" className="gap-1">
             <p className="text-[20px] font-[400] leading-[30px] text-secondary-pure">
-              {location.nome}
+              {location.name}
             </p>
             <Flex className="gap-2" align="center">
               <Flex className="w-fit">
                 <Icons.MapPin className="w-[18px] h-[18px]" />
               </Flex>
               <p className="text-[14px] font-[400] leading-[21px] text-neutral-pure400">
-                {location.endereco}
+                {location.address}
               </p>
             </Flex>
           </Flex>

@@ -1,13 +1,13 @@
 export interface Location {
-  imagem?: string;
+  image?: string;
   id: string;
   lat: number;
   lng: number;
-  nome: string;
-  especializacao: string;
-  horaInicio: string;
-  horaFim: string;
-  endereco: string;
-  dias: string;
+  name: string;
+  specialization: string;
+  hora_inicio: string;
+  hora_fim: string;
+  address: string;
+  days: string;
   status: "aberto" | "fechado";
 }

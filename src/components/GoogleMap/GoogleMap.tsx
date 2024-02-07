@@ -191,7 +191,7 @@ export const Map = ({
 
   const handleMarkerClick = (location: Location) => {
     handleSelectedLocation(location);
-    setMapCenter({ lat: location.lat, lng: location.lng });
+    setMapCenter({ lat: Number(location.lat), lng: Number(location.lng) });
   };
 
   const { isLoaded, loadError } = useLoadScript({
@@ -213,13 +213,16 @@ export const Map = ({
         <MarkerF
           onClick={() => handleMarkerClick(location)}
           key={location.id}
-          position={{ lat: location.lat, lng: location.lng }}
+          position={{ lat: Number(location.lat), lng: Number(location.lng) }}
           icon={"/assets/icons/googlePin.svg"}
         />
       ))}
       {selectedLocation && (
         <InfoWindowF
-          position={{ lat: selectedLocation.lat, lng: selectedLocation.lng }}
+          position={{
+            lat: Number(selectedLocation.lat),
+            lng: Number(selectedLocation.lng),
+          }}
           onCloseClick={() => handleSelectedLocation(null)}
         >
           <Flex
@@ -227,16 +230,16 @@ export const Map = ({
             className="bg-white rounded-sm p-6 gap-4 w-[306px]"
           >
             <p className="text-[20px] font-sans font-secondary-pure font-[500] leading-[30px]">
-              {selectedLocation.nome}
+              {selectedLocation.name}
             </p>
             <div className="divider h-0 m-0" />
             <Flex direction="col" className="gap-3">
               <Flex direction="col" className="gap-1">
                 <p className="text-[14px] text-neutral-pure400 font-[500] leading-[17px]">
-                  {selectedLocation.dias}
+                  {selectedLocation.days}
                 </p>
                 <p className="text-secondary-pure leading-[24px]">
-                  {selectedLocation.horaInicio} - {selectedLocation.horaFim}
+                  {selectedLocation.hora_inicio} - {selectedLocation.hora_fim}
                 </p>
               </Flex>
               <Flex direction="col" className="gap-1">
@@ -244,7 +247,7 @@ export const Map = ({
                   Especialização
                 </p>
                 <p className="text-secondary-pure leading-[24px]">
-                  {selectedLocation.especializacao}
+                  {selectedLocation.specialization}
                 </p>
               </Flex>
               <Flex direction="col" className="gap-1">
@@ -252,7 +255,7 @@ export const Map = ({
                   Endereço
                 </p>
                 <p className="text-secondary-pure leading-[24px]">
-                  {selectedLocation.endereco}
+                  {selectedLocation.address}
                 </p>
               </Flex>
             </Flex>
