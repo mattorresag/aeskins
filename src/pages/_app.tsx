@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             },
           ],
           description:
-            "A Aeskins Pharmaceutical nasceu com a missão de descomplicar o mercado de procedimentos estéticos, colocando nossos clientes em primeiro lugar.",
+            "Aeskins Pharmaceutical | A Aeskins Pharmaceutical nasceu com a missão de descomplicar o mercado de procedimentos estéticos, colocando nossos clientes em primeiro lugar.",
         }}
       />
       <QueryClientProvider client={queryClient}>
