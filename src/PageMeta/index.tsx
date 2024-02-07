@@ -20,16 +20,16 @@ const PageMeta = ({ subtitle, url }: Props) => {
     <>
       <NextSeo
         title={`Aeskins Pharmaceutical ${subtitle ? `| ${subtitle}` : ""}`}
-        canonical={`https://www.aeskins.com/${url}`}
+        canonical={`https://www.aeskins.com/${url ? url : ""}`}
         twitter={{
-          site: `https://www.aeskins.com/${url}`,
+          site: `https://www.aeskins.com/${url ? url : ""}`,
         }}
         description="A Aeskins Pharmaceutical nasceu com a missão de descomplicar o mercado de procedimentos estéticos, colocando nossos clientes em primeiro lugar."
         openGraph={{
           title: "Aeskins Pharmaceutical",
           type: "website",
           locale: "pt_BR",
-          url: `https://www.aeskins.com/${url}`,
+          url: `https://www.aeskins.com/${url ? url : ""}`,
           images: [
             {
               url: "https://aeskins.com/assets/logogrande.png",
