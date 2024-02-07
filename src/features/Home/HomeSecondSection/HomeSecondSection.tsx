@@ -13,9 +13,9 @@ export const HomeSecondSection = () => {
     >
       <Flex direction="col" className="px-[5%] gap-3 items-center">
         <p className="text-neutral-pure400 text-[12px] font-[600]">LINHAS</p>
-        <p className="max-w-[752px] w-full uppercase lg:normal-case text-secondary-pure text-[32px] font-[300] leading:-[48px] lg:text-[40px] text-center lg:leading-[52px]">
+        <h2 className="max-w-[752px] w-full uppercase lg:normal-case text-secondary-pure text-[32px] font-[300] leading:-[48px] lg:text-[40px] text-center lg:leading-[52px]">
           Conheça nossas linhas e complemente o resultado
-        </p>
+        </h2>
       </Flex>
       <Flex direction="col" className="gap-4">
         <CorporalSection />

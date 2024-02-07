@@ -92,7 +92,6 @@ export const Header = (): JSX.Element => {
             <a>
               <Icons.LetterBlack className="w-[52px] h-10" />
             </a>
-
           </Link>
           <Flex
             onClick={() => setShowSidebar((prevState) => !prevState)}
@@ -162,9 +161,9 @@ export const Header = (): JSX.Element => {
             </Flex>
             <Flex onClick={() => setShowSidebar((prevState) => !prevState)}>
               <Link href="/produtos/linha-corporal">
-                <p className="pb-6 text-[20px] w-full text-neutral-pure1000 font-[400] leading-[32px] border-b-[1px] ">
+                <h1 className="pb-6 text-[20px] w-full text-neutral-pure1000 font-[400] leading-[32px] border-b-[1px] ">
                   Linha Corporal
-                </p>
+                </h1>
               </Link>
             </Flex>
             <Flex onClick={() => setShowSidebar((prevState) => !prevState)}>

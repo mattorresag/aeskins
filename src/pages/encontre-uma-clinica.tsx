@@ -112,10 +112,10 @@ const Clinicas: NextPage = (): JSX.Element => {
           >
             <Flex direction="col" className="gap-6">
               <Flex direction="col" className="gap-2">
-                <p className="text-[24px] text-secondary-pure font-[600] leading-[36px] uppercase font-[600]">
-                  ENCONTRE UMA CLÍNICA{" "}
+                <h1 className="text-[24px] text-secondary-pure font-[600] leading-[36px] uppercase font-[600]">
+                  ENCONTRE UMA CLÍNICA
                   <span className="font-[300]">PERTINHO DE VOCÊ </span>
-                </p>
+                </h1>
                 <p className="text-neutral-pure400 leading-[24px]">
                   Pesquise uma clínica mais perto da localização que você
                   deseja.

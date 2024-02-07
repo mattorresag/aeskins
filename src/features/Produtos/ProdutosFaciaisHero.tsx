@@ -16,9 +16,9 @@ export const ProdutosFaciaisHero = (): JSX.Element => {
         className=" px-[5%] 2xl:px-[160px]   justify-center gap-10 z-10  lg:w-[50%] xl:w-[60%]"
       >
         <Flex direction="col" className="max-w-[742px] ">
-          <p className="font-[300] tracking-[2px] uppercase text-[54px] xl:text-[80px] xl:leading-[104px] leading-[70px] text-secondary-pure">
+          <h1 className="font-[300] tracking-[2px] uppercase text-[54px] xl:text-[80px] xl:leading-[104px] leading-[70px] text-secondary-pure">
             linha facial <span className="font-[600]"> sofiderm</span>
-          </p>
+          </h1>
         </Flex>
       </Flex>
       <Flex className="h-full lg:w-[50%] xl:w-[40%] relative">

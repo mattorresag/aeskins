@@ -37,12 +37,12 @@ export const HomeFirstSection = () => {
           <p className="text-neutral-pure400 text-[12px] font-[600] leading-[14px]">
             QUEM SOMOS
           </p>
-          <p className="text-center text-[48px] lg:text-[56px] text-neutral-pure900 tracking-[2px] font-[300] leading-[62px] lg:leading-[73px]">
+          <h1 className="text-center text-[48px] lg:text-[56px] text-neutral-pure900 tracking-[2px] font-[300] leading-[62px] lg:leading-[73px]">
             LEVANDO A BELEZA <br />
             <span className="font-[400] text-secondary-pure lg:text-[64px]">
               AINDA MAIS LONGE
             </span>
-          </p>
+          </h1>
         </Flex>
         <Icons.LetterLine className="w-[281px] h-5" />
       </Flex>
