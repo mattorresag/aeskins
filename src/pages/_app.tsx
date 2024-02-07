@@ -3,6 +3,8 @@ import { AppProps } from "next/app";
 
 import "../styles/globals.css";
 import { DefaultSeo } from "next-seo";
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -29,7 +31,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             "A Aeskins Pharmaceutical nasceu com a missão de descomplicar o mercado de procedimentos estéticos, colocando nossos clientes em primeiro lugar.",
         }}
       />
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
     </>
   );
 }
