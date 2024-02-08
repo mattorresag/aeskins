@@ -11,3 +11,15 @@ export interface Location {
   days: string;
   status: "aberto" | "fechado";
 }
+
+export interface BlogPost {
+  id: number;
+  title: string;
+  active: boolean;
+  publication_date: string;
+  author_name: string;
+  author_avatar?: string;
+  content: string;
+  banner_image: string;
+  card_image: string;
+}

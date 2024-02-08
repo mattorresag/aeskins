@@ -3,12 +3,30 @@ import React from "react";
 import { Layout } from "../../Layout/Layout";
 import { Flex } from "../../components/Flex/Flex";
 import Image from "next/image";
+import { getPosts } from "../../http/queries/posts/getPosts";
+import { usePost } from "../../http/hooks/posts/usePost";
+
+import ClientSideSanitizer from "../../features/Blog/ClientSideSanitizer";
+import { getPost } from "../../http/queries/posts/getPost";
+import { useRouter } from "next/router";
 interface Props {
   postId: string;
 }
 const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
+  const router = useRouter();
+  const { data } = usePost({
+    postId,
+    options: {
+      refetchOnWindowFocus: false,
+      retry: false,
+      onError() {
+        router.push("/404");
+      },
+    },
+  });
+
   return (
-    <Layout subtitle={`Blog Post ${postId}`} url={`blog/${postId}`}>
+    <Layout subtitle={`${data?.title}`} url={`blog/${postId}`}>
       <Flex className="lg:py-[62px] pb-20 gap-20">
         <Flex
           direction="col"
@@ -19,7 +37,7 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
               Publicado em
             </p>
             <p className="text-[18px] font-[400] text-secondary-pure leading-[27px]">
-              7 de Janeiro, 2024
+              {data?.publication_date}
             </p>
           </Flex>
           <div className="divider h-0 m-0 bg-black/10" />
@@ -34,11 +52,11 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
                   height={32}
                   objectFit="cover"
                   alt="Autor"
-                  src="/assets/blogPlaceholder.png"
+                  src={data?.author_avatar || "/assets/blogPlaceholder.png"}
                 />
               </Flex>
               <p className="text-[18px] font-[400] text-secondary-pure leading-[27px]">
-                Mariana Barbosa
+                {data?.author_name}
               </p>
             </Flex>
           </Flex>
@@ -51,8 +69,8 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
             <div className="relative w-full  lg:pt-[43.89%] pt-[73%]">
               <Image
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                src="/assets/levandoBeleza.png"
-                alt="Levando Beleza"
+                src={data?.banner_image || "/assets/levandoBeleza.png"}
+                alt={data?.title || "Levando Beleza"}
                 layout="fill"
                 quality={100}
                 priority
@@ -61,11 +79,9 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
           </Flex>
           <Flex direction="col" className=" gap-8 w-[90%] ">
             <p className="text-[32px] text-secondary-pure uppercase leading-[48px] lg:text-[56px] lg:font-[600] lg:tracking-[2px] lg:leading-[73px]">
-              TITULO
+              {data?.title}
             </p>
-            <p className="text-secondary-pure leading-[24px] lg:text-[20px] lg:font-[300] lg:leading-[30px]">
-              CONTEUDO
-            </p>
+            {data?.content && <ClientSideSanitizer html={data.content} />}
           </Flex>
         </Flex>
       </Flex>
@@ -74,13 +90,14 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = [{ id: "1" }, { id: "2" }];
+  const posts = await getPosts({});
 
-  const paths = posts.map((post) => ({
-    params: { postId: post.id },
-  }));
+  const paths =
+    posts?.map((post) => ({
+      params: { postId: `${post.id}` },
+    })) || [];
 
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

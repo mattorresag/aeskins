@@ -4,6 +4,9 @@ const nextConfig = {
   ignoreBuildErrors: false,
   swcMinify: true,
   productionBrowserSourceMaps: true,
+  images: {
+    domains: ["cloudfront.net", "localhost"],
+  },
 };
 
 module.exports = {

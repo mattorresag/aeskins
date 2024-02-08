@@ -3,56 +3,12 @@ import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
 import { BlogPostCard } from "../../../components/Cards/BlogPostCard";
 import useWindowWidth from "../../../hooks/useWindowWidth";
+import { BlogPost } from "../../../utils/types";
+interface Props {
+  posts?: BlogPost[];
+}
 
-const mockedPosts = [
-  {
-    title: "Exploring the Future of Web Development",
-    link: "exploring-the-future-of-web-development",
-    date: "2024-05-01",
-  },
-  {
-    title: "The Impact of AI on Modern Software Practices",
-    link: "impact-of-ai-on-software",
-    date: "2024-05-15",
-  },
-  {
-    title: "Understanding React's Latest Features",
-    link: "understanding-react-features",
-    date: "2024-06-01",
-  },
-  {
-    title: "Innovations in Cloud Computing",
-    link: "innovations-in-cloud-computing",
-    date: "2024-06-18",
-  },
-  {
-    title: "Best Practices for Responsive Design",
-    link: "best-practices-responsive-design",
-    date: "2024-07-05",
-  },
-  {
-    title: "Building Scalable Web Applications",
-    link: "building-scalable-web-applications",
-    date: "2024-07-20",
-  },
-  {
-    title: "Introduction to Serverless Architectures",
-    link: "intro-to-serverless-architectures",
-    date: "2024-08-10",
-  },
-  {
-    title: "Leveraging Machine Learning in Web Apps",
-    link: "leveraging-ml-in-web-apps",
-    date: "2024-08-25",
-  },
-  {
-    title: "Cybersecurity Trends in 2024",
-    link: "cybersecurity-trends-2024",
-    date: "2024-09-05",
-  },
-];
-
-export const UltimosPosts = (): JSX.Element => {
+export const UltimosPosts = ({ posts }: Props): JSX.Element => {
   const width = useWindowWidth();
   return (
     <Flex
@@ -108,10 +64,9 @@ export const UltimosPosts = (): JSX.Element => {
         'card9'
       `,
         }}
-        justify="center"
-        className="grid gap-8  bg-white 2xl:px-[160px] px-[5%] xl:px-20"
+        className="grid gap-8 justify-center md:justify-start bg-white 2xl:px-[160px] px-[5%] xl:px-20"
       >
-        {mockedPosts.map((post, index) => {
+        {posts?.map((post, index) => {
           return (
             <Flex
               key={`${post.title} - ${index}`}
@@ -122,8 +77,8 @@ export const UltimosPosts = (): JSX.Element => {
             >
               <BlogPostCard
                 title={post.title}
-                date={post.date}
-                link={post.link}
+                date={post.publication_date}
+                id={post.id}
               />
             </Flex>
           );

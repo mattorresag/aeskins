@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Flex } from "../../components/Flex/Flex";
 import { Map } from "../../components/GoogleMap/GoogleMap";
 import { useRouter } from "next/router";
-import { useClinicas } from "../../http/hooks/useClinicas";
+import { useClinicas } from "../../http/hooks/clinicas/useClinicas";
 import { Location } from "../../utils/types";
 import { BuscarClinicasItems } from "./BuscarClinicasItems";
 

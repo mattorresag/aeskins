@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 interface Props {
   title: string;
-  link: string;
+  id: number;
   date: string;
   image?: string;
 }
@@ -12,7 +12,7 @@ export const BlogPostCard = ({
   title,
   image,
   date,
-  link,
+  id,
 }: Props): JSX.Element => {
   const router = useRouter();
   return (
@@ -39,7 +39,7 @@ export const BlogPostCard = ({
         </Flex>
         <Flex
           onClick={() => {
-            router.push(`/blog/${link}`);
+            router.push(`/blog/${id}`);
           }}
           align="center"
           className="cursor-pointer w-fit gap-4 h-12 border-b-[1px] border-secondary-pure text-secondary-pure"
