@@ -7,7 +7,6 @@ import { getPosts } from "../../http/queries/posts/getPosts";
 import { usePost } from "../../http/hooks/posts/usePost";
 
 import ClientSideSanitizer from "../../features/Blog/ClientSideSanitizer";
-import { getPost } from "../../http/queries/posts/getPost";
 import { useRouter } from "next/router";
 interface Props {
   postId: string;
@@ -89,21 +88,21 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getPosts({});
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const posts = await getPosts({});
 
-  const paths =
-    posts?.map((post) => ({
-      params: { postId: `${post.id}` },
-    })) || [];
+//   const paths =
+//     posts?.map((post) => ({
+//       params: { postId: `${post.id}` },
+//     })) || [];
 
-  return { paths, fallback: true };
-};
+//   return { paths, fallback: true };
+// };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postId = params?.postId;
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const postId = params?.postId;
 
-  return { props: { postId } };
-};
+//   return { props: { postId } };
+// };
 
 export default BlogPost;
