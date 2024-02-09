@@ -7,25 +7,6 @@ interface Props {
 
 export default function AutoPlaySilentVideo({ video, className }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  useEffect(() => {
-    const videoElement = videoRef.current;
-    if (!videoElement) return;
-
-    const handleCanPlay = () => {
-      videoElement.muted = true;
-      videoElement
-        .play()
-        .then(() => alert("Video is playing"))
-        .catch((e) => console.error("Error playing video", e));
-    };
-
-    videoElement.addEventListener("canplaythrough", handleCanPlay);
-
-    // Clean up
-    return () => {
-      videoElement.removeEventListener("canplaythrough", handleCanPlay);
-    };
-  }, []);
 
   return (
     <>
