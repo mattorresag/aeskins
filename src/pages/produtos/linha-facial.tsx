@@ -10,7 +10,7 @@ const LinhaFacial: NextPage = (): JSX.Element => {
   return (
     <Layout subtitle="Linha Facial" url="produtos/linha-facial">
       <ProdutosFaciaisHero />
-      <Produtos />
+      <Produtos isFacial />
       {/* <AntesEDepoisSofiderm /> */}
       {/* <QuemUtiliza /> */}
     </Layout>

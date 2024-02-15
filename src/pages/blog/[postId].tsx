@@ -1,9 +1,8 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { NextPage } from "next";
 import React from "react";
 import { Layout } from "../../Layout/Layout";
 import { Flex } from "../../components/Flex/Flex";
 import Image from "next/image";
-import { getPosts } from "../../http/queries/posts/getPosts";
 import { usePost } from "../../http/hooks/posts/usePost";
 
 import ClientSideSanitizer from "../../features/Blog/ClientSideSanitizer";
