@@ -14,25 +14,18 @@ const words = (
 
 const depoimentos = [
   {
-    src: "/assets/depoimento.png",
-    url: "https://www.youtube.com/embed/MOPKWUVKU28?si=CsQKYlXESEcpJJoT",
+    src: "/assets/depoimentos/first.jpg",
+    url: "https://www.youtube.com/embed/5lR2owUhPIM",
   },
   {
-    src: "/assets/depoimento.png",
-    url: "https://www.youtube.com/embed/MOPKWUVKU28?si=CsQKYlXESEcpJJoT",
+    src: "/assets/depoimentos/second.jpg",
+    url: "https://www.youtube.com/embed/3uuchiNpOIk",
   },
   {
-    src: "/assets/depoimento.png",
-    url: "https://www.youtube.com/embed/vZX6fI2cdl4?si=aZssTB8DCb62EHJb",
+    src: "/assets/depoimentos/third.jpg",
+    url: "https://www.youtube.com/embed/-oVmk4hQlfA",
   },
-  {
-    src: "/assets/depoimento.png",
-    url: "https://www.youtube.com/embed/vZX6fI2cdl4?si=aZssTB8DCb62EHJb",
-  },
-  {
-    src: "/assets/depoimento.png",
-    url: "https://www.youtube.com/embed/vZX6fI2cdl4?si=aZssTB8DCb62EHJb",
-  },
+
 ];
 
 export const QuemUtiliza = () => {
@@ -68,7 +61,7 @@ export const QuemUtiliza = () => {
                     setIsModalOpen((oldState) => !oldState);
                   }}
                 >
-                  <DepoimentosCard src={depoimento.src} url={depoimento.url} />
+                  <DepoimentosCard src={depoimento.src} />
                 </Flex>
               ))}
             </Flex>

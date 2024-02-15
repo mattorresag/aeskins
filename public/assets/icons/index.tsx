@@ -54,8 +54,10 @@ import WhiteWhatsapp from "./whiteWhatsapp.svg?svgr";
 import WhiteMail from "./whiteMail.svg?svgr";
 import LevandoABelezaWave from "./levandoABelezaWave.svg?svgr";
 import ChevronDown from "./chevronDown.svg?svgr";
+import YoutubePlay from "./youtubePlay.svg?svgr";
 
 const rawIcons = {
+  YoutubePlay,
   ChevronDown,
   LevandoABelezaWave,
   TransparentSearchSmall,

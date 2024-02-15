@@ -12,7 +12,7 @@ const LinhaFacial: NextPage = (): JSX.Element => {
       <ProdutosFaciaisHero />
       <Produtos isFacial />
       {/* <AntesEDepoisSofiderm /> */}
-      {/* <QuemUtiliza /> */}
+      <QuemUtiliza />
     </Layout>
   );
 };

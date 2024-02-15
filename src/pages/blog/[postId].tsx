@@ -87,21 +87,4 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
   );
 };
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const posts = await getPosts({});
-
-//   const paths =
-//     posts?.map((post) => ({
-//       params: { postId: `${post.id}` },
-//     })) || [];
-
-//   return { paths, fallback: true };
-// };
-
-// export const getStaticProps: GetStaticProps = async ({ params }) => {
-//   const postId = params?.postId;
-
-//   return { props: { postId } };
-// };
-
 export default BlogPost;
