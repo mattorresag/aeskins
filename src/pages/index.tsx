@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <HomeFirstSection />
         <HomeSecondSection />
         <HomeThirdSection />
-        <QuemUtiliza />
+        {/* <QuemUtiliza /> */}
         <FacaParte />
         <FaleConosco />
       </Flex>

@@ -96,26 +96,11 @@ export const Footer = (): JSX.Element => {
         </Flex>
         <Flex className="w-full border-y-[1px] border-white/10">
           <Flex className="flex-col lg:flex-row max-[1800px]:max-w-[1792px] relative w-full  lg:gap-0 justify-start  lg:justify-between  min-[1800px]:px-0 min-[1921px]:px-[5%]">
-            <Flex
-              direction="col"
+            <div
               className="lg:border-r-[1px] border-b-[1px] border-white/10 gap-8 py-6 lg:py-16 lg:px-20 w-full lg:w-[50%]  justify-start lg:justify-center"
             >
-              <Flex direction="col" className="px-[5%] lg:px-0">
-                <p className="text-[32px] text-white leading-[48px]">
-                  FIQUE POR DENTRO DAS NOVIDADES!
-                </p>
-                <p className="text-[16px] text-white/70 leading-[24px]">
-                  Cadastre seu e-mail e fique sabendo primeiro de todas as
-                  nossas promoções e lançamentos.
-                </p>
-              </Flex>
-              <Flex className="cursor-pointer items-center w-full gap-2 px-[5%] lg:px-0">
-                <p className="w-full h-14 px-[14px] py-3 border-b-[1px] border-white/10 text-white/70 text-[16px]">
-                  Endereço de e-mail
-                </p>
-                <Icons.EmailButton className="h-14 w-14" />
-              </Flex>
-            </Flex>
+
+            </div>
             <Flex className="flex-col py-8 px-[5%] gap-8 lg:gap-10 lg:flex-row w-full lg:w-[50%] lg:px-20 lg:py-16">
               <Flex className=" w-full gap-4" direction="col">
                 <Link href="/quem-somos" passHref>
