@@ -26,22 +26,6 @@ import SofidermFineLinesImage20ml from "../../../public/assets/fineline/20_ml.pn
 
 const produtos = [
   {
-    title: "Sofiderm Derm Sub-skin (1ML)",
-    image: SofidermDermSubskinImage1ml.src,
-  },
-  {
-    title: "Sofiderm Derm Sub-skin (2ML)",
-    image: SofidermDermSubskinImage2ml.src,
-  },
-  {
-    title: "Sofiderm Derm Sub-skin (10ML)",
-    image: SofidermDermSubskinImage10ml.src,
-  },
-  {
-    title: "Sofiderm Derm Sub-skin (20ML)",
-    image: SofidermDermSubskinImage20ml.src,
-  },
-  {
     title: "Sofiderm Derm Plus (1ML)",
     image: SofidermDermPlusImage1ml.src,
   },
@@ -58,23 +42,41 @@ const produtos = [
     image: SofidermDermPlusImage20ml.src,
   },
   {
-    title: "Sofiderm Deep (1ML)",
-    image: SofidermDeepImage1ml.src,
+    title: "Sofiderm Derm Sub-skin (1ML)",
+    image: SofidermDermSubskinImage1ml.src,
+  },
+  {
+    title: "Sofiderm Derm Sub-skin (2ML)",
+    image: SofidermDermSubskinImage2ml.src,
+  },
+  {
+    title: "Sofiderm Derm Sub-skin (10ML)",
+    image: SofidermDermSubskinImage10ml.src,
+  },
+  {
+    title: "Sofiderm Derm Sub-skin (20ML)",
+    image: SofidermDermSubskinImage20ml.src,
+  },
+
+
+  {
+    title: "Sofiderm Fine Lines (1ML)",
+    image: SofidermFineLinesImage1ml.src,
     isFacial: true,
   },
   {
-    title: "Sofiderm Deep (2ML)",
-    image: SofidermDeepImage2ml.src,
+    title: "Sofiderm Fine Lines (2ML)",
+    image: SofidermFineLinesImage2ml.src,
     isFacial: true,
   },
   {
-    title: "Sofiderm Deep (10ML)",
-    image: SofidermDeepImage10ml.src,
+    title: "Sofiderm Fine Lines (10ML)",
+    image: SofidermFineLinesImage10ml.src,
     isFacial: true,
   },
   {
-    title: "Sofiderm Deep (20ML)",
-    image: SofidermDeepImage20ml.src,
+    title: "Sofiderm Fine Lines (20ML)",
+    image: SofidermFineLinesImage20ml.src,
     isFacial: true,
   },
   {
@@ -98,23 +100,23 @@ const produtos = [
     isFacial: true,
   },
   {
-    title: "Sofiderm Fine Lines (1ML)",
-    image: SofidermFineLinesImage1ml.src,
+    title: "Sofiderm Deep (1ML)",
+    image: SofidermDeepImage1ml.src,
     isFacial: true,
   },
   {
-    title: "Sofiderm Fine Lines (2ML)",
-    image: SofidermFineLinesImage2ml.src,
+    title: "Sofiderm Deep (2ML)",
+    image: SofidermDeepImage2ml.src,
     isFacial: true,
   },
   {
-    title: "Sofiderm Fine Lines (10ML)",
-    image: SofidermFineLinesImage10ml.src,
+    title: "Sofiderm Deep (10ML)",
+    image: SofidermDeepImage10ml.src,
     isFacial: true,
   },
   {
-    title: "Sofiderm Fine Lines (20ML)",
-    image: SofidermFineLinesImage20ml.src,
+    title: "Sofiderm Deep (20ML)",
+    image: SofidermDeepImage20ml.src,
     isFacial: true,
   },
 ];
