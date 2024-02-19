@@ -1,27 +1,20 @@
-import { useEffect, useRef } from "react";
-
 interface Props {
   video: string;
   className: string;
 }
 
 export default function AutoPlaySilentVideo({ video, className }: Props) {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   return (
-    <>
-
-      <video
-        className={`${className} hidden lg:block`}
-        ref={videoRef}
-        loop
-        autoPlay={true}
-        muted={true}
-        playsInline={true}
-        style={{ maxWidth: "100%", height: "auto" }} // Inline style for responsiveness
-      >
-        <source src={video} type="video/mp4" />
-      </video>
-    </>
+    <video
+      className={`${className} hidden lg:block`}
+      loop
+      autoPlay={true}
+      muted={true}
+      playsInline={true}
+      style={{ maxWidth: "100%", height: "auto" }} // Inline style for responsiveness
+    >
+      <source src={video} type="video/mp4" />
+    </video>
   );
 }
