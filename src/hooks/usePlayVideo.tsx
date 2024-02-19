@@ -10,8 +10,9 @@ export default function AutoPlaySilentVideo({ video, className }: Props) {
 
   return (
     <>
+
       <video
-        className={`${className}`}
+        className={`${className} hidden lg:block`}
         ref={videoRef}
         loop
         autoPlay={true}
