@@ -9,6 +9,7 @@ import { GOOGLE_API_KEY } from "../../utils/envs";
 import { Flex } from "../Flex/Flex";
 import Icons from "../../../public/assets/icons";
 import { Location } from "../../utils/types";
+import Link from "next/link";
 
 interface Props {
   locations: Location[];
@@ -185,8 +186,8 @@ export const Map = ({
   handleSelectedLocation,
 }: Props) => {
   const [mapCenter, setMapCenter] = useState({
-    lat: 40.7128,
-    lng: -74.006,
+    lat: -23.5489,
+    lng: -46.6388,
   });
 
   const handleMarkerClick = (location: Location) => {
@@ -239,7 +240,7 @@ export const Map = ({
                   {selectedLocation.days}
                 </p>
                 <p className="text-secondary-pure leading-[24px]">
-                  {selectedLocation.hora_inicio} - {selectedLocation.hora_fim}
+                  {selectedLocation.start_time} - {selectedLocation.end_time}
                 </p>
               </Flex>
               <Flex direction="col" className="gap-1">
@@ -260,9 +261,22 @@ export const Map = ({
               </Flex>
             </Flex>
             <Flex align="center" className="pt-4 gap-3">
-              <Icons.WhitePhone className="w-12 h-12" />
-              <Icons.WhiteWhatsapp className="w-12 h-12" />
-              <Icons.WhiteMail className="w-12 h-12" />
+              <Link href={`tel:+55${selectedLocation.phone}`} passHref>
+                <a className="cursor-pointer">
+                  <Icons.WhitePhone className="w-12 h-12" />
+                </a>
+              </Link>
+              <Link
+                href={`https://wa.me/55${selectedLocation.whatsapp}?text=Olá!`}
+                passHref
+              >
+                <a target="_blank" className="cursor-pointer">
+                  <Icons.WhiteWhatsapp className="w-12 h-12" />
+                </a>
+              </Link>
+              {/* <Flex className="cursor-pointer">
+                <Icons.WhiteMail className="w-12 h-12" />
+              </Flex> */}
             </Flex>
           </Flex>
         </InfoWindowF>

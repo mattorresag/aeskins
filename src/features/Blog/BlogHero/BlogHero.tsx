@@ -3,35 +3,13 @@ import { Flex } from "../../../components/Flex/Flex";
 import { BlogHeroCard } from "../../../components/Cards/BlogHeroCard";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCarousel } from "../../../hooks/useCarousel";
+import { BlogPost } from "../../../utils/types";
 
-const mockedCards = [
-  {
-    date: "2024-01-01",
-    title: "New Year, New Beginnings: Launching Our Latest Project",
-    link: "/blog/new-year-new-beginnings",
-    image: "/assets/produtoPlaceholder.png",
-  },
-  {
-    date: "2024-02-14",
-    title: "Valentine's Day Special: Love in the Tech World",
-    link: "/blog/valentines-day-special",
-    image: "/assets/produtoPlaceholder.png",
-  },
-  {
-    date: "2024-03-10",
-    title: "International Women's Day: Celebrating Women in Tech",
-    link: "/blog/international-womens-day",
-    image: "/assets/produtoPlaceholder.png",
-  },
-  {
-    date: "2024-04-22",
-    title: "Earth Day: Sustainable Practices in Software Development",
-    link: "/blog/earth-day",
-    image: "/assets/produtoPlaceholder.png",
-  },
-];
+interface Props {
+  posts?: BlogPost[];
+}
 
-export const BlogHero = (): JSX.Element => {
+export const BlogHero = ({ posts }: Props): JSX.Element => {
   const { calcStyle, emblaRef, scrollToSlide } = useCarousel({});
 
   return (
@@ -40,18 +18,18 @@ export const BlogHero = (): JSX.Element => {
       className="relative cursor-pointer  w-full w-screen bg-neutral-pure100 dark:bg-neutral-pure100 lg:bg-secondary-pure dark:lg:bg-secondary-pure z-[10] flex-nowrap"
     >
       <Flex className="w-full ">
-        {mockedCards.map((card) => (
+        {posts?.map((card) => (
           <BlogHeroCard
             key={card.title}
-            date={card.date}
+            date={card.publication_date}
             title={card.title}
-            link={card.link}
-            image={card.image}
+            link={`${card.id}`}
+            image={card.card_image}
           />
         ))}
       </Flex>
       <Flex className="w-full gap-2 absolute bottom-4 lg:bottom-6 2xl:pl-[160px] px-[5%] xl:px-20">
-        {Array.from({ length: mockedCards.length }, (_, index) => (
+        {Array.from({ length: posts?.length || 1 }, (_, index) => (
           <div
             key={index}
             className={calcStyle(index)}

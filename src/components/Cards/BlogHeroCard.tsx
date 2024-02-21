@@ -23,7 +23,7 @@ export const BlogHeroCard = ({
         direction="col"
         className="gap-8  w-full lg:w-[50%] px-[5%] 2xl:pl-[160px] lg:pl-[5%] xl:pl-20 lg:justify-center"
         onClick={() => {
-          router.push(link);
+          router.push(`/blog/${link}`);
         }}
       >
         <Flex direction="col" className="gap-2">
@@ -65,7 +65,7 @@ export const BlogHeroCard = ({
         <div className="relative w-full h-full  lg:pt-[50.9%] pt-[60%]">
           <Image
             className="absolute top-0 left-0 w-full h-full object-cover"
-            src="/assets/teste.png"
+            src={image || "/assets/teste.png"}
             alt="Levando Beleza"
             layout="fill"
             quality={100}

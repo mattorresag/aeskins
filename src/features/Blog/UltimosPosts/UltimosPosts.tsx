@@ -79,6 +79,7 @@ export const UltimosPosts = ({ posts }: Props): JSX.Element => {
                 title={post.title}
                 date={post.publication_date}
                 id={post.id}
+                image={post.card_image}
               />
             </Flex>
           );

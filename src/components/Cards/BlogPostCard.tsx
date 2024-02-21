@@ -17,7 +17,12 @@ export const BlogPostCard = ({
   const router = useRouter();
   return (
     <Flex direction="col" className="gap-6 max-w-[512px] h-full w-full">
-      <Flex className="bg-neutral-pure100 h-full">
+      <Flex
+        onClick={() => {
+          router.push(`/blog/${id}`);
+        }}
+        className="bg-neutral-pure100 h-full cursor-pointer"
+      >
         <Image
           src={image || "/assets/blogPlaceholder.png"}
           objectFit="cover"

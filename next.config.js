@@ -5,7 +5,13 @@ const nextConfig = {
   swcMinify: true,
   productionBrowserSourceMaps: true,
   images: {
-    domains: ["cloudfront.net", "localhost"],
+    domains: [
+      "cloudfront.net",
+      "localhost",
+      "www.aeskins.com",
+      "aeskins.com",
+      "162.215.131.210",
+    ],
   },
 };
 

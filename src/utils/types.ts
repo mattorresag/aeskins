@@ -5,11 +5,13 @@ export interface Location {
   lng: number;
   name: string;
   specialization: string;
-  hora_inicio: string;
-  hora_fim: string;
+  start_time: string;
+  end_time: string;
   address: string;
   days: string;
   status: "aberto" | "fechado";
+  phone: string;
+  whatsapp: string;
 }
 
 export interface BlogPost {
@@ -22,4 +24,5 @@ export interface BlogPost {
   content: string;
   banner_image: string;
   card_image: string;
+  featured?: boolean;
 }
