@@ -11,9 +11,12 @@ export const ClinicaCard = ({
   location,
   handleSelectedLocation,
 }: Props): JSX.Element => {
-  const isOpen = new Date(location.hora_fim) <= new Date() && new Date(location.hora_inicio) >= new Date();
-  const statusStyle = `${isOpen ? "bg-status-open" : "bg-status-closed"
-    } py-2 px-3 text-[12px] font-[600] uppercase rounded-3xl h-6 items-center justify-center`;
+  const isOpen =
+    new Date(location.end_time) <= new Date() &&
+    new Date(location.start_time) >= new Date();
+  const statusStyle = `${
+    isOpen ? "bg-status-open" : "bg-status-closed"
+  } py-2 px-3 text-[12px] font-[600] uppercase rounded-3xl h-6 items-center justify-center`;
   return (
     <Flex
       className="w-full rounded-md border-[1px] border-black/10 active:border-secondary-pure hover:border-secondary-pure"
@@ -45,7 +48,7 @@ export const ClinicaCard = ({
           </Flex>
         </Flex>
         <Flex className={statusStyle}>
-          <p>{isOpen ? 'Aberto' : 'Fechado'}</p>
+          <p>{isOpen ? "Aberto" : "Fechado"}</p>
         </Flex>
       </Flex>
       <div className="divider h-0 m-0" />
