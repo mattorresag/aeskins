@@ -60,7 +60,7 @@ export const Footer = (): JSX.Element => {
                     </Flex>
                   </a>
                 </Link>
-                <Link href="https://www.youtube.com/@aeskinspharma" passHref>
+                <Link href="https://www.facebook.com/aeskins.pharma/" passHref>
                   <a
                     className="cursor-pointer"
                     target="_blank"
@@ -75,7 +75,7 @@ export const Footer = (): JSX.Element => {
                     </Flex>
                   </a>
                 </Link>
-                <Link href="https://www.youtube.com/@aeskinspharma" passHref>
+                <Link href="https://www.linkedin.com/company/aeskins/" passHref>
                   <a
                     className="cursor-pointer"
                     target="_blank"
@@ -96,11 +96,7 @@ export const Footer = (): JSX.Element => {
         </Flex>
         <Flex className="w-full border-y-[1px] border-white/10">
           <Flex className="flex-col lg:flex-row max-[1800px]:max-w-[1792px] relative w-full  lg:gap-0 justify-start  lg:justify-between  min-[1800px]:px-0 min-[1921px]:px-[5%]">
-            <div
-              className="lg:border-r-[1px] border-b-[1px] border-white/10 gap-8 py-6 lg:py-16 lg:px-20 w-full lg:w-[50%]  justify-start lg:justify-center"
-            >
-
-            </div>
+            <div className="lg:border-r-[1px] border-b-[1px] border-white/10 gap-8 py-6 lg:py-16 lg:px-20 w-full lg:w-[50%]  justify-start lg:justify-center"></div>
             <Flex className="flex-col py-8 px-[5%] gap-8 lg:gap-10 lg:flex-row w-full lg:w-[50%] lg:px-20 lg:py-16">
               <Flex className=" w-full gap-4" direction="col">
                 <Link href="/quem-somos" passHref>
