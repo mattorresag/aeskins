@@ -144,11 +144,6 @@ export const Footer = (): JSX.Element => {
               R. Paraná, Nº 107 - Sala 30, 2º Andar - Santana de Parnaíba/SP -
               CEP 06530-025
             </p>
-            <p className="lg:hidden">--</p>
-            <p className="hidden lg:block text-white/40">|</p>
-            <p>Termos de Uso</p>
-            <p>•</p>
-            <p>Política de Privacidade</p>
           </Flex>
         </Flex>
       </Flex>
