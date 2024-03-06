@@ -15,7 +15,7 @@ export const DepoimentosCard = ({ src }: Props) => {
           <Icons.YoutubePlay className="w-20 h-20" />
         </Flex>
         <Image
-          className="object-cover"
+          className="object-cover object-left"
           width={556}
           height={536}
           src={src}

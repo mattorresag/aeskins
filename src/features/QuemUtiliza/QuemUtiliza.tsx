@@ -14,18 +14,17 @@ const words = (
 
 const depoimentos = [
   {
-    src: "/assets/depoimentos/first.jpg",
+    src: "/assets/depoimentos/first.png",
     url: "https://www.youtube.com/embed/5lR2owUhPIM",
   },
   {
-    src: "/assets/depoimentos/second.jpg",
+    src: "/assets/depoimentos/second.png",
     url: "https://www.youtube.com/embed/3uuchiNpOIk",
   },
   {
-    src: "/assets/depoimentos/third.jpg",
+    src: "/assets/depoimentos/third.png",
     url: "https://www.youtube.com/embed/-oVmk4hQlfA",
   },
-
 ];
 
 export const QuemUtiliza = () => {

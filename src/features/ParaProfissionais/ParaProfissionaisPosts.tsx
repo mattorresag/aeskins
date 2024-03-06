@@ -15,10 +15,9 @@ export const ParaProfissionaisPosts = (): JSX.Element => {
           image="/assets/community.png"
         />
         <PostCard
-          title="Como a Aeskins Eleva a Autoestima dos Nossos Clientes"
-          linkName="BAIXAR MATERIAL"
-          link="https://community.aeskins.com/"
-          icon={<Icons.Download className="h-6 w-6" />}
+          title="Acesse nossa página de materiais"
+          linkName="MATERIAIS"
+          link="https://materiais.aeskins.com/"
         />
       </Flex>
     </Flex>
