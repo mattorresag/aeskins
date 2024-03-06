@@ -14,11 +14,11 @@ export const ConhecaOTimeCard = ({
   sobre,
 }: Props): JSX.Element => {
   return (
-    <Flex className="flex-col w-full xl:flex-row min-w-[100vw] xl:h-[85vh] 2xl:h-[90vh] ">
+    <Flex className="flex-col w-full xl:flex-row min-w-[100vw]  min-h-fit ">
       <Flex className="hidden xl:flex w-[50%]">
         <Image
-          // src={image}
-          src="/assets/alexandre.png"
+          className="object-cover"
+          src={image}
           width={1920}
           height={1000}
           alt="Time"
@@ -30,7 +30,7 @@ export const ConhecaOTimeCard = ({
         <div className="relative w-full h-full pt-[88%] ">
           <Image
             className="absolute top-0 left-0 w-full h-full object-cover"
-            src="/assets/alexandre.png"
+            src={image}
             alt={nome}
             layout="fill"
             quality={100}
@@ -43,7 +43,7 @@ export const ConhecaOTimeCard = ({
         className="w-full xl:w-[50%]  bg-secondary-pure pt-6 pb-20 xl:py-[3%] xl:px-[3%] 2xl:py-[5%] 2xl:px-[5%]  px-[5%]"
       >
         <Flex direction="col" className="xl:gap-16 gap-8 ">
-          <Flex direction="col" className="gap-2 pt-[100px] xl:pt-0">
+          <Flex direction="col" className="gap-2 lg:pt-[100px] xl:pt-0">
             <p className="text-[18px] text-start xl:text-[20px] leading-[27px] xl:leading-[30px] text-white font-[300]">
               {cargo}
             </p>

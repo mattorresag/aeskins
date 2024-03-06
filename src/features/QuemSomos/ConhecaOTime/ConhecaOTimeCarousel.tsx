@@ -4,73 +4,36 @@ import { Flex } from "../../../components/Flex/Flex";
 import { ConhecaOTimeCard } from "./ConhecaOTimeCard";
 const mockedCards = [
   {
-    image: "/assets/mock1.png",
-    cargo: "Desenvolvedor Frontend",
-    nome: "Alexandre",
+    image: "/assets/mock1.jpeg",
+    cargo: "Conselho Médico Dermatológico",
+    nome: "Dra. Luciana Lourenço",
     sobre: (
       <p className="text-[16px] lg:text-[18px] text-white/40 lg:font-[300] leading-[24px] lg:leading-[27px]">
-        {" "}
-        Médico formado pela Universidade Gama Filho do Rio de Janeiro em 1991 e
-        pós-graduado em Dermatologia pela Santa Casa da Misericórdia do Rio de
-        Janeiro em 1993.
+        • Doutorado pela Universidade de São Paulo – USP.
         <br />
         <br className="hidden lg:block" />
-        • Membro da Sociedade Brasileira de Dermatologia
+        • Pós-graduada em Cosmiatria e Cirurgia pela Faculdade de Medicina do
+        ABC
         <br />
         <br className="hidden lg:block" />
-        • Membro da Academia Americana de Dermatologia
+        • Dermatologia no Hospital Heliópolis. Dermatologista pela SBD.
         <br />
         <br className="hidden lg:block" />
-        • Ex-coordenador do Departamento de Laser da SBD por 3 mandatos• Chefe
-        do setor de laser da Santa Casa do Rio de Janeiro
+        • Membro Titular da Sociedade Brasileira de Dermatologia.
         <br />
         <br className="hidden lg:block" />
-        • Professor de Dermatologia da Santa Casa do Rio de Janeiro
+        • Membro Titular da Sociedade Brasileira de Cirurgia Dermatológica.
         <br />
         <br className="hidden lg:block" />
-        • Membro da Sociedade Brasileira de Cirurgia Dermatológica
+        • Membro da Academia Americana de Dermatologia – AAD.
         <br />
         <br className="hidden lg:block" />
-      </p>
-    ),
-  },
-  {
-    image: "/assets/mock2.png",
-    cargo: "Designer UI/UX",
-    nome: "Beatriz",
-    sobre: (
-      <p className="text-[16px] lg:text-[18px] text-white/40 lg:font-[300] leading-[24px] lg:leading-[27px]">
-        Expertise em design de interfaces e experiência do usuário.
-      </p>
-    ),
-  },
-  {
-    image: "/assets/mock3.png",
-    cargo: "Desenvolvedor Backend",
-    nome: "Carlos",
-    sobre: (
-      <p className="text-[16px] lg:text-[18px] text-white/40 lg:font-[300] leading-[24px] lg:leading-[27px]">
-        Especializado em Node.js e bancos de dados.
-      </p>
-    ),
-  },
-  {
-    image: "/assets/mock4.png",
-    cargo: "Gerente de Projeto",
-    nome: "Daniela",
-    sobre: (
-      <p className="text-[16px] lg:text-[18px] text-white/40 lg:font-[300] leading-[24px] lg:leading-[27px]">
-        Gerenciamento de projetos ágeis e SCRUM.
-      </p>
-    ),
-  },
-  {
-    image: "/assets/mock5.png",
-    cargo: "Analista de Dados",
-    nome: "Eduardo",
-    sobre: (
-      <p className="text-[16px] lg:text-[18px] text-white/40 lg:font-[300] leading-[24px] lg:leading-[27px]">
-        Experiência em Python, análise de dados e machine learning.
+        • Membro da ISDS (Sociedade Internacional de Cirurgia Dermatológica).
+        <br />
+        <br className="hidden lg:block" />
+        • Dermatologista em consultório particular.
+        <br />
+        <br className="hidden lg:block" />
       </p>
     ),
   },
@@ -89,7 +52,7 @@ export const ConhecaOTimeCarousel = (): JSX.Element => {
         {mockedCards.map((card) => (
           <ConhecaOTimeCard
             key={card.nome}
-            image="/assets/alexandre.png"
+            image={card.image}
             cargo={card.cargo}
             nome={card.nome}
             sobre={card.sobre}

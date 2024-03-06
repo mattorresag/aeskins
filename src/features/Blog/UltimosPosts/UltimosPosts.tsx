@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Flex } from "../../../components/Flex/Flex";
 import Icons from "../../../../public/assets/icons";
 import { BlogPostCard } from "../../../components/Cards/BlogPostCard";
@@ -9,7 +9,11 @@ interface Props {
 }
 
 export const UltimosPosts = ({ posts }: Props): JSX.Element => {
+  const [userSearch, setUserSearch] = useState("");
   const width = useWindowWidth();
+  const filteredPosts = posts?.filter((post) =>
+    post.title.toLowerCase().includes(userSearch.toLowerCase())
+  );
   return (
     <Flex
       direction="col"
@@ -36,6 +40,8 @@ export const UltimosPosts = ({ posts }: Props): JSX.Element => {
           >
             <input
               placeholder="Faça sua busca"
+              value={userSearch}
+              onChange={(e) => setUserSearch(e.target.value)}
               className="input h-fit bg-transparent w-[90%]"
             />
 
@@ -66,7 +72,7 @@ export const UltimosPosts = ({ posts }: Props): JSX.Element => {
         }}
         className="grid gap-8 justify-center md:justify-start bg-white 2xl:px-[160px] px-[5%] xl:px-20"
       >
-        {posts?.map((post, index) => {
+        {filteredPosts?.map((post, index) => {
           return (
             <Flex
               key={`${post.title} - ${index}`}
