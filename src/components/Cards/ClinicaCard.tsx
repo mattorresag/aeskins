@@ -11,9 +11,43 @@ export const ClinicaCard = ({
   location,
   handleSelectedLocation,
 }: Props): JSX.Element => {
+  const imageUrl = location.image?.replace(
+    "http://localhost:8000",
+    "https://hml.aeskins.com"
+  );
+
+  const checkIfOpenBasedOnDay = (days: string) => {
+    const currentDay = new Date().getDay(); // Sunday - 0, Monday - 1, ..., Saturday - 6
+    const daysMapping = {
+      Dom: 0,
+      Seg: 1,
+      Ter: 2,
+      Qua: 3,
+      Qui: 4,
+      Sex: 5,
+      Sab: 6,
+    };
+    const [startDay, endDay] = days
+      .split("-")
+      .map((day) => daysMapping[day.trim() as keyof typeof daysMapping]);
+
+    // Check if current day is within the range
+    if (startDay <= endDay) {
+      // Range does not cross the week boundary (e.g., Seg-Sex)
+      return currentDay >= startDay && currentDay <= endDay;
+    } else {
+      // Range crosses the week boundary (e.g., Sab-Ter), handle accordingly
+      return currentDay >= startDay || currentDay <= endDay;
+    }
+  };
+
+  // Usage
+  const isOpenToday = checkIfOpenBasedOnDay(location.days);
+
   const isOpen =
-    new Date(location.end_time) <= new Date() &&
-    new Date(location.start_time) >= new Date();
+    new Date().getHours() >= parseInt(location.start_time.split(":")[0]) &&
+    new Date().getHours() < parseInt(location.end_time.split(":")[0]) &&
+    isOpenToday;
   const statusStyle = `${
     isOpen ? "bg-status-open" : "bg-status-closed"
   } py-2 px-3 text-[12px] font-[600] uppercase rounded-3xl h-6 items-center justify-center`;
@@ -27,7 +61,7 @@ export const ClinicaCard = ({
           <Flex className="w-20 h-20">
             <Image
               alt={`${location.name} logo`}
-              src={location.image || "/assets/produtoPlaceholder.png"}
+              src={imageUrl || "/assets/produtoPlaceholder.png"}
               width={80}
               height={80}
               objectFit="cover"

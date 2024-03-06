@@ -11,6 +11,7 @@ const nextConfig = {
       "www.aeskins.com",
       "aeskins.com",
       "162.215.131.210",
+      "hml.aeskins.com",
     ],
   },
 };
