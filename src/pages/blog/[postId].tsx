@@ -25,6 +25,16 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
     },
   });
 
+  const avatarUrl = data?.author_avatar?.replace(
+    "http://localhost:8000",
+    "https://hml.aeskins.com"
+  );
+
+  const bannerUrl = data?.banner_image?.replace(
+    "http://localhost:8000",
+    "https://hml.aeskins.com"
+  );
+
   return (
     <Layout subtitle={`${data?.title}`} url={`blog/${postId}`}>
       <PageLoading isLoading={isLoading}>
@@ -38,7 +48,9 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
                 Publicado em
               </p>
               <p className="text-[18px] font-[400] text-secondary-pure leading-[27px]">
-                {data?.publication_date}
+                {new Intl.DateTimeFormat("pt-BR").format(
+                  new Date(data?.publication_date || new Date())
+                )}
               </p>
             </Flex>
             <div className="divider h-0 m-0 bg-black/10" />
@@ -53,7 +65,7 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
                     height={32}
                     objectFit="cover"
                     alt="Autor"
-                    src={data?.author_avatar || "/assets/blogPlaceholder.png"}
+                    src={avatarUrl || "/assets/blogPlaceholder.png"}
                   />
                 </Flex>
                 <p className="text-[18px] font-[400] text-secondary-pure leading-[27px]">
@@ -73,7 +85,7 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
               <div className="relative w-full  lg:pt-[43.89%] pt-[73%]">
                 <Image
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src={data?.banner_image || "/assets/levandoBeleza.png"}
+                  src={bannerUrl || "/assets/levandoBeleza.png"}
                   alt={data?.title || "Levando Beleza"}
                   layout="fill"
                   quality={100}
