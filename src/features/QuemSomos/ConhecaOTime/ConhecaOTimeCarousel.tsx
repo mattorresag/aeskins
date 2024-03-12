@@ -4,7 +4,7 @@ import { Flex } from "../../../components/Flex/Flex";
 import { ConhecaOTimeCard } from "./ConhecaOTimeCard";
 const mockedCards = [
   {
-    image: "/assets/mock1.jpeg",
+    image: "/assets/luciana.png",
     cargo: "Conselho Médico Dermatológico",
     nome: "Dra. Luciana Lourenço",
     sobre: (
@@ -32,6 +32,54 @@ const mockedCards = [
         <br />
         <br className="hidden lg:block" />
         • Dermatologista em consultório particular.
+        <br />
+        <br className="hidden lg:block" />
+      </p>
+    ),
+  },
+  {
+    image: "/assets/karine.png",
+    nome: "Dra. Karine Cade",
+    cargo: 'CRM: 138.586 – RQE: 48.780',
+    sobre: (
+      <p className="text-[16px] lg:text-[18px] text-white/40 lg:font-[300] leading-[24px] lg:leading-[27px]">
+        • Graduada em medicina pela Escola de Medicina da Santa Casa de Misericórdia de Vitória ( EMESCAM).
+        <br />
+        <br className="hidden lg:block" />
+        • Especialização em Dermatologia pelo SUS- SP.
+        <br />
+        <br className="hidden lg:block" />
+        • Membro Titular da Sociedade Brasileira de Dermatologia (SBD).
+        <br />
+        <br className="hidden lg:block" />
+        • Membro titular da Sociedade Brasileira de Cirurgia Dermatológica (SBCD).
+        <br />
+        <br className="hidden lg:block" />
+        • Estágio em Dermatologia no Hôpital Saint-Louis in Paris, France.
+        <br />
+        <br className="hidden lg:block" />
+      </p>
+    ),
+  },
+  {
+    image: "/assets/marcelly.png",
+    nome: "Dra. Marcelly",
+    cargo: 'CRM: 138.586 – RQE: 48.780',
+    sobre: (
+      <p className="text-[16px] lg:text-[18px] text-white/40 lg:font-[300] leading-[24px] lg:leading-[27px]">
+        • Graduada em medicina pela Escola de Medicina da Santa Casa de Misericórdia de Vitória ( EMESCAM).
+        <br />
+        <br className="hidden lg:block" />
+        • Especialização em Dermatologia pelo SUS- SP.
+        <br />
+        <br className="hidden lg:block" />
+        • Membro Titular da Sociedade Brasileira de Dermatologia (SBD).
+        <br />
+        <br className="hidden lg:block" />
+        • Membro titular da Sociedade Brasileira de Cirurgia Dermatológica (SBCD).
+        <br />
+        <br className="hidden lg:block" />
+        • Estágio em Dermatologia no Hôpital Saint-Louis in Paris, France.
         <br />
         <br className="hidden lg:block" />
       </p>

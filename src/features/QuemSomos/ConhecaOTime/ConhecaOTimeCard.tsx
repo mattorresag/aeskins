@@ -3,7 +3,7 @@ import { Flex } from "../../../components/Flex/Flex";
 import Image from "next/image";
 interface Props {
   image: string;
-  cargo: string;
+  cargo?: string;
   nome: string;
   sobre: React.ReactNode;
 }
@@ -14,8 +14,8 @@ export const ConhecaOTimeCard = ({
   sobre,
 }: Props): JSX.Element => {
   return (
-    <Flex className="flex-col w-full xl:flex-row min-w-[100vw]  min-h-fit ">
-      <Flex className="hidden xl:flex w-[50%]">
+    <Flex className="flex-col w-full lg:flex-row min-w-[100vw]  min-h-fit ">
+      <Flex className="hidden lg:flex w-[50%]">
         <Image
           className="object-cover"
           src={image}
@@ -26,7 +26,7 @@ export const ConhecaOTimeCard = ({
           priority
         />
       </Flex>
-      <Flex className="xl:hidden w-full  h-full">
+      <Flex className="lg:hidden w-full  h-full">
         <div className="relative w-full h-full pt-[88%] ">
           <Image
             className="absolute top-0 left-0 w-full h-full object-cover"
@@ -40,14 +40,16 @@ export const ConhecaOTimeCard = ({
       </Flex>
       <Flex
         direction="col"
-        className="w-full xl:w-[50%]  bg-secondary-pure pt-6 pb-20 xl:py-[3%] xl:px-[3%] 2xl:py-[5%] 2xl:px-[5%]  px-[5%]"
+        className="w-full lg:w-[50%]  bg-secondary-pure pt-6 pb-20 lg:py-[3%] lg:px-[3%] 2lg:py-[5%] 2lg:px-[5%]  px-[5%]"
       >
-        <Flex direction="col" className="xl:gap-16 gap-8 ">
-          <Flex direction="col" className="gap-2 lg:pt-[100px] xl:pt-0">
-            <p className="text-[18px] text-start xl:text-[20px] leading-[27px] xl:leading-[30px] text-white font-[300]">
-              {cargo}
-            </p>
-            <p className="uppercase text-[48px] xl:text-[56px] xl:tracking-[2px] xl:leading-[73px] leading-[62px] text-white font-[300]">
+        <Flex direction="col" className="lg:gap-16 gap-8 ">
+          <Flex direction="col" className="gap-2 lg:pt-[100px] lg:pt-0">
+            {cargo && (
+              <p className="text-[18px] text-start lg:text-[20px] leading-[27px] lg:leading-[30px] text-white font-[300]">
+                {cargo}
+              </p>
+            )}
+            <p className="uppercase text-[48px] lg:text-[56px] lg:tracking-[2px] lg:leading-[73px] leading-[62px] text-white font-[300]">
               {nome}
             </p>
           </Flex>
