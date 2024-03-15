@@ -10,6 +10,7 @@ import { Flex } from "../Flex/Flex";
 import Icons from "../../../public/assets/icons";
 import { Location } from "../../utils/types";
 import Link from "next/link";
+import _ from "lodash";
 
 interface Props {
   locations: Location[];
@@ -179,7 +180,7 @@ const customMapStyles = [
   },
 ];
 
-export const Map = ({
+const Map = ({
   locations,
   style,
   selectedLocation,
@@ -267,16 +268,14 @@ export const Map = ({
                 </a>
               </Link>
               <Link
-                href={`https://wa.me/55${selectedLocation.whatsapp}?text=Olá!`}
+                href={`https://wa.me/55${selectedLocation.phone}?text=Olá!`}
                 passHref
               >
                 <a target="_blank" className="cursor-pointer">
                   <Icons.WhiteWhatsapp className="w-12 h-12" />
                 </a>
               </Link>
-              {/* <Flex className="cursor-pointer">
-                <Icons.WhiteMail className="w-12 h-12" />
-              </Flex> */}
+
             </Flex>
           </Flex>
         </InfoWindowF>
@@ -284,3 +283,10 @@ export const Map = ({
     </GoogleMap>
   );
 };
+
+export const MapMemoized = React.memo(Map, (prevProps, nextProps) => {
+  // This function should return true if passing nextProps to render would return
+  // the same result as passing prevProps, otherwise return false
+  return _.isEqual(prevProps.locations, nextProps.locations) &&
+    _.isEqual(prevProps.selectedLocation, nextProps.selectedLocation);
+});

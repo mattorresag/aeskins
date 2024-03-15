@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Flex } from "../../components/Flex/Flex";
-import { Map } from "../../components/GoogleMap/GoogleMap";
 import { useRouter } from "next/router";
 import { useClinicas } from "../../http/hooks/clinicas/useClinicas";
 import { Location } from "../../utils/types";
 import { BuscarClinicasItems } from "./BuscarClinicasItems";
+import { MapMemoized } from "../../components/GoogleMap/GoogleMap";
 
 export const BuscarClinicas = (): JSX.Element => {
   const [debounced, setDebounced] = useState<string>("");
@@ -34,7 +34,11 @@ export const BuscarClinicas = (): JSX.Element => {
   };
 
   useEffect(() => {
-    refetch();
+    const handler = setTimeout(() => {
+      refetch();
+    }, 300);
+
+    return () => clearTimeout(handler);
   }, [debounced, refetch]);
 
   return (
@@ -46,7 +50,7 @@ export const BuscarClinicas = (): JSX.Element => {
         handleSelectedLocation={handleSelectedLocation}
       />
       <Flex className="lg:w-[50%] w-full lg:h-[975px] h-[446px]" id="mapa">
-        <Map
+        <MapMemoized
           style={{
             width: "100%",
             height: "100%",

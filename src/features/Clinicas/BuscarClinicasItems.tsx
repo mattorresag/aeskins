@@ -6,6 +6,8 @@ import { useDebounce } from "react-use";
 import { Flex } from "../../components/Flex/Flex";
 import { BuscarClinicasInput } from "./BuscarClinicasInput";
 import CircularProgress from "../../components/CircularProgress/CircularProgress";
+import { AutoSizer, List, CellMeasurer, CellMeasurerCache, ListRowProps } from 'react-virtualized';
+
 interface Props {
   handleDebounced: (value: string) => void;
   handleSelectedLocation: (location: Location | null) => void;
@@ -19,28 +21,12 @@ export const BuscarClinicasItems = ({
   handleDebounced,
 }: Props): JSX.Element => {
   const [userSearch, setUserSearch] = useState<string | undefined>();
-
   const isEmpty = !data || data?.length === 0;
 
-  const renderClinicas = () => {
-    if (isLoading)
-      return (
-        <Flex className="justify-center overflow-hidden min-h-[100px]">
-          <CircularProgress />
-        </Flex>
-      );
-    return isEmpty ? (
-      <BuscaVazia />
-    ) : (
-      data.map((clinica) => (
-        <ClinicaCard
-          location={clinica}
-          key={clinica.name}
-          handleSelectedLocation={handleSelectedLocation}
-        />
-      ))
-    );
-  };
+  const cache = new CellMeasurerCache({
+    fixedWidth: true,
+    defaultHeight: 100, // Provide a default height
+  });
 
   const handleUserSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserSearch(e.target.value);
@@ -53,6 +39,27 @@ export const BuscarClinicasItems = ({
     300,
     [userSearch]
   );
+
+  const rowRenderer = ({ index, key, style, parent }: ListRowProps) => {
+    const itemStyle = { ...style, paddingBottom: index === (data?.length || 0) - 1 ? 0 : 16 };
+    return (
+      <CellMeasurer
+        key={key}
+        cache={cache}
+        parent={parent}
+        columnIndex={0}
+        rowIndex={index}>
+        <div style={itemStyle}>
+          {data && (
+            <ClinicaCard
+              location={data[index]}
+              key={data?.[index].name}
+              handleSelectedLocation={handleSelectedLocation}
+            />)}
+        </div>
+      </CellMeasurer>
+    );
+  };
 
   return (
     <Flex className="justify-center lg:justify-start   w-full lg:w-[50%] py-10 xl:pl-[160px] px-[5%] lg:pr-0">
@@ -76,11 +83,27 @@ export const BuscarClinicasItems = ({
           <BuscarClinicasInput handleUserSearch={handleUserSearch} />
         </Flex>
         <div className="divider h-0 m-0" />
-        <Flex
-          className="max-h-[732px] overflow-y-auto overflow-x-hidden gap-6"
-          direction="col"
-        >
-          {renderClinicas()}
+        <Flex className="h-[732px] h-full">
+          {isLoading ? (
+            <Flex className="justify-center overflow-hidden min-h-[100px]">
+              <CircularProgress />
+            </Flex>
+          ) : isEmpty ? (
+            <BuscaVazia />
+          ) : (
+            <AutoSizer>
+              {({ height, width }) => (
+                <List
+                  width={width}
+                  height={height}
+                  deferredMeasurementCache={cache}
+                  rowCount={data.length}
+                  rowHeight={cache.rowHeight}
+                  rowRenderer={rowRenderer}
+                />
+              )}
+            </AutoSizer>
+          )}
         </Flex>
       </Flex>
     </Flex>

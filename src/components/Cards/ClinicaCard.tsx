@@ -48,12 +48,11 @@ export const ClinicaCard = ({
     new Date().getHours() >= parseInt(location.start_time.split(":")[0]) &&
     new Date().getHours() < parseInt(location.end_time.split(":")[0]) &&
     isOpenToday;
-  const statusStyle = `${
-    isOpen ? "bg-status-open" : "bg-status-closed"
-  } py-2 px-3 text-[12px] font-[600] uppercase rounded-3xl h-6 items-center justify-center`;
+  const statusStyle = `${isOpen ? "bg-status-open" : "bg-status-closed"
+    } py-2 px-3 text-[12px] font-[600] uppercase rounded-3xl h-6 items-center justify-center`;
   return (
     <Flex
-      className="w-full rounded-md border-[1px] border-black/10 active:border-secondary-pure hover:border-secondary-pure"
+      className=" w-full rounded-md border-[1px] border-black/10 active:border-secondary-pure hover:border-secondary-pure"
       direction="col"
     >
       <Flex className="p-4 gap-4 lg:justify-between">
