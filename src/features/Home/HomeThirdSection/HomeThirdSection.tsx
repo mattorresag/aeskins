@@ -53,7 +53,7 @@ export const HomeThirdSection = () => {
               <div className="md:hidden relative w-full pt-[60%]">
                 <Image
                   className="absolute left-0 w-full object-cover object-top"
-                  src={PreenchedoresMobileImage.src}
+                  src={PreenchedoresImage.src}
                   alt="Preenchedores Mobile"
                   unoptimized
                   layout="fill"
