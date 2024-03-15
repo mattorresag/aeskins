@@ -1,7 +1,5 @@
 import React from "react";
 import { Flex } from "../../components/Flex/Flex";
-import Image from "next/image";
-import Icons from "../../../public/assets/icons";
 import { PostCard } from "../../components/Cards/PostCard";
 
 export const ParaProfissionaisPosts = (): JSX.Element => {
@@ -17,6 +15,7 @@ export const ParaProfissionaisPosts = (): JSX.Element => {
         <PostCard
           title="Acesse nossa página de materiais"
           linkName="MATERIAIS"
+          image="/assets/materiais.png"
           link="https://materiais.aeskins.com/"
         />
       </Flex>
