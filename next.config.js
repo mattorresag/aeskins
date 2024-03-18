@@ -3,7 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   ignoreBuildErrors: false,
   swcMinify: true,
-  productionBrowserSourceMaps: true,
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
   images: {
     domains: [
       "cloudfront.net",

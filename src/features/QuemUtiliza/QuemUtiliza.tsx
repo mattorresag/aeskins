@@ -4,6 +4,9 @@ import { Carousel } from "../../components/Carousel/Carousel";
 import { DepoimentosCard } from "../../components/Cards/DepoimentosCard";
 import { WordsCarousel } from "../../components/Carousel/WordsCarousel/WordsCarousel";
 import VideoDialog from "../../components/VideoDialog/VideoDialog";
+import Depoimentos1 from "../../../public/assets/depoimentos/first.png";
+import Depoimentos2 from "../../../public/assets/depoimentos/second.png";
+import Depoimentos3 from "../../../public/assets/depoimentos/third.png";
 
 const words = (
   <p className="text-[64px] font-[300] leading-[83px] lg:text-[80px] lg:leading-[104px] text-nowrap">
@@ -14,15 +17,15 @@ const words = (
 
 const depoimentos = [
   {
-    src: "/assets/depoimentos/first.png",
+    src: Depoimentos1.src,
     url: "https://www.youtube.com/embed/5lR2owUhPIM",
   },
   {
-    src: "/assets/depoimentos/second.png",
+    src: Depoimentos2.src,
     url: "https://www.youtube.com/embed/3uuchiNpOIk",
   },
   {
-    src: "/assets/depoimentos/third.png",
+    src: Depoimentos3.src,
     url: "https://www.youtube.com/embed/-oVmk4hQlfA",
   },
 ];

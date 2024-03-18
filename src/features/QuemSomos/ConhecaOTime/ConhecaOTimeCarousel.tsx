@@ -67,19 +67,22 @@ const mockedCards = [
     cargo: 'CRM: 138.586 – RQE: 48.780',
     sobre: (
       <p className="text-[16px] lg:text-[18px] text-white/40 lg:font-[300] leading-[24px] lg:leading-[27px]">
-        • Graduada em medicina pela Escola de Medicina da Santa Casa de Misericórdia de Vitória ( EMESCAM).
+        • Graduada em Medicina pela FAPAC.
         <br />
         <br className="hidden lg:block" />
-        • Especialização em Dermatologia pelo SUS- SP.
+        • Pós Graduada em Dermatologia Clínica.
         <br />
         <br className="hidden lg:block" />
-        • Membro Titular da Sociedade Brasileira de Dermatologia (SBD).
+        • Pós Graduada em Dermatologia Estética Avançada.
         <br />
         <br className="hidden lg:block" />
-        • Membro titular da Sociedade Brasileira de Cirurgia Dermatológica (SBCD).
+        • Membro da Sociedade Brasileira de Laser em Medicina e Cirurgia.
         <br />
         <br className="hidden lg:block" />
-        • Estágio em Dermatologia no Hôpital Saint-Louis in Paris, France.
+        • Possui 11 anos de experiência na área Médica e especialista em dermatologia
+        estética e tecnologia à Laser. Pós-graduada em dermatologia estética e
+        dermatologia estética avançada, lidera três unidades de clínicas de medicina
+        estética do Grupo Performance Place e Skin Place.
         <br />
         <br className="hidden lg:block" />
       </p>

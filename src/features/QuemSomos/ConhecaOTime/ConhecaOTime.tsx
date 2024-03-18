@@ -5,7 +5,7 @@ import { ConhecaOTimeCarousel } from "./ConhecaOTimeCarousel";
 
 const words = (
   <p className="text-[64px] font-[300] leading-[83px] lg:text-[80px] lg:leading-[104px] text-nowrap">
-    Conheça o time de
+    Conheça o time de{' '}
     <span className="text-secondary-pure font-[700]">Especialistas</span>
   </p>
 );

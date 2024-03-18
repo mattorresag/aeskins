@@ -23,13 +23,10 @@ export const ProdutosFaciaisHero = (): JSX.Element => {
       </Flex>
       <Flex className="h-full lg:w-[50%] xl:w-[40%] relative">
         <div className="relative w-full h-full pt-[62%]">
-          <Image
+          <img
             className="absolute top-0 left-0 w-full h-full object-cover"
-            src="/assets/produtosHero.png"
+            src={'/assets/produtosHero.png'}
             alt="produtos hero"
-            layout="fill"
-            quality={100}
-            priority
           />
         </div>
       </Flex>

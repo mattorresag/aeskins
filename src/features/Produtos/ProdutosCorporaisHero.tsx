@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Flex } from "../../components/Flex/Flex";
+import ProdutosHero from "../../../public/assets/corporalHero.png";
 
 export const ProdutosCorporaisHero = (): JSX.Element => {
   return (
@@ -23,13 +24,10 @@ export const ProdutosCorporaisHero = (): JSX.Element => {
       </Flex>
       <Flex className=" h-full w-[89%] ">
         <div className="relative w-full h-full pt-[45%] ">
-          <Image
+          <img
             className="absolute top-0 left-0 w-full h-full object-cover"
-            src="/assets/corporalHero.png"
+            src={ProdutosHero.src}
             alt="produtos hero"
-            layout="fill"
-            quality={100}
-            priority
           />
         </div>
       </Flex>
