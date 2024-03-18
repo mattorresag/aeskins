@@ -18,8 +18,8 @@ export const ConhecaOTime = (): JSX.Element => {
     >
       <WordsCarousel words={words} />
       <p className="text-center lg:hidden text-[40px] font-[300] leading-[53px]">
-        Conheça o time{" "}
-        <span className="text-secondary-pure font-[700]">Aeskins® </span>
+        Conheça o time de{" "}
+        <span className="text-secondary-pure font-[700]">Especialistas</span>
       </p>
       <Flex className="w-full">
         <ConhecaOTimeCarousel />

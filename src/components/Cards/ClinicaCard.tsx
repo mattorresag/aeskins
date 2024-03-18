@@ -13,7 +13,7 @@ export const ClinicaCard = ({
 }: Props): JSX.Element => {
   const imageUrl = location.image?.replace(
     "http://localhost:8000",
-    "https://hml.aeskins.com"
+    "https://api.aeskins.com"
   );
 
   const checkIfOpenBasedOnDay = (days: string) => {

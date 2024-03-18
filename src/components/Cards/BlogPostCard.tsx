@@ -15,6 +15,10 @@ export const BlogPostCard = ({
   id,
 }: Props): JSX.Element => {
   const router = useRouter();
+  const imageUrl = image?.replace(
+    "http://localhost:8000",
+    "https://api.aeskins.com"
+  );
   return (
     <Flex direction="col" className="gap-6 max-w-[512px] h-full w-full">
       <Flex
@@ -24,7 +28,7 @@ export const BlogPostCard = ({
         className="bg-neutral-pure100 h-full cursor-pointer"
       >
         <Image
-          src={image || "/assets/blogPlaceholder.png"}
+          src={imageUrl || "/assets/blogPlaceholder.png"}
           objectFit="cover"
           width={512}
           height={420}

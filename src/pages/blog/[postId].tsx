@@ -27,12 +27,12 @@ const BlogPost: NextPage<Props> = ({ postId }): JSX.Element => {
 
   const avatarUrl = data?.author_avatar?.replace(
     "http://localhost:8000",
-    "https://hml.aeskins.com"
+    "https://api.aeskins.com"
   );
 
   const bannerUrl = data?.banner_image?.replace(
     "http://localhost:8000",
-    "https://hml.aeskins.com"
+    "https://api.aeskins.com"
   );
 
   return (
