@@ -11,22 +11,37 @@ export const HomeThirdSection = () => {
     <Flex className="xl:pb-[174px] w-full">
       <Flex
         className="
-    xl:bg-background-preenchedores
+        lg:bg-background-preenchedoresLg
+        2xl:bg-background-preenchedores
     max-[1023px]:bg-background-preenchedoresMobile
     bg-no-repeat
     bg-right-bottom
     w-full
-    xl:h-[630px]
+    2xl:h-[630px]
     min-[1921px]:justify-center
+    relative
     bg-center xl:px-20  2xl:px-[160px] pt-16 xl:pt-[88px]  xl:pb-[0px]"
       >
+        <div className="absolute right-0 bottom-0 w-[50%] hidden lg:block 2xl:hidden">
+          <div className="relative w-full pt-[70%]">
+            <Image
+              className="absolute right-0 w-full object-cover object-top"
+              src={PreenchedoresImage.src}
+              alt="Preenchedores Mobile"
+              unoptimized
+              layout="fill"
+              quality={100}
+              priority
+            />
+          </div>
+        </div>
         <Flex
           direction="col"
-          className="    min-[1921px]:max-w-[1800px] gap-2 xl:gap-6  xl:max-w-[50vw] w-full"
+          className="    min-[1921px]:max-w-[1800px] relative gap-2 xl:gap-6  xl:max-w-[50vw] w-full"
         >
           <Flex direction="col" className="gap-6 xl:gap-14 w-full ">
             <Flex direction="col" className="lg:gap-4">
-              <Icons.Sofiderm className="w-[200px] lg:w-[161px] h-[60px] pl-[5%] lg:pl-0" />
+              <Icons.Sofiderm className="w-[200px] xl:w-[161px] h-[60px] pl-[5%] xl:pl-0" />
               <Flex
                 className="w-full xl:px-0 px-[5%] justify-between min-[1921px]:justify-start min-[1921px]:gap-14"
                 align="end"

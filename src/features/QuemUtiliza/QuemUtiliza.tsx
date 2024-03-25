@@ -53,7 +53,7 @@ export const QuemUtiliza = () => {
             interval={3000}
             config={{ dragFree: true }}
           >
-            <Flex className=" w-full pl-[5%] lg:pl-[160px] [&>*:last-child]:mr-8 gap-2 lg:gap-6 ">
+            <Flex className=" w-full px-[5%] [&>*:last-child]:mr-8 gap-2 lg:gap-6 ">
               {depoimentos.map((depoimento, index) => (
                 <Flex
                   className="w-full"

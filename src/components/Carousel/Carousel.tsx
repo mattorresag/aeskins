@@ -87,7 +87,7 @@ export const Carousel = ({
       {isConheca && (
         <Flex
           direction="col"
-          className="gap-2 w-full max-w-[90%] lg:max-w-[80%] 2xl:max-w-[1600px] min-[1921px]:max-w-[80%]"
+          className="gap-2 w-full max-w-[90%] xl:hidden lg:max-w-[80%] min-[1800px]:max-w-[1600px] min-[1921px]:max-w-[80%]"
         >
           <div className="mt-8  w-full bg-black/10">
             <div

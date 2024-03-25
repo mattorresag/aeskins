@@ -45,6 +45,8 @@ module.exports = {
       backgroundImage: {
         "background-home": "url('/assets/banner.png')",
         "background-homeMobile": "url('/assets/bannerMobile.png')",
+        "background-preenchedoresLg":
+          "radial-gradient(602.15% 130.28% at 2.73% 13.33%, rgba(6, 247, 132, 0.10) 0%, rgba(255, 255, 255, 0.00) 47.93%, rgba(6, 247, 132, 0.10) 100%)",
         "background-preenchedores":
           "url('/assets/preenchedores.png'),radial-gradient(602.15% 130.28% at 2.73% 13.33%, rgba(6, 247, 132, 0.10) 0%, rgba(255, 255, 255, 0.00) 47.93%, rgba(6, 247, 132, 0.10) 100%)",
         "background-preenchedoresMobile":
