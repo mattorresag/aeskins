@@ -13,7 +13,7 @@ export const ParaProfissionaisPosts = (): JSX.Element => {
           image="/assets/community.png"
         />
         <PostCard
-          title="Acesse nossa página de materiais"
+          title="Acesse nosso portal científico"
           linkName="MATERIAIS"
           image="/assets/materiais.png"
           link="https://materiais.aeskins.com/"
