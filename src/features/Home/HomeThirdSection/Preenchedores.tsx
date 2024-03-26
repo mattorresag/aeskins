@@ -66,7 +66,7 @@ export const Preenchedores = () => {
 
   return (
     <Flex
-      className="px-[5%] xl:px-0 gap-4 w-full flex-wrap items-center justify-center xl:justify-start"
+      className="px-[5%] xl:px-0 gap-4 w-full flex-wrap items-center justify-between"
       style={{
         gridTemplateAreas:
           width > 1439
