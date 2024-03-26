@@ -4,37 +4,20 @@ import Icons from "../../../../public/assets/icons";
 import { Preenchedores } from "./Preenchedores";
 import Image from "next/image";
 import PreenchedoresImage from "../../../../public/assets/preenchedores.png";
-import PreenchedoresMobileImage from "../../../../public/assets/mobilePreenchedores.png";
 
 export const HomeThirdSection = () => {
   return (
     <Flex className="xl:pb-[174px] w-full">
       <Flex
         className="
-        lg:bg-background-preenchedoresLg
-        2xl:bg-background-preenchedores
-    max-[1023px]:bg-background-preenchedoresMobile
+bg-background-preenchedoresMobile
     bg-no-repeat
     bg-right-bottom
     w-full
-    2xl:h-[630px]
-    min-[1921px]:justify-center
+justify-center
     relative
     bg-center xl:px-20  2xl:px-[160px] pt-16 xl:pt-[88px]  xl:pb-[0px]"
       >
-        <div className="absolute right-0 bottom-0 w-[50%] hidden lg:block 2xl:hidden">
-          <div className="relative w-full pt-[70%]">
-            <Image
-              className="absolute right-0 w-full object-cover object-top"
-              src={PreenchedoresImage.src}
-              alt="Preenchedores Mobile"
-              unoptimized
-              layout="fill"
-              quality={100}
-              priority
-            />
-          </div>
-        </div>
         <Flex
           direction="col"
           className="    min-[1921px]:max-w-[1800px] relative gap-2 xl:gap-6  xl:max-w-[50vw] w-full"
@@ -54,18 +37,8 @@ export const HomeThirdSection = () => {
             </Flex>
             <Preenchedores />
             <Flex>
-              <div className="hidden md:block xl:hidden relative w-full pt-[60%]">
-                <Image
-                  className="absolute left-0 w-full object-cover object-top"
-                  src={PreenchedoresImage.src}
-                  alt="Preenchedores Mobile"
-                  unoptimized
-                  layout="fill"
-                  quality={100}
-                  priority
-                />
-              </div>
-              <div className="md:hidden relative w-full pt-[60%]">
+
+              <div className="relative w-full pt-[60%]">
                 <Image
                   className="absolute left-0 w-full object-cover object-top"
                   src={PreenchedoresImage.src}
