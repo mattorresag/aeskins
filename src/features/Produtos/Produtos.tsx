@@ -13,6 +13,7 @@ import SofidermDeepImage10ml from "../../../public/assets/deep/10_ml.png";
 import SofidermDermImage1ml from "../../../public/assets/derm/1_ml.png";
 import SofidermDermImage2ml from "../../../public/assets/derm/2_ml.png";
 import SofidermFineLinesImage1ml from "../../../public/assets/fineline/1_ml.png";
+import ProdutoDialog from "./ProdutoDialog";
 
 
 
@@ -75,20 +76,32 @@ interface Props {
 
 export const Produtos = ({ isFacial = false }: Props): JSX.Element => {
   const produtosArray = produtos.filter((produto) => isFacial ? produto.isFacial : !produto.isFacial)
+  const [selectedProduct, setSelectedProduct] = React.useState<string | null>();
   return (
-    <Flex
-      justify="center"
-      className="grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]  lg:grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-8 px-[5%] 2xl:px-[160px] py-20  lg:pb-[120px] bg-white"
-    >
-      {produtosArray.map((produto, index) => {
-        return (
-          <Flex
-            key={`${produto.title} - ${index}`}
-          >
-            <ProdutosCards title={produto.title} image={produto.image} />
-          </Flex>
-        );
-      })}
-    </Flex>
+    <>
+      <Flex
+        justify="center"
+        className="grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]  lg:grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] gap-8 px-[5%] 2xl:px-[160px] py-20  lg:pb-[120px] bg-white"
+      >
+        {produtosArray.map((produto, index) => {
+          return (
+            <Flex
+              key={`${produto.title} - ${index}`}
+              onClick={() => setSelectedProduct(produto.image)}
+              className="cursor-pointer"
+            >
+              <ProdutosCards title={produto.title} image={produto.image} />
+            </Flex>
+          );
+        })}
+      </Flex>
+      {selectedProduct && (
+        <ProdutoDialog
+          isModalOpen={!!selectedProduct}
+          handleClose={() => setSelectedProduct(null)}
+          image={selectedProduct}
+        />
+      )}
+    </>
   );
 };

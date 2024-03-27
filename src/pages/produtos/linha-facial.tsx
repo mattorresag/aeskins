@@ -11,7 +11,6 @@ const LinhaFacial: NextPage = (): JSX.Element => {
     <Layout subtitle="Linha Facial" url="produtos/linha-facial">
       <ProdutosFaciaisHero />
       <Produtos isFacial />
-      {/* <AntesEDepoisSofiderm /> */}
       <QuemUtiliza />
     </Layout>
   );
