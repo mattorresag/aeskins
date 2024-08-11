@@ -60,11 +60,6 @@ export const Header = (): JSX.Element => {
                   </Flex>
                 </a>
               </Link>
-              <Link passHref href="/blog">
-                <a>
-                  <p>BLOGS E ARTIGOS</p>
-                </a>
-              </Link>
               <Link passHref href="/encontre-uma-clinica">
                 <a>
                   <p>ENCONTRE UMA CLÍNICA</p>
@@ -164,13 +159,6 @@ export const Header = (): JSX.Element => {
                 <h1 className="pb-6 text-[20px] w-full text-neutral-pure1000 font-[400] leading-[32px] border-b-[1px] ">
                   Linha Corporal
                 </h1>
-              </Link>
-            </Flex>
-            <Flex onClick={() => setShowSidebar((prevState) => !prevState)}>
-              <Link href="/blog">
-                <p className="pb-6 text-[20px] w-full text-neutral-pure1000 font-[400] leading-[32px] border-b-[1px] ">
-                  Blogs e Artigos
-                </p>
               </Link>
             </Flex>
             <Flex onClick={() => setShowSidebar((prevState) => !prevState)}>

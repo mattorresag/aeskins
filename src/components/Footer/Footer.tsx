@@ -106,13 +106,6 @@ export const Footer = (): JSX.Element => {
                     </p>
                   </a>
                 </Link>
-                <Link href="/blog" passHref>
-                  <a>
-                    <p className="text-[20px] text-white leading-[30px] cursor-pointer">
-                      Blogs e Artigos
-                    </p>
-                  </a>
-                </Link>
                 <Link href="/encontre-uma-clinica" passHref>
                   <a>
                     <p className="text-[20px] text-white leading-[30px] cursor-pointer">
