@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Modal } from "../../components/Modal/SideModal";
 import { Flex } from "../../components/Flex/Flex";
 import Image from "next/image";

@@ -19,7 +19,7 @@ export const HomeFirstSection = () => {
     if (ref.current) {
       setMargin(ref.current.clientHeight);
     }
-  }, [windowWidth]); // Dependency array includes windowWidth
+  }, [windowWidth]);
   return (
     <Flex
       direction="col"

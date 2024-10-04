@@ -1,6 +1,5 @@
 import React from "react";
 import { Flex } from "../../../components/Flex/Flex";
-import Image from "next/image";
 
 export const QuemSomosHero = () => {
   return (

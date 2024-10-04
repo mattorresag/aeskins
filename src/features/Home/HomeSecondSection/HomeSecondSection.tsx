@@ -1,7 +1,5 @@
 import React from "react";
 import { Flex } from "../../../components/Flex/Flex";
-import Image from "next/image";
-import Icons from "../../../../public/assets/icons";
 import { CorporalSection } from "./CorporalSection";
 import { FacialSection } from "./FacialSection";
 

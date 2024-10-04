@@ -7,6 +7,12 @@ import FacaParte1 from "../../../../public/assets/faca1.png";
 import FacaParte2 from "../../../../public/assets/faca2.png";
 import FacaParte3 from "../../../../public/assets/faca3.png";
 
+const imageData = [
+  { src: FacaParte1.src, alt: "Faca Parte 1" },
+  { src: FacaParte2.src, alt: "Faca Parte 2" },
+  { src: FacaParte3.src, alt: "Faca Parte 3" },
+];
+
 export const FacaParte = () => {
   const width = useWindowWidth();
   return (
@@ -37,45 +43,22 @@ export const FacaParte = () => {
         `,
         }}
       >
+      {imageData.map((image, index) => (
         <Flex
-          style={{ gridArea: "card1" }}
+          key={index}
+          style={{ gridArea: `card${index + 1}` }}
           className="w-full lg:w-[calc(50%-16px)] h-[160px] lg:h-[266px]"
         >
           <Image
-            src={FacaParte1.src}
+            src={image.src}
             width={800}
             height={266}
-            alt="Faca Parte 1"
+            alt={image.alt}
             objectFit="cover"
             quality={100}
           />
         </Flex>
-        <Flex
-          style={{ gridArea: "card2" }}
-          className="w-full lg:w-[calc(50%-16px)] h-[160px] lg:h-[266px]"
-        >
-          <Image
-            src={FacaParte2.src}
-            width={800}
-            height={266}
-            alt="Faca Parte 2"
-            objectFit="cover"
-            quality={100}
-          />
-        </Flex>
-        <Flex
-          style={{ gridArea: "card3" }}
-          className="w-full lg:w-[calc(50%-16px)] h-[160px] lg:h-[266px]"
-        >
-          <Image
-            src={FacaParte3.src}
-            width={800}
-            height={266}
-            alt="Faca Parte 3"
-            objectFit="cover"
-            quality={100}
-          />
-        </Flex>
+      ))}
         <Flex
           style={{ gridArea: "card4" }}
           direction="col"
