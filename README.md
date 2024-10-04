@@ -1,1 +1,1 @@
-This is a studying project using Aeskins company as a mockup.
+This is a study project using Aeskins company as a mockup.
